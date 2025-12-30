@@ -6,6 +6,7 @@ import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import { getProductSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
@@ -103,6 +104,7 @@ export default function CMSPage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
         <div className="container mx-auto px-4">
+          <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Full Web CMS' }]} />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Full Web CMS
