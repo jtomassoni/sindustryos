@@ -7,9 +7,24 @@ import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Digital Signage - $49-99/month | SindustryOS',
-  description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements. Designed for 10-30ft viewing distance.',
-  keywords: ['digital signage', 'TV display', 'restaurant signage', 'bar signage', 'specials display'],
+  title: 'Digital Signage - $49-99/month | TV Display System for Restaurants | SindustryOS',
+  description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements. Designed for 10-30ft viewing distance. 24/7 operation.',
+  keywords: [
+    'digital signage',
+    'TV display',
+    'restaurant signage',
+    'bar signage',
+    'specials display',
+    'restaurant TV display',
+    'bar digital signage',
+    'restaurant menu board',
+  ],
+  openGraph: {
+    title: 'Digital Signage - $49-99/month | SindustryOS',
+    description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements.',
+    url: 'https://sindustryos.com/products/digital-signage',
+    type: 'website',
+  },
 }
 
 const features = [
@@ -249,7 +264,7 @@ export default function DigitalSignagePage() {
             <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
               <Image
                 src="https://placehold.co/600x400/1a1d20/f56b1a?text=Slide+Builder+Interface"
-                alt="Slide Builder Interface"
+                alt="Digital signage slide builder interface for creating custom TV displays with specials, events, and announcements for restaurants and bars"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg mb-4"
@@ -260,7 +275,7 @@ export default function DigitalSignagePage() {
             <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
               <Image
                 src="https://placehold.co/600x400/1a1d20/f56b1a?text=TV+Display+Example"
-                alt="TV Display Example"
+                alt="Example of digital signage TV display showing restaurant specials and events, optimized for 10-30ft viewing distance"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg mb-4"

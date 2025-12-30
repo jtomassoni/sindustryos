@@ -7,9 +7,23 @@ import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Private Dining Inquiries - $250/year | SindustryOS',
-  description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients.',
-  keywords: ['private dining', 'event space booking', 'restaurant CRM', 'private party inquiries'],
+  title: 'Private Dining Inquiries - $250/year | Event Space Booking CRM | SindustryOS',
+  description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients. Perfect for restaurants and bars hosting private parties and corporate events.',
+  keywords: [
+    'private dining',
+    'event space booking',
+    'restaurant CRM',
+    'private party inquiries',
+    'corporate event booking',
+    'private dining room management',
+    'event inquiry system',
+  ],
+  openGraph: {
+    title: 'Private Dining Inquiries - $250/year | SindustryOS',
+    description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients.',
+    url: 'https://sindustryos.com/products/private-dining',
+    type: 'website',
+  },
 }
 
 const features = [
@@ -196,7 +210,7 @@ export default function PrivateDiningPage() {
             <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
               <Image
                 src="https://placehold.co/600x400/1a1d20/f56b1a?text=Lead+Capture+Form"
-                alt="Lead Capture Form Screenshot"
+                alt="Private dining inquiry lead capture form for restaurants and bars to collect event booking information from potential clients"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg mb-4"
@@ -207,7 +221,7 @@ export default function PrivateDiningPage() {
             <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
               <Image
                 src="https://placehold.co/600x400/1a1d20/f56b1a?text=CRM+Dashboard"
-                alt="CRM Dashboard Screenshot"
+                alt="CRM dashboard for managing private dining inquiries, tracking contacts, and following up with potential event clients"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-lg mb-4"

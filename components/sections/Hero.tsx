@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://placehold.co/1920x1080/1a1d20/f56b1a?text=Warm+Restaurant+Atmosphere"
-          alt="Warm, inviting restaurant atmosphere"
+          alt="Warm, inviting restaurant atmosphere with dimmed lighting - perfect for dive bars and restaurants using SindustryOS management platform"
           fill
           className="object-cover opacity-20"
           priority
