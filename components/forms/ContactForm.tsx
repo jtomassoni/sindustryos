@@ -37,24 +37,40 @@ export default function ContactForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // TODO: Implement actual form submission
-    // For now, just simulate a delay
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setSubmitStatus('success')
-    
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        restaurant: '',
-        hasWebsite: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-      setSubmitStatus('idle')
-    }, 3000)
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
+      }
+
+      setSubmitStatus('success')
+      
+      // Reset form after success
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          restaurant: '',
+          hasWebsite: '',
+          message: '',
+        })
+        setSubmitStatus('idle')
+      }, 3000)
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

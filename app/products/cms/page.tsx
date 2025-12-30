@@ -243,6 +243,7 @@ export default function CMSPage() {
                 width={1200}
                 height={800}
                 className="w-full h-auto rounded-lg"
+                loading="lazy"
               />
             </div>
           </div>
