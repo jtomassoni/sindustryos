@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -46,15 +47,40 @@ export async function POST(request: NextRequest) {
       // Continue even if CRM save fails
     }
 
-    // TODO: Send email via Resend
-    // This will be implemented when Resend API key is configured
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'contact@sindustryos.com',
-    //   to: process.env.CONTACT_EMAIL || 'contact@sindustryos.com',
-    //   subject: `New Contact Form Submission from ${restaurant}`,
-    //   html: `...`
-    // })
+    // Send email via Resend
+    if (process.env.RESEND_API_KEY) {
+      try {
+        const resend = new Resend(process.env.RESEND_API_KEY)
+        const contactEmail = process.env.CONTACT_EMAIL || 'contact@sindustryos.com'
+        
+        await resend.emails.send({
+          from: 'SindustryOS <onboarding@resend.dev>', // Update this to your verified domain
+          to: contactEmail,
+          reply_to: email,
+          subject: `New Contact Form Submission: ${restaurant}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #f56b1a;">New Contact Form Submission</h2>
+              <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p><strong>Restaurant/Bar:</strong> ${restaurant}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+                <p><strong>Has Website:</strong> ${hasWebsite === 'yes' ? 'Yes' : 'No'}</p>
+                ${message ? `<p><strong>Message:</strong></p><p style="background: white; padding: 15px; border-radius: 4px; margin-top: 10px;">${message.replace(/\n/g, '<br>')}</p>` : ''}
+              </div>
+              <p style="color: #666; font-size: 12px;">
+                This email was sent from the SindustryOS contact form.
+              </p>
+            </div>
+          `,
+        })
+      } catch (emailError) {
+        console.error('Resend email error:', emailError)
+        // Continue even if email fails - submission is still saved to CRM
+      }
+    } else {
+      console.warn('RESEND_API_KEY not configured - email not sent')
+    }
 
     return NextResponse.json(
       { message: 'Thank you! We\'ll be in touch soon.' },
