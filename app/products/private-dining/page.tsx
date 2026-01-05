@@ -8,7 +8,7 @@ import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Private Dining Inquiries - $250/year | Event Space Booking CRM | SindustryOS',
+  title: 'Private Dining Inquiries - $49/month | Event Space Booking CRM | SindustryOS',
   description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients. Perfect for restaurants and bars hosting private parties and corporate events.',
   keywords: [
     'private dining',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'event inquiry system',
   ],
   openGraph: {
-    title: 'Private Dining Inquiries - $250/year | SindustryOS',
+    title: 'Private Dining Inquiries - $49/month | SindustryOS',
     description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients.',
     url: 'https://sindustryos.com/products/private-dining',
     type: 'website',
@@ -58,7 +58,7 @@ const features = [
 const faqItems = [
   {
     question: 'How does the pricing work?',
-    answer: 'Private Dining Inquiries is $250 per year, paid upfront. If you book even one party, it should cover the cost. It\'s designed to be a no-brainer investment.',
+    answer: 'Private Dining Inquiries is $49 per month. If you book even one party, it should cover the cost. It\'s designed to be a no-brainer investment.',
   },
   {
     question: 'Can I customize the inquiry form?',
@@ -70,7 +70,7 @@ const faqItems = [
   },
   {
     question: 'What if I don\'t get any inquiries?',
-    answer: 'The system helps you capture and manage inquiries more effectively. Even if you only book one party per year, the $250 investment pays for itself.',
+    answer: 'The system helps you capture and manage inquiries more effectively. Even if you only book one party per month, the $49 investment pays for itself.',
   },
   {
     question: 'Can I use this for other types of events?',
@@ -172,16 +172,16 @@ export default function PrivateDiningPage() {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple Annual Pricing
+                Simple Monthly Pricing
               </h2>
               <p className="text-xl text-gray-400">
-                One payment per year. If you book even one party, it pays for itself.
+                $49 per month. If you book even one party, it pays for itself.
               </p>
             </div>
             
             <PricingDisplay
-              price="$250"
-              period="/year"
+              price="$49"
+              period="/month"
               description="Complete private dining inquiry management system"
               features={[
                 'Lead capture form',

@@ -23,21 +23,21 @@ export default function Hero() {
       }} />
       
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-8 relative z-10 py-24 md:py-32">
+      <div className="container mx-auto px-6 md:px-8 relative z-10 py-16 md:py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-dark-900 mb-8 leading-[1.1] tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-dark-900 mb-6 leading-[1.1] tracking-tight">
             Stop juggling vendors.
             <br />
             <span className="text-primary-600 italic">Run your place.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-dark-700 mb-12 leading-relaxed max-w-2xl font-light">
+          <p className="text-lg md:text-xl text-dark-700 mb-8 leading-relaxed max-w-2xl font-light">
             Instead of needing a social media company, website company, manager for delivery apps, 
             chef for menu optimization, scheduling manager...{' '}
             <span className="text-dark-900 font-normal">we do it all.</span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 items-start">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start">
             <a
               href="/contact"
               className="inline-flex items-center text-lg text-dark-900 border-b-2 border-primary-500 pb-1 hover:border-primary-600 transition-colors font-medium"

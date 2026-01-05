@@ -2,7 +2,7 @@ import { FiMessageSquare } from 'react-icons/fi'
 
 export default function Testimonial() {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-br from-dark-900 via-secondary-900 to-dark-900 overflow-hidden">
+    <section className="relative py-12 md:py-16 bg-gradient-to-br from-dark-900 via-secondary-900 to-dark-900 overflow-hidden">
       {/* Rich texture overlay */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -23,18 +23,18 @@ export default function Testimonial() {
       
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-dark-800/80 backdrop-blur-sm border border-dark-700/50 rounded-2xl p-8 md:p-12 shadow-2xl">
-            <FiMessageSquare className="w-12 h-12 text-primary-500 mb-6" />
+          <div className="bg-dark-800/80 backdrop-blur-sm border border-dark-700/50 rounded-2xl p-6 md:p-10 shadow-2xl">
+            <FiMessageSquare className="w-10 h-10 md:w-12 md:h-12 text-primary-500 mb-4 md:mb-6" />
             
-            <blockquote className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              "JT has become a true partner to the business. He worked in the industry for years 
-              so he understands my concerns and has never built anything less than amazing."
+            <blockquote className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
+              "This platform has become a true partner to the business. It's built by people who 
+              understand the industry, so they know our concerns and have never delivered anything less than amazing."
             </blockquote>
             
             <div className="flex items-center">
               <div>
-                <p className="text-white font-semibold text-lg">Victoria</p>
-                <p className="text-gray-400">Monaghan's Bar</p>
+                <p className="text-white font-semibold text-base md:text-lg">Victoria, Owner</p>
+                <p className="text-gray-400 text-sm md:text-base">Monaghan's Bar</p>
               </div>
             </div>
           </div>

@@ -23,60 +23,86 @@ const replacements = [
   },
 ]
 
+const benefits = [
+  {
+    title: 'Lower Costs',
+    description: 'One platform instead of multiple vendor fees',
+  },
+  {
+    title: 'Less Overhead',
+    description: 'Automation that reduces manual work',
+  },
+  {
+    title: 'Time-Saving',
+    description: 'Everything in one place, accessible anywhere',
+  },
+]
+
 export default function ValueProposition() {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-warm-100 via-secondary-50 to-warm-50">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-gradient-to-b from-warm-50 via-warm-100 to-primary-50">
       {/* Subtle texture */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 0.5px, transparent 0)',
-          backgroundSize: '30px 30px',
+          backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+          backgroundSize: '35px 35px',
           color: '#2e2824',
         }} />
       </div>
       
-      <div className="container mx-auto px-6 md:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-display font-semibold text-dark-900 mb-6 leading-tight">
+      {/* Warm accent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-50/10 to-transparent" />
+      
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+        {/* Header Section */}
+        <div className="max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-dark-900 mb-4 md:mb-6 leading-tight text-balance">
             One platform replaces multiple vendors
           </h2>
-          <p className="text-xl text-dark-700 leading-relaxed font-light">
+          <p className="text-base md:text-lg lg:text-xl text-dark-700 leading-relaxed font-light max-w-2xl mx-auto">
             Stop juggling multiple services and vendors. SindustryOS consolidates everything you need 
             into one platform.
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          {replacements.map((item, index) => {
-            const Icon = item.icon
-            return (
-              <div key={index} className="flex items-center gap-6 py-4 border-b border-dark-200 last:border-0">
-                <div className="flex-shrink-0">
-                  <Icon className="w-6 h-6 text-dark-700" />
+        {/* Services Replacement Section */}
+        <div className="max-w-5xl mx-auto mb-16 md:mb-20 lg:mb-24">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-6 sm:gap-y-4 md:gap-x-8 md:gap-y-6 lg:gap-x-12">
+            {replacements.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <div key={index} className="flex items-center">
+                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                    <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+                      <Icon className="w-full h-full text-dark-700" />
+                    </div>
+                    <div className="flex flex-col min-w-0">
+                      <p className="text-dark-400 text-xs sm:text-sm md:text-base mb-0.5 whitespace-nowrap">{item.old}</p>
+                      <p className="text-dark-900 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">SindustryOS</p>
+                    </div>
+                  </div>
+                  {index < replacements.length - 1 && (
+                    <span className="text-dark-300 mx-2 sm:mx-3 md:mx-4 text-base sm:text-lg md:text-xl lg:text-2xl hidden sm:inline">•</span>
+                  )}
                 </div>
-                <div className="flex-1">
-                  <p className="text-dark-400 text-base mb-1">{item.old}</p>
-                  <p className="text-dark-700 font-medium text-base">SindustryOS</p>
-                </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
         
-        <div className="mt-20 max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div>
-              <h3 className="text-lg font-medium text-dark-900 mb-2">Lower Costs</h3>
-              <p className="text-dark-600 text-sm">One platform instead of multiple vendor fees</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-dark-900 mb-2">Less Overhead</h3>
-              <p className="text-dark-600 text-sm">Automation that reduces manual work</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-dark-900 mb-2">Time-Saving</h3>
-              <p className="text-dark-600 text-sm">Everything in one place, accessible anywhere</p>
-            </div>
+        {/* Benefits Section */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-display font-semibold text-dark-900 mb-2 md:mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-sm md:text-base text-dark-600 leading-relaxed max-w-xs mx-auto">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
