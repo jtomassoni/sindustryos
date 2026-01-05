@@ -34,7 +34,7 @@ const products = [
   },
   {
     name: 'Digital Signage',
-    price: '$49-99/month',
+    price: '$99/month',
     description: 'TV signage display system with custom slide builder for specials, events, and announcements.',
     icon: FiMonitor,
     href: '/products/digital-signage',
@@ -50,57 +50,62 @@ const products = [
 
 export default function ProductShowcase() {
   return (
-    <section className="py-20 bg-dark-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section className="py-24 md:py-32 bg-warm-50">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-display font-semibold text-dark-900 mb-6 leading-tight">
             Products & Solutions
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-700 leading-relaxed font-light">
             Start with our core CMS, then add powerful features as you need them.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {products.map((product) => {
             const Icon = product.icon
             return (
               <div
                 key={product.name}
-                className="bg-dark-800 border border-dark-700 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300 flex flex-col"
+                className="flex flex-col"
               >
                 <div className="mb-6">
-                  <Icon className="w-12 h-12 text-primary-500 mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
-                  <p className="text-primary-500 text-xl font-semibold mb-4">{product.price}</p>
-                  <p className="text-gray-400 mb-6">{product.description}</p>
+                  <Icon className="w-10 h-10 text-primary-600 mb-6" />
+                  <h3 className="text-2xl font-display font-semibold text-dark-900 mb-3">{product.name}</h3>
+                  <p className="text-primary-600 text-lg font-medium mb-4">{product.price}</p>
+                  <p className="text-dark-700 mb-6 leading-relaxed">{product.description}</p>
                 </div>
                 
-                <ul className="space-y-2 mb-8 flex-grow">
+                <ul className="space-y-3 mb-8 flex-grow">
                   {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-gray-300 text-sm">
-                      <span className="text-primary-500 mr-2">✓</span>
+                    <li key={index} className="flex items-start text-dark-600 text-sm">
+                      <span className="text-primary-600 mr-3 mt-1">—</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <Button href={product.href} variant="outline" size="md" className="w-full">
-                  Learn More
-                </Button>
+                <Link
+                  href={product.href}
+                  className="inline-flex items-center text-dark-900 border-b border-dark-900 pb-1 hover:opacity-70 transition-opacity text-sm mt-auto"
+                >
+                  Learn more
+                  <span className="ml-2">→</span>
+                </Link>
               </div>
             )
           })}
         </div>
         
-        <div className="text-center mt-12">
-          <p className="text-gray-400 mb-4">And more features coming soon...</p>
-          <Link href="/features" className="text-primary-500 hover:text-primary-400 font-semibold">
-            View All Features →
+        <div className="text-center mt-16">
+          <p className="text-dark-600 mb-4">And more features coming soon...</p>
+          <Link href="/features" className="text-dark-900 border-b border-dark-900 pb-1 hover:opacity-70 transition-opacity text-sm">
+            View All Features
           </Link>
         </div>
       </div>
     </section>
   )
 }
+
 

@@ -8,7 +8,7 @@ import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Digital Signage - $49-99/month | TV Display System for Restaurants | SindustryOS',
+  title: 'Digital Signage - $99/month | TV Display System for Restaurants | SindustryOS',
   description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements. Designed for 10-30ft viewing distance. 24/7 operation.',
   keywords: [
     'digital signage',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'restaurant menu board',
   ],
   openGraph: {
-    title: 'Digital Signage - $49-99/month | SindustryOS',
+    title: 'Digital Signage - $99/month | SindustryOS',
     description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements.',
     url: 'https://sindustryos.com/products/digital-signage',
     type: 'website',
@@ -87,7 +87,7 @@ const faqItems = [
   },
   {
     question: 'How does the pricing work?',
-    answer: 'Digital Signage pricing ranges from $49-$99 per month depending on the number of slides and features. Contact us for a custom quote based on your needs.',
+    answer: 'Digital Signage is $99 per month. This includes all features: TV display system, custom slide builder, specials rotator, events display, and announcements integration.',
   },
   {
     question: 'Can I customize the slides?',
@@ -225,17 +225,17 @@ export default function DigitalSignagePage() {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing
+                Pricing
               </h2>
               <p className="text-xl text-gray-400">
-                Pricing based on your needs. Contact us for a custom quote.
+                Simple, straightforward pricing for all features.
               </p>
             </div>
             
             <PricingDisplay
-              price="$49-99"
+              price="$99"
               period="/month"
-              description="Custom pricing based on slides and features"
+              description="All features included"
               features={[
                 'TV display system',
                 'Custom slide builder',
@@ -244,7 +244,7 @@ export default function DigitalSignagePage() {
                 'Announcements integration',
                 '24/7 operation',
               ]}
-              ctaText="Get Custom Quote"
+              ctaText="Get Started"
             />
           </div>
         </div>

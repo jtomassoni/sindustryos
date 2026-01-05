@@ -3,41 +3,45 @@ import Button from '@/components/ui/Button'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] flex items-center bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://placehold.co/1920x1080/1a1d20/f56b1a?text=Warm+Restaurant+Atmosphere"
-          alt="Warm, inviting restaurant atmosphere with dimmed lighting - perfect for dive bars and restaurants using SindustryOS management platform"
-          fill
-          className="object-cover opacity-20"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 via-dark-800/60 to-dark-900/80" />
+    <section className="relative min-h-[85vh] flex items-center bg-warm-50">
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+          backgroundSize: '40px 40px',
+          color: '#2e2824',
+        }} />
       </div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            One Platform Replaces{' '}
-            <span className="text-primary-500">Multiple Vendors</span>
+      <div className="container mx-auto px-6 md:px-8 relative z-10 py-24 md:py-32">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-dark-900 mb-8 leading-[1.1] tracking-tight">
+            Stop juggling vendors.
+            <br />
+            <span className="text-primary-600 italic">Run your place.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-dark-700 mb-12 leading-relaxed max-w-2xl font-light">
             Instead of needing a social media company, website company, manager for delivery apps, 
             chef for menu optimization, scheduling manager...{' '}
-            <span className="text-primary-400 font-semibold">we do it all.</span>
+            <span className="text-dark-900 font-normal">we do it all.</span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button href="/contact" variant="primary" size="lg" className="min-w-[200px]">
-              Get Started
-            </Button>
-            <Button href="/products" variant="outline" size="lg" className="min-w-[200px]">
-              Learn More
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <a
+              href="/contact"
+              className="inline-flex items-center text-lg text-dark-900 border-b-2 border-primary-500 pb-1 hover:border-primary-600 transition-colors font-medium"
+            >
+              Get started
+              <span className="ml-2">→</span>
+            </a>
+            <a
+              href="/products"
+              className="inline-flex items-center text-lg text-dark-600 hover:text-dark-900 transition-colors"
+            >
+              See how it works
+            </a>
           </div>
         </div>
       </div>

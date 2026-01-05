@@ -28,7 +28,7 @@ const products = [
   },
   {
     name: 'Digital Signage',
-    price: '$49-99/month',
+    price: '$99/month',
     description: 'TV signage display system with custom slide builder. Show specials, events, and announcements automatically.',
     icon: FiMonitor,
     href: '/products/digital-signage',
@@ -116,4 +116,5 @@ export default function ProductsPage() {
     </main>
   )
 }
+
 

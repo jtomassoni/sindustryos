@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/layout/Header'
@@ -9,6 +9,12 @@ import { getOrganizationSchema } from '@/lib/structured-data'
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -58,7 +64,7 @@ export default function RootLayout({
   const organizationSchema = getOrganizationSchema()
   
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <Script
           id="organization-schema"

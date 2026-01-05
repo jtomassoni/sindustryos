@@ -18,33 +18,36 @@ export default function Header() {
   ]
   
   return (
-    <header className="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-700">
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 bg-warm-50/95 backdrop-blur-sm border-b border-dark-200">
+      <nav className="container mx-auto px-6 md:px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary-500">SindustryOS</span>
+            <span className="text-2xl font-display font-semibold text-dark-900 tracking-tight">SindustryOS</span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-primary-500 transition-colors font-medium"
+                className="text-dark-700 hover:text-dark-900 transition-colors font-normal text-sm tracking-wide uppercase"
               >
                 {item.name}
               </Link>
             ))}
-            <Button href="/contact" variant="primary" size="sm">
+            <a
+              href="/contact"
+              className="text-dark-900 border-b border-dark-900 pb-1 hover:opacity-70 transition-opacity text-sm tracking-wide uppercase"
+            >
               Get Started
-            </Button>
+            </a>
           </div>
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-primary-500 transition-colors"
+            className="md:hidden text-dark-700 hover:text-dark-900 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -54,21 +57,25 @@ export default function Header() {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-dark-700">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden py-6 border-t border-dark-200">
+            <div className="flex flex-col gap-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-primary-500 transition-colors font-medium py-2"
+                  className="text-dark-700 hover:text-dark-900 transition-colors font-normal text-sm tracking-wide uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button href="/contact" variant="primary" size="sm" className="w-full">
+              <a
+                href="/contact"
+                className="text-dark-900 border-b border-dark-900 pb-1 w-fit text-sm tracking-wide uppercase"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Started
-              </Button>
+              </a>
             </div>
           </div>
         )}
@@ -76,4 +83,5 @@ export default function Header() {
     </header>
   )
 }
+
 

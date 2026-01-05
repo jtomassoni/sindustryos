@@ -49,7 +49,7 @@ const products = [
   },
   {
     name: 'Digital Signage',
-    price: '$49-99',
+    price: '$99',
     period: '/month',
     description: 'TV signage display system',
     features: [
@@ -287,4 +287,5 @@ export default function PricingPage() {
     </main>
   )
 }
+
 

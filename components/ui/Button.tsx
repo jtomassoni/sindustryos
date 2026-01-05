@@ -19,9 +19,9 @@ export default function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900 disabled:opacity-50 disabled:cursor-not-allowed'
   
   const variants = {
-    primary: 'bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 active:bg-primary-700',
-    secondary: 'bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500 active:bg-secondary-800',
-    outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white focus:ring-primary-500',
+    primary: 'bg-dark-900 text-warm-50 hover:bg-dark-800 focus:ring-dark-700 active:bg-dark-700 border border-dark-800',
+    secondary: 'bg-primary-600 text-warm-50 hover:bg-primary-700 focus:ring-primary-500 active:bg-primary-800',
+    outline: 'border border-dark-400 text-dark-700 hover:bg-dark-50 hover:border-dark-600 focus:ring-dark-300',
   }
   
   const sizes = {
@@ -46,4 +46,5 @@ export default function Button({
     </button>
   )
 }
+
 

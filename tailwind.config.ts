@@ -9,60 +9,73 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm, inviting, not super bright - Irish dive bar aesthetic
-        // Lively and warm but moody
+        // Editorial, warm, hospitality-focused palette
+        // Think aged whiskey, worn leather, warm wood, patina
         primary: {
-          50: '#fef3e2',
-          100: '#fde4b8',
-          200: '#fbc98a',
-          300: '#f9a85c',
-          400: '#f78a3a',
-          500: '#f56b1a', // Primary warm amber/gold
-          600: '#d95415',
-          700: '#b84014',
-          800: '#963316',
-          900: '#7a2d15',
+          50: '#faf8f5',
+          100: '#f5f0e8',
+          200: '#e8ddd0',
+          300: '#d4c4b0',
+          400: '#b8a085',
+          500: '#9d8266', // Aged wood / whiskey
+          600: '#7d6852',
+          700: '#5f4f40',
+          800: '#453a30',
+          900: '#2e2620',
         },
         secondary: {
-          50: '#f5f1f0',
-          100: '#e8ddd9',
-          200: '#d4c0b8',
-          300: '#b99a8e',
-          400: '#9d7a6b',
-          500: '#8a6251', // Deep burgundy/brown
-          600: '#735044',
-          700: '#5f4239',
-          800: '#503830',
-          900: '#45322c',
+          50: '#f7f5f3',
+          100: '#ebe7e2',
+          200: '#d4ccc2',
+          300: '#b8aa9c',
+          400: '#9d8874',
+          500: '#7d6b5a', // Warm taupe
+          600: '#655548',
+          700: '#4f4339',
+          800: '#3d342c',
+          900: '#2a231e',
         },
         accent: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316', // Warm amber accent
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
+          50: '#fef7ed',
+          100: '#fdebd5',
+          200: '#fad4aa',
+          300: '#f6b874',
+          400: '#f0953d', // Warm amber (softer than before)
+          500: '#d97717',
+          600: '#b85f14',
+          700: '#964a16',
+          800: '#7a3c15',
+          900: '#653212',
+        },
+        warm: {
+          50: '#fefaf6',
+          100: '#fdf4eb',
+          200: '#fae6d1',
+          300: '#f5d0b0',
+          400: '#edb584',
+          500: '#e0955a', // Warm terracotta
+          600: '#c77a42',
+          700: '#a35f36',
+          800: '#844d2e',
+          900: '#6c4026',
         },
         dark: {
-          50: '#f8f9fa',
-          100: '#e9ecef',
-          200: '#dee2e6',
-          300: '#ced4da',
-          400: '#adb5bd',
-          500: '#6c757d',
-          600: '#495057',
-          700: '#343a40',
-          800: '#212529', // Dark base (not pure black)
-          900: '#1a1d20',
+          50: '#faf9f7',
+          100: '#f3f1ed',
+          200: '#e6e1d9',
+          300: '#d4ccc0',
+          400: '#b8ada0',
+          500: '#9d8f80',
+          600: '#7d7164',
+          700: '#5f554b',
+          800: '#453d36',
+          900: '#2e2824', // Warm dark (not pure black)
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'], // For headings
       },
       spacing: {
         '18': '4.5rem',
@@ -80,4 +93,5 @@ const config: Config = {
   plugins: [],
 }
 export default config
+
 
