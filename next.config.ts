@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Ensure proper routing
+  trailingSlash: false,
+  // Enable proper error handling
+  reactStrictMode: true,
 }
 
 export default nextConfig

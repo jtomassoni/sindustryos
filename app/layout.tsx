@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://sindustryos.com'),
+  metadataBase: new URL('https://www.sindustryos.com'),
   openGraph: {
     title: 'SindustryOS - All-in-One Restaurant & Bar Management Platform',
     description: 'One platform replaces multiple vendors. SindustryOS handles your website, social media, delivery apps, menu optimization, staff scheduling, and more.',
-    url: 'https://sindustryos.com',
+    url: 'https://www.sindustryos.com',
     siteName: 'SindustryOS',
     locale: 'en_US',
     type: 'website',
@@ -69,14 +69,12 @@ export default function RootLayout({
   
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <head>
+      <body>
         <Script
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-      </head>
-      <body>
         <Header />
         {children}
         <Footer />

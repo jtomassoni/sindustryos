@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SindustryOS - All-in-One Restaurant & Bar Management Platform',
     description: 'One platform replaces multiple vendors. SindustryOS handles your website, social media, delivery apps, menu optimization, staff scheduling, and more.',
-    url: 'https://sindustryos.com',
+    url: 'https://www.sindustryos.com',
     siteName: 'SindustryOS',
     locale: 'en_US',
     type: 'website',
