@@ -3,15 +3,24 @@ import Button from '@/components/ui/Button'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-warm-50">
+    <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-warm-50 via-primary-50 to-warm-100">
       {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-[0.02]">
+      <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
           backgroundSize: '40px 40px',
           color: '#2e2824',
         }} />
       </div>
+      
+      {/* Warm gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-50/20 to-transparent" />
+      
+      {/* Subtle diagonal lines */}
+      <div className="absolute inset-0 opacity-[0.015]" style={{
+        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 11px)',
+        color: '#2e2824',
+      }} />
       
       {/* Content */}
       <div className="container mx-auto px-6 md:px-8 relative z-10 py-24 md:py-32">

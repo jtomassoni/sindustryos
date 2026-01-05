@@ -25,28 +25,40 @@ const features = [
 
 export default function FeatureHighlights() {
   return (
-    <section className="py-20 bg-dark-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-primary-50 via-warm-100 to-secondary-50">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-[0.025]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1.5px 1.5px, currentColor 0.5px, transparent 0)',
+          backgroundSize: '25px 25px',
+          color: '#2e2824',
+        }} />
+      </div>
+      
+      {/* Warm gradient accents */}
+      <div className="absolute inset-0 bg-gradient-to-r from-accent-50/20 via-transparent to-warm-50/20" />
+      
+      <div className="container mx-auto px-6 md:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-display font-semibold text-dark-900 mb-6 leading-tight">
             Everything You Need
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-700 leading-relaxed font-light">
             We integrate with your existing systems and build solutions that work for your business.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <div
                 key={index}
-                className="bg-dark-800 border border-dark-700 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300"
+                className="bg-warm-50/80 backdrop-blur-sm border border-dark-200/50 rounded-lg p-6 hover:border-primary-400/50 hover:bg-warm-50 transition-all duration-300 shadow-sm"
               >
-                <Icon className="w-10 h-10 text-primary-500 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <Icon className="w-10 h-10 text-primary-600 mb-4" />
+                <h3 className="text-xl font-medium text-dark-900 mb-2">{feature.title}</h3>
+                <p className="text-dark-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             )
           })}

@@ -20,8 +20,8 @@ const products = [
   },
   {
     name: 'Private Dining Inquiries',
-    price: '$250/year',
-    description: 'Lead capture and CRM system for private event inquiries and event space bookings.',
+    price: '$21/month',
+    description: 'Add-on: Lead capture and CRM for private event inquiries. You handle calls and emails.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: [
@@ -50,8 +50,20 @@ const products = [
 
 export default function ProductShowcase() {
   return (
-    <section className="py-24 md:py-32 bg-warm-50">
-      <div className="container mx-auto px-6 md:px-8">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-warm-50 via-warm-100 to-primary-50">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+          backgroundSize: '35px 35px',
+          color: '#2e2824',
+        }} />
+      </div>
+      
+      {/* Warm accent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-50/10 to-transparent" />
+      
+      <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-semibold text-dark-900 mb-6 leading-tight">
             Products & Solutions

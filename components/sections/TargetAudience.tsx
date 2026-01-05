@@ -20,13 +20,25 @@ const audiences = [
 
 export default function TargetAudience() {
   return (
-    <section className="py-20 bg-dark-800">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section className="relative py-24 md:py-32 bg-gradient-to-br from-secondary-100 via-warm-100 to-primary-100">
+      {/* Rich texture */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+          backgroundSize: '45px 45px',
+          color: '#2e2824',
+        }} />
+      </div>
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-accent-50/15 to-transparent" />
+      
+      <div className="container mx-auto px-6 md:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-display font-semibold text-dark-900 mb-6 leading-tight">
             Built for Your Business
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-700 leading-relaxed font-light">
             Whether you run a cozy dive bar or a bustling restaurant, SindustryOS adapts to your needs.
           </p>
         </div>
@@ -37,11 +49,11 @@ export default function TargetAudience() {
             return (
               <div
                 key={index}
-                className="text-center bg-dark-900 border border-dark-700 rounded-xl p-8 hover:border-primary-500/50 transition-all duration-300"
+                className="text-center bg-warm-50/90 backdrop-blur-sm border border-dark-200/50 rounded-xl p-8 hover:border-primary-400/50 hover:bg-warm-50 transition-all duration-300 shadow-sm"
               >
-                <Icon className="w-16 h-16 text-primary-500 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">{audience.title}</h3>
-                <p className="text-gray-400">{audience.description}</p>
+                <Icon className="w-16 h-16 text-primary-600 mx-auto mb-6" />
+                <h3 className="text-2xl font-display font-semibold text-dark-900 mb-4">{audience.title}</h3>
+                <p className="text-dark-600 leading-relaxed">{audience.description}</p>
               </div>
             )
           })}

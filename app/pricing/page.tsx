@@ -33,9 +33,9 @@ const products = [
   },
   {
     name: 'Private Dining Inquiries',
-    price: '$250',
-    period: '/year',
-    description: 'Lead capture and CRM for private events',
+    price: '$21',
+    period: '/month',
+    description: 'Add-on: Lead capture and CRM for private events (you handle communications)',
     features: [
       'Lead capture form',
       'CRM functionality',

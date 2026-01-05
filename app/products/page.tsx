@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
   title: 'Products - SindustryOS Restaurant & Bar Management Solutions',
-  description: 'Explore SindustryOS products: Full Web CMS ($99/month), Private Dining Inquiries ($250/year), and Digital Signage ($49-99/month). All-in-one solutions for restaurants and bars.',
+  description: 'Explore SindustryOS products: Full Web CMS ($99/month), Private Dining Inquiries add-on ($21/month), and Digital Signage ($99/month). All-in-one solutions for restaurants and bars.',
   keywords: ['sindustryos products', 'restaurant management products', 'bar management solutions'],
 }
 
@@ -20,8 +20,8 @@ const products = [
   },
   {
     name: 'Private Dining Inquiries',
-    price: '$250/year',
-    description: 'Lead capture and CRM system for private event inquiries. Perfect for restaurants and bars hosting private parties.',
+    price: '$21/month',
+    description: 'Add-on: Lead capture and CRM for private event inquiries. You handle calls and emails.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: ['Lead capture form', 'CRM functionality', 'Contact tracking', 'Event space management'],
