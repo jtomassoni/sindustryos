@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="relative min-h-[88vh] flex items-end md:items-center overflow-hidden">
-      {/* Full-bleed atmosphere — /public/hero-bg.jpg */}
+      {/* Full-bleed atmosphere: /public/hero-bg.jpg */}
       <div className="absolute inset-0 bg-dark-900" aria-hidden>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 md:scale-100"
@@ -30,10 +30,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
-            One month of sales data in — margin analysis that actually hits day-of-week and
-            week-of-month patterns better than anyone else. Legit math. Better than the rest of the
-            field. No contract, no BS — not sold by lifetime sales pros. Built by and owned by people
-            who hate that game as much as you do.
+            One month of sales data in. Margin analysis that actually accounts for day-of-week and
+            week-of-month patterns. Real math. No contract. Not sold by career salespeople.
           </p>
           <p className="text-sm text-primary-300/80 italic mb-10 max-w-lg animate-fade-up animate-fade-up-delay-2">
             For the cost of one 4-top, optimize your shit.

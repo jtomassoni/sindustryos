@@ -27,7 +27,7 @@ export default async function ResourcesPage() {
             Resources for restaurants &amp; bars
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Practical guides on websites, specials, events, signage, and private dining — written for
+            Practical guides on websites, specials, events, signage, and private dining. Written for
             independents who run the floor.
           </p>
         </div>

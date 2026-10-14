@@ -52,7 +52,7 @@ const calendarSchema = z.object({
 
 const SYSTEM = `You write practical SEO content for SindustryOS, an all-in-one restaurant and bar management platform (website CMS, private dining CRM, digital signage) for independent venues.
 
-Voice: direct, ops-first, no fluff, no emojis, no hype. Speak to owners and managers who work the floor. Prefer concrete workflows over buzzwords. Mention SindustryOS only when it naturally fits a decision — never hard-sell every paragraph.
+Voice: direct, ops-first, no fluff, no emojis, no hype, no em dashes. Speak to owners and managers who work the floor. Prefer concrete workflows over buzzwords. Mention SindustryOS only when it naturally fits a decision. Never hard-sell every paragraph.
 
 Audience: US independent restaurants and bars.`
 
@@ -82,12 +82,12 @@ export async function generateArticleContent(input: {
     prompt: `Write a complete resource article.
 
 Working title: ${input.title}
-Topic notes: ${input.topicNotes || 'None — expand the title into a useful guide.'}
+Topic notes: ${input.topicNotes || 'None. Expand the title into a useful guide.'}
 Preferred category: ${input.category || 'choose the best fit'}
 Seed keywords: ${(input.keywords || []).join(', ') || 'derive from the topic'}
 
 Requirements:
-- 3–6 H2 sections with 1–3 short paragraphs each
+- 3-6 H2 sections with 1-3 short paragraphs each
 - Practical, skimmable, SEO-useful without keyword stuffing
 - Meta description under ~160 characters
 - Pick the best primary product CTA href from the allowed list`,
@@ -132,7 +132,7 @@ Focus: ${input.focus || 'restaurant/bar websites, specials, events, private dini
 Do NOT duplicate or closely paraphrase these existing titles:
 ${input.existingTitles.slice(0, 40).map((t) => `- ${t}`).join('\n') || '- (none)'}
 
-Return ${count} topics with title, topicNotes (1–2 sentences of angle), category, keywords, and primaryProductHref.`,
+Return ${count} topics with title, topicNotes (1-2 sentences of angle), category, keywords, and primaryProductHref.`,
   })
 
   const object = result.output

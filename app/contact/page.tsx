@@ -3,7 +3,7 @@ import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact — Get Started with Restaurant Software',
+  title: 'Contact: Get Started with Restaurant Software',
   description:
     'Contact SindustryOS to get a restaurant or bar website CMS, private dining CRM, or digital signage demo. No long-term contracts.',
   alternates: { canonical: '/contact' },

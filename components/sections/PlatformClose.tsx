@@ -9,7 +9,7 @@ const capabilities = [
   },
   {
     title: 'Premium POS sync',
-    description: 'Direct Square, Toast, and modern POS connections — no file shuffle.',
+    description: 'Direct Square, Toast, and modern POS connections. No file shuffle.',
   },
   {
     title: 'Always current',
@@ -55,7 +55,7 @@ export default function PlatformClose() {
 
         <div className="max-w-3xl mx-auto text-center border-t border-dark-600/80 pt-10 md:pt-12">
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed font-light">
-            Menu Insights from $149/month — $99 in the bundle. Add the rest when you want it.
+            Menu Insights from $149/month, $99 in the bundle. Add the rest when you want it.
           </p>
           <p className="text-sm md:text-base text-primary-300/90 italic mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
             For the cost of one 4-top, optimize your shit. The rest is gravy.

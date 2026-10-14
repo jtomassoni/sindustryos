@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Back of House Management — Coming Soon',
+  title: 'Back of House Management: Coming Soon',
   description:
     'Streamline kitchen operations with inventory tracking, recipe management, and production planning. Coming soon to SindustryOS.',
   robots: { index: false, follow: false },

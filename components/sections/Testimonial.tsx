@@ -38,7 +38,7 @@ export default function Testimonial() {
                   href="/customers/monaghans-bar-and-grill"
                   className="text-gray-400 text-sm md:text-base hover:text-primary-400 transition-colors"
                 >
-                  Monaghan&apos;s Bar and Grill — read the story
+                  Monaghan&apos;s Bar and Grill. Read the story
                 </a>
               </div>
             </div>

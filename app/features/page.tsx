@@ -8,7 +8,7 @@ import FeatureHighlights from '@/components/sections/FeatureHighlights'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Features — Menus, Events, Signage & More',
+  title: 'Features: Menus, Events, Signage & More',
   description:
     'SindustryOS features for restaurants and bars: content management, menus, specials, events, private dining, digital signage, and upcoming ops tools.',
   alternates: { canonical: '/features' },

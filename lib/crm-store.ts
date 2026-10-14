@@ -11,7 +11,7 @@ export interface Submission {
   status: SubmissionStatus
 }
 
-// In-memory only — resets on deploy / cold start. Email via Resend is the durable copy.
+// In-memory only. Resets on deploy / cold start. Email via Resend is the durable copy.
 const submissions: Submission[] = []
 
 export function listSubmissions(): Submission[] {

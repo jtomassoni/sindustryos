@@ -3,7 +3,7 @@ import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy',
-  description: 'Privacy policy for SindustryOS — how we collect, use, and protect information.',
+  description: 'Privacy policy for SindustryOS: how we collect, use, and protect information.',
   path: '/privacy',
 })
 

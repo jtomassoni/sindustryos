@@ -13,9 +13,9 @@ import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant Digital Signage Software — $99/month',
+  title: 'Restaurant Digital Signage Software: $99/month',
   description:
-    'Digital signage for restaurants and bars: TV menu boards, specials rotator, events, and announcements synced from your CMS. Built for 10–30ft viewing. $99/month.',
+    'Digital signage for restaurants and bars: TV menu boards, specials rotator, events, and announcements synced from your CMS. Built for 10-30ft viewing. $99/month.',
   path: '/products/digital-signage',
 })
 
@@ -79,7 +79,7 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Digital Signage is $99 per month. For the cost of one 4-top, one extra special sold because someone saw it on the screen covers the month. Everything else — events, announcements, fewer “what’s on special?” questions — is upside.',
+      'Digital Signage is $99 per month. For the cost of one 4-top, one extra special sold because someone saw it on the screen covers the month. Everything else (events, announcements, fewer “what’s on special?” questions) is upside.',
   },
   {
     question: 'Can I customize the slides?',
@@ -248,7 +248,7 @@ export default function DigitalSignagePage() {
               <SubValueClaim
                 className="text-left max-w-xl mx-auto mb-10"
                 claim="For the cost of one 4-top, one special sold off the screen covers the bill."
-                detail="Everything else — fewer staff questions, always-current events — is free upside."
+                detail="Everything else (fewer staff questions, always-current events) is free upside."
               />
             </div>
             

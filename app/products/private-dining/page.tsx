@@ -13,7 +13,7 @@ import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Private Dining Inquiry CRM for Restaurants — $49/month',
+  title: 'Private Dining Inquiry CRM for Restaurants: $49/month',
   description:
     'Capture private dining and event space inquiries for neighborhood restaurants and bars. Built for venues near weddings, schools, and local gatherings. $49/month.',
   path: '/products/private-dining',
@@ -29,7 +29,7 @@ const features = [
   {
     title: 'CRM Functionality',
     description:
-      'Track every private dining and event-space inquiry in one dashboard — not a buried inbox thread.',
+      'Track every private dining and event-space inquiry in one dashboard, not a buried inbox thread.',
     icon: FiUsers,
   },
   {
@@ -51,7 +51,7 @@ const features = [
   {
     title: 'Built for Neighborhood Demand',
     description:
-      'When you sit near a wedding venue, a high school, or a cemetery, the leads are already there — the site has to catch them.',
+      'When you sit near a wedding venue, a high school, or a cemetery, the leads are already there. The site has to catch them.',
     icon: FiMapPin,
   },
 ]
@@ -60,32 +60,32 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Private Dining Inquiries is $49 per month. For the cost of one 4-top, you’re catching high-intent party requests that would otherwise die in voicemail — one solid booking covers the sub; the rest is upside.',
+      'Private Dining Inquiries is $49 per month. For the cost of one 4-top, you’re catching high-intent party requests that would otherwise die in voicemail. One solid booking covers the sub; the rest is upside.',
   },
   {
     question: 'Who is this actually for?',
     answer:
-      'Neighborhood restaurants and bars with a private room or buyout potential — especially places sitting next to built-in demand like wedding venues, schools, and gathering spots. Catch local, high-intent inquiries instead of hoping they call back.',
+      'Neighborhood restaurants and bars with a private room or buyout potential, especially places sitting next to built-in demand like wedding venues, schools, and gathering spots. Catch local, high-intent inquiries instead of hoping they call back.',
   },
   {
     question: 'Can I customize the inquiry form?',
     answer:
-      'Yes. Capture the details you need for your space — headcount, date, occasion, and anything else that helps you quote fast.',
+      'Yes. Capture the details you need for your space: headcount, date, occasion, and anything else that helps you quote fast.',
   },
   {
     question: 'How do I access the CRM?',
     answer:
-      'It lives in your SindustryOS admin dashboard with the rest of your site tools — same login, no extra stack.',
+      'It lives in your SindustryOS admin dashboard with the rest of your site tools. Same login, no extra stack.',
   },
   {
     question: 'What if I don’t get many inquiries?',
     answer:
-      'This is a niche, high-intent form — a few good requests a month is the job. If your location has nearby demand, the form’s job is to catch it cleanly before those leads vanish.',
+      'This is a niche, high-intent form. A few good requests a month is the job. If your location has nearby demand, the form’s job is to catch it cleanly before those leads vanish.',
   },
   {
     question: 'Can I use this for other types of events?',
     answer:
-      'Yes. Private dining, patio buyouts, rehearsal dinners, school celebrations, memorial gatherings — anything your space can host.',
+      'Yes. Private dining, patio buyouts, rehearsal dinners, school celebrations, memorial gatherings. Anything your space can host.',
   },
 ]
 
@@ -117,7 +117,7 @@ export default function PrivateDiningPage() {
                 Catch the private dining leads your neighborhood already sends
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Inquiry form + CRM for restaurants and bars with a room to fill — especially when
+                Inquiry form + CRM for restaurants and bars with a room to fill, especially when
                 weddings, schools, and local gatherings are already around the corner.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -136,8 +136,8 @@ export default function PrivateDiningPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <SubValueClaim
-                claim="Optimize your shit — catch the private dining asks before they vanish."
-                detail="A few high-intent requests a month for parties of 20–100 is the job. For $49/month, one solid booking covers the sub."
+                claim="Optimize your shit: catch the private dining asks before they vanish."
+                detail="A few high-intent requests a month for parties of 20-100 is the job. For $49/month, one solid booking covers the sub."
               />
               <p className="mt-4 text-sm text-gray-500">
                 <Link
@@ -155,7 +155,7 @@ export default function PrivateDiningPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 text-center">
-                Foolproof lead territory — if the site can take the inquiry
+                Foolproof lead territory if the site can take the inquiry
               </h2>
               <p className="text-xl text-gray-400 mb-12 text-center max-w-2xl mx-auto">
                 Sit near a wedding venue, a high school, or a cemetery and you’ve got built-in
@@ -168,13 +168,13 @@ export default function PrivateDiningPage() {
                   <h3 className="text-lg font-semibold text-white mb-2">Wedding overflow</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
                     Nearby venues send rehearsal dinners, after-parties, and weekend buyouts looking
-                    for a room that can host 20–100.
+                    for a room that can host 20-100.
                   </p>
                 </div>
                 <div className="border-l-2 border-primary-500 pl-5">
                   <h3 className="text-lg font-semibold text-white mb-2">School & team events</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    High schools and sports calendars create recurring celebrations — parents and
+                    High schools and sports calendars create recurring celebrations. Parents and
                     coaches need a place that answers fast.
                   </p>
                 </div>
@@ -216,7 +216,7 @@ export default function PrivateDiningPage() {
                     Neighborhood bars with a room
                   </h3>
                   <p className="text-gray-400">
-                    A busy floor plus private dining demand from what’s already nearby — not from
+                    A busy floor plus private dining demand from what’s already nearby, not from
                     national ad spend.
                   </p>
                 </div>
@@ -242,7 +242,7 @@ export default function PrivateDiningPage() {
                     Memorials & private gatherings
                   </h3>
                   <p className="text-gray-400">
-                    Quiet, high-intent groups that deserve a form that works the first time — not a
+                    Quiet, high-intent groups that deserve a form that works the first time, not a
                     phone tree.
                   </p>
                 </div>
@@ -264,7 +264,7 @@ export default function PrivateDiningPage() {
                 </p>
                 <SubValueClaim
                   className="text-left max-w-xl mx-auto mb-10"
-                  claim="Optimize your shit — capture the ask, track the follow-up, fill the room."
+                  claim="Optimize your shit: capture the ask, track the follow-up, fill the room."
                   detail="Same dashboard as your site. No extra stack."
                 />
               </div>
@@ -308,7 +308,7 @@ export default function PrivateDiningPage() {
                 The room fills when the inquiry gets caught
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Neighborhood bars already get the asks — wedding overflow, school nights, gatherings
+                Neighborhood bars already get the asks: wedding overflow, school nights, gatherings
                 after services. The form and CRM make sure those requests land somewhere you can
                 act on.
               </p>

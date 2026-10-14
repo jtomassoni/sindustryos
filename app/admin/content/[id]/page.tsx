@@ -147,7 +147,7 @@ export default function EditPostPage() {
           body: s.body.join('\n\n'),
         }))
       )
-      setMessage('AI content generated — review and save if you tweak further')
+      setMessage('AI content generated. Review and save if you tweak further')
     } catch {
       setError('Generation failed')
     } finally {

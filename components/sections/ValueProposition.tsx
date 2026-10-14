@@ -1,7 +1,7 @@
 const pillars = [
   {
     title: 'Website',
-    description: 'Your site, menus, and specials — managed in the same place you already work.',
+    description: 'Your site, menus, and specials, managed in the same place you already work.',
   },
   {
     title: 'Digital signage',
@@ -25,14 +25,14 @@ export default function ValueProposition() {
             Already in your dashboard
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-white mb-4 leading-tight text-balance">
-            The rest is nice to have — in the same place.
+            The rest is nice to have, in the same place.
           </h2>
           <p className="text-base md:text-lg text-dark-300 leading-relaxed font-light max-w-2xl">
             Website, digital signage, and external inquiries combine into one easy dashboard you are
             already going to be in for menu insights. No extra stack to learn.
           </p>
           <p className="mt-4 text-sm md:text-base text-primary-300/90 italic max-w-2xl leading-relaxed">
-            For the cost of one 4-top, optimize your shit — SEO, private dining catch, or a margin
+            For the cost of one 4-top, optimize your shit: SEO, private dining catch, or a margin
             fix. Pick your favorite story.
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function ValueProposition() {
           </h3>
           <p className="text-base md:text-lg text-dark-300 leading-relaxed font-light max-w-2xl">
             No downloading or uploading data between systems. Premium models stay connected to your
-            POS so insights just know — and keep showing up as the business runs.
+            POS so insights just know, and keep showing up as the business runs.
           </p>
         </div>
       </div>

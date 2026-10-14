@@ -7,7 +7,7 @@ import PricingDisplay from '@/components/products/PricingDisplay'
 import SubValueClaim from '@/components/sections/SubValueClaim'
 
 export const metadata: Metadata = {
-  title: 'Menu Insights — Spot Leakage, Bad Margins & Hidden Opportunities',
+  title: 'Menu Insights: Spot Leakage, Bad Margins & Hidden Opportunities',
   description:
     'SindustryOS flagship Menu Insights: turn one month of sales data into actionable guidance on leakage, margins, and menu opportunities. $149/month, or $99 in the bundle.',
   alternates: { canonical: '/products/ingredient-optimization' },
@@ -35,7 +35,7 @@ const features = [
   {
     title: 'Actionable recommendations',
     description:
-      'One month of sales data in — clear next steps out, in the dashboard you already use.',
+      'One month of sales data in, clear next steps out, in the dashboard you already use.',
     icon: FiZap,
   },
 ]
@@ -59,7 +59,7 @@ export default function IngredientOptimizationPage() {
               Menu Insights
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
-              Spot leakage, bad margins, and hidden opportunities — from one month of sales data.
+              Spot leakage, bad margins, and hidden opportunities from one month of sales data.
             </p>
             <p className="text-lg text-gray-400 mb-8">
               $149/month · $99/month in the Complete Bundle
@@ -81,7 +81,7 @@ export default function IngredientOptimizationPage() {
           <div className="max-w-3xl mx-auto">
             <SubValueClaim
               claim="Fix one bad-margin item and you can cover months of the subscription."
-              detail="For the cost of one 4-top, we surface leakage and opportunities your gut already suspected — with numbers attached."
+              detail="For the cost of one 4-top, we surface leakage and opportunities your gut already suspected, with numbers attached."
             />
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function IngredientOptimizationPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What you get</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Clear, actionable insights — not another report you ignore.
+              Clear, actionable insights. Not another report you ignore.
             </p>
           </div>
 

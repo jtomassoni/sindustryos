@@ -28,7 +28,7 @@ export async function proxy(request: NextRequest) {
           return NextResponse.redirect(new URL('/admin', request.url))
         }
       } catch {
-        // Invalid session — stay on login
+        // Invalid session: stay on login
       }
     }
     return NextResponse.next()

@@ -15,7 +15,7 @@ export const resources: ResourceArticle[] = [
     slug: 'restaurant-website-builder-vs-agency',
     title: 'Restaurant Website Builder vs Agency: What Independents Should Choose',
     description:
-      'Compare DIY website builders, agencies, and hospitality CMS tools for restaurants and bars — cost, speed, and who updates the menu.',
+      'Compare DIY website builders, agencies, and hospitality CMS tools for restaurants and bars, cost, speed, and who updates the menu.',
     datePublished: '2026-10-13',
     dateModified: '2026-10-13',
     category: 'Websites',
@@ -25,7 +25,7 @@ export const resources: ResourceArticle[] = [
       {
         heading: 'The real problem is not the homepage',
         body: [
-          'Most restaurants already have a site. The problem is keeping menus, specials, events, and hours accurate when the people who know the truth are behind the bar — not in a Slack channel with a web vendor.',
+          'Most restaurants already have a site. The problem is keeping menus, specials, events, and hours accurate when the people who know the truth are behind the bar, not in a Slack channel with a web vendor.',
           'Agencies are great at launch-day design. They are expensive at Tuesday 4pm when you 86 a special and your homepage still says “$5 wells all night.”',
         ],
       },
@@ -33,8 +33,8 @@ export const resources: ResourceArticle[] = [
         heading: 'Builder vs agency vs hospitality CMS',
         body: [
           'Generic builders (Squarespace, Wix) get you online fast, but menus and events are usually static pages or embeds that drift out of sync with the floor.',
-          'Agencies deliver polish and strategy, then bill for every content change — or train a manager who never has time to use the CMS.',
-          'A hospitality CMS like SindustryOS is built around menu sections, specials windows, and event calendars — the objects restaurants actually change weekly.',
+          'Agencies deliver polish and strategy, then bill for every content change, or train a manager who never has time to use the CMS.',
+          'A hospitality CMS like SindustryOS is built around menu sections, specials windows, and event calendars: the objects restaurants actually change weekly.',
         ],
       },
       {
@@ -58,7 +58,7 @@ export const resources: ResourceArticle[] = [
     slug: 'how-to-update-restaurant-specials-without-chaos',
     title: 'How to Update Restaurant Specials Without Chaos',
     description:
-      'A simple system for food and drink specials that stay accurate on your website, TVs, and staff answers — without texting screenshots.',
+      'A simple system for food and drink specials that stay accurate on your website, TVs, and staff answers without texting screenshots.',
     datePublished: '2026-10-13',
     dateModified: '2026-10-13',
     category: 'Operations',
@@ -69,13 +69,13 @@ export const resources: ResourceArticle[] = [
         heading: 'Why specials break first',
         body: [
           'Specials change by weekday, daypart, and exceptions (holidays, sell-outs). Spreadsheets and Instagram posts cannot keep every surface honest.',
-          'Guests trust the TV over the server. If those disagree, you look disorganized — even when the kitchen is fine.',
+          'Guests trust the TV over the server. If those disagree, you look disorganized, even when the kitchen is fine.',
         ],
       },
       {
         heading: 'One source of truth',
         body: [
-          'Define specials as structured records: name, price, days, time windows, and exceptions — not as freeform blog posts.',
+          'Define specials as structured records: name, price, days, time windows, and exceptions, not as freeform blog posts.',
           'Publish once. Let the website and digital signage read the same schedule.',
         ],
       },
@@ -84,7 +84,7 @@ export const resources: ResourceArticle[] = [
         body: [
           'Sunday or Monday: lock the week’s food and drink specials in the CMS.',
           'Midweek: adjust only exceptions (86s, weather, private buyouts).',
-          'Friday: glance at guest-facing surfaces before the rush — website, TVs, Google Business hours if needed.',
+          'Friday: glance at guest-facing surfaces before the rush, website, TVs, Google Business hours if needed.',
         ],
       },
     ],
@@ -104,7 +104,7 @@ export const resources: ResourceArticle[] = [
         heading: 'Design for ten to thirty feet',
         body: [
           'Bar TVs are not PowerPoint decks. High-contrast type, fewer words, and large prices beat busy photo slides.',
-          'If a guest cannot read the special from a barstool, the board is decoration — not operations.',
+          'If a guest cannot read the special from a barstool, the board is decoration, not operations.',
         ],
       },
       {
@@ -152,7 +152,7 @@ export const resources: ResourceArticle[] = [
         heading: 'Response speed wins the booking',
         body: [
           'Corporate planners and birthday hosts book the first venue that answers clearly.',
-          'Automate confirmation of receipt, then work the deal personally — software should remove admin, not replace hospitality.',
+          'Automate confirmation of receipt, then work the deal personally. Software should remove admin, not replace hospitality.',
         ],
       },
     ],
@@ -161,7 +161,7 @@ export const resources: ResourceArticle[] = [
     slug: 'stop-juggling-restaurant-vendors',
     title: 'Stop Juggling Restaurant Vendors: A Consolidation Checklist',
     description:
-      'Audit the tools your restaurant or bar pays for — website, social, signage, scheduling, delivery — and decide what belongs in one platform.',
+      'Audit the tools your restaurant or bar pays for, website, social, signage, scheduling, delivery, and decide what belongs in one platform.',
     datePublished: '2026-10-13',
     dateModified: '2026-10-13',
     category: 'Strategy',
@@ -186,7 +186,7 @@ export const resources: ResourceArticle[] = [
         heading: 'Score tools on owner time, not feature count',
         body: [
           'The best stack is the one a manager will actually update on a busy week.',
-          'SindustryOS starts with CMS, private dining, and signage — the surfaces guests see — then expands into deeper ops.',
+          'SindustryOS starts with CMS, private dining, and signage (the surfaces guests see), then expands into deeper ops.',
         ],
       },
     ],
@@ -205,7 +205,7 @@ export const resources: ResourceArticle[] = [
       {
         heading: 'Recurring vs one-off events',
         body: [
-          'Trivia every Tuesday should be a recurring rule with exceptions — not 52 manual posts.',
+          'Trivia every Tuesday should be a recurring rule with exceptions, not 52 manual posts.',
           'One-off concerts need date, start time, cover, and a clear “sold out” state.',
         ],
       },

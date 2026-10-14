@@ -21,13 +21,13 @@ export async function POST(request: NextRequest) {
 
     if (months < 1 || months > 12) {
       return NextResponse.json(
-        { error: 'months must be 1–12' },
+        { error: 'months must be 1-12' },
         { status: 400 }
       )
     }
     if (postsPerMonth < 1 || postsPerMonth > 8) {
       return NextResponse.json(
-        { error: 'postsPerMonth must be 1–8' },
+        { error: 'postsPerMonth must be 1-8' },
         { status: 400 }
       )
     }

@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Online Ordering — Coming Soon',
+  title: 'Online Ordering: Coming Soon',
   description:
     'Accept online orders directly through your website. Reduce third-party fees and keep more revenue. Coming soon to SindustryOS.',
   robots: { index: false, follow: false },

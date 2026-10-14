@@ -1,7 +1,7 @@
 const claims = [
   {
     product: 'Private Dining',
-    claim: 'Catch a few high-intent private dining requests a month — parties of 20–100.',
+    claim: 'Catch a few high-intent private dining requests a month: parties of 20-100.',
   },
   {
     product: 'Full Web CMS',

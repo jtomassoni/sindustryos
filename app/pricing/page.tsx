@@ -8,7 +8,7 @@ import { getFaqSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant Software Pricing — Menu Insights from $99/month',
+  title: 'Restaurant Software Pricing: Menu Insights from $99/month',
   description:
     'SindustryOS pricing: Menu Insights $149/month ($99 in the bundle), Full Web CMS $99, Private Dining $49, Digital Signage $99, Complete Bundle $199. No long-term contracts.',
   path: '/pricing',
@@ -117,12 +117,12 @@ const faqItems = [
   {
     question: 'Can I start with just the CMS and add features later?',
     answer:
-      'Absolutely! Start with the Full Web CMS at $99/month and add Private Dining, Digital Signage, or Menu Insights when you need them — or grab the Complete Bundle at $199/month and add Menu Insights for $99.',
+      'Absolutely! Start with the Full Web CMS at $99/month and add Private Dining, Digital Signage, or Menu Insights when you need them, or grab the Complete Bundle at $199/month and add Menu Insights for $99.',
   },
   {
     question: 'What\'s included in the Complete Bundle?',
     answer:
-      'The Complete Bundle includes Full Web CMS, Private Dining Inquiries, and Digital Signage for $199/month — $48 less than buying all three separately ($247). Menu Insights is $99/month when added to the bundle (vs $149 alone).',
+      'The Complete Bundle includes Full Web CMS, Private Dining Inquiries, and Digital Signage for $199/month ($48 less than buying all three separately at $247). Menu Insights is $99/month when added to the bundle (vs $149 alone).',
   },
   {
     question: 'What happens if I need to cancel?',
@@ -244,7 +244,7 @@ export default function PricingPage() {
                   </p>
                   <p className="text-gray-300 mb-3 leading-relaxed">{bundle.description}</p>
                   <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
-                    For less than one mid-week private party, you get the whole stack — site, SEO,
+                    For less than one mid-week private party, you get the whole stack: site, SEO,
                     inquiries, and signage.
                   </p>
                   <Button href={bundle.href} variant="outline" size="lg" className="w-full sm:w-auto">
@@ -310,7 +310,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <SubValueClaim
-              claim="Optimize your shit — private dining catch, SEO walk-ins, or one margin fix."
+              claim="Optimize your shit: private dining catch, SEO walk-ins, or one margin fix."
               detail="For the cost of one 4-top, the math is supposed to feel obvious."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">

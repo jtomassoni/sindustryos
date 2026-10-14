@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Cool charcoal + teal/forest — clean hospitality ops, not whiskey wood
+        // Cool charcoal + teal/forest. Clean hospitality ops, not whiskey wood
         primary: {
           50: '#f0fdfa',
           100: '#ccfbf1',

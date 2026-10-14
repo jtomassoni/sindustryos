@@ -12,7 +12,7 @@ import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant & Bar Website CMS — $99/month',
+  title: 'Restaurant & Bar Website CMS: $99/month',
   description:
     'Restaurant website builder and CMS for bars and independents. Menu management, event calendar, specials, gallery, hosting, and SEO included. $99/month, cancel anytime.',
   path: '/products/cms',
@@ -215,7 +215,7 @@ export default function CMSPage() {
               <SubValueClaim
                 className="text-left max-w-xl mx-auto mb-10"
                 claim="For the cost of an agency retainer's coffee budget, you get a site that actually ranks."
-                detail="Hosting, SEO, menus, events, specials — the whole stack for less than one slow Tuesday's waste."
+                detail="Hosting, SEO, menus, events, specials. The whole stack for less than one slow Tuesday's waste."
               />
             </div>
             

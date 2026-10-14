@@ -5,7 +5,7 @@ import { pageMetadata } from '@/lib/seo-metadata'
 export const metadata: Metadata = pageMetadata({
   title: 'Support',
   description:
-    'Get help with SindustryOS — contact support, browse resources, or request onboarding help for your restaurant or bar.',
+    'Get help with SindustryOS. Contact support, browse resources, or request onboarding help for your restaurant or bar.',
   path: '/support',
 })
 

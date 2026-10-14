@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Staff Scheduling — Coming Soon',
+  title: 'Staff Scheduling: Coming Soon',
   description:
     'Simplify staff scheduling with automated shift management, availability tracking, and communication tools. Coming soon to SindustryOS.',
   robots: { index: false, follow: false },

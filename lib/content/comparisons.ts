@@ -17,7 +17,7 @@ export const comparisons: ComparisonPage[] = [
       'See how a hospitality CMS compares to Squarespace for menus, specials, events, private dining, and digital signage.',
     competitor: 'Squarespace',
     summary:
-      'Squarespace is a strong general website builder. SindustryOS is built for restaurants and bars that change menus, specials, and events every week — and may also need private dining CRM and TV signage.',
+      'Squarespace is a strong general website builder. SindustryOS is built for restaurants and bars that change menus, specials, and events every week, and may also need private dining CRM and TV signage.',
     rows: [
       { feature: 'Menu & specials as structured ops data', us: 'Yes', them: 'Mostly page/blocks' },
       { feature: 'Event calendar for bars', us: 'Built-in', them: 'DIY or plugin-like pages' },
@@ -28,7 +28,7 @@ export const comparisons: ComparisonPage[] = [
     ],
     verdict: [
       'Choose Squarespace if you want maximum design freedom and rarely update ops content.',
-      'Choose SindustryOS if specials, events, and guest-facing accuracy are weekly work — not a redesign project.',
+      'Choose SindustryOS if specials, events, and guest-facing accuracy are weekly work, not a redesign project.',
     ],
     ctaHref: '/products/cms',
   },
@@ -39,7 +39,7 @@ export const comparisons: ComparisonPage[] = [
       'Compare retaining a web agency versus running your restaurant or bar site on SindustryOS.',
     competitor: 'Traditional agency',
     summary:
-      'Agencies excel at brand launches and custom design. Day-two operations — specials, events, private dining leads — are where retainers get expensive and queues get long.',
+      'Agencies excel at brand launches and custom design. Day-two operations (specials, events, private dining leads) are where retainers get expensive and queues get long.',
     rows: [
       { feature: 'Launch design quality', us: 'Strong, hospitality-focused', them: 'Often excellent' },
       { feature: 'Same-day specials update', us: 'Owner self-serve', them: 'Ticket / change request' },
@@ -61,7 +61,7 @@ export const comparisons: ComparisonPage[] = [
       'How SindustryOS compares when your POS is Toast (or similar) but you still need a marketing site, events, and private dining.',
     competitor: 'Toast website tools',
     summary:
-      'POS platforms optimize ordering and payments. Marketing websites, event calendars, private dining CRM, and bar signage are different jobs — often better as a focused hospitality layer.',
+      'POS platforms optimize ordering and payments. Marketing websites, event calendars, private dining CRM, and bar signage are different jobs, often better as a focused hospitality layer.',
     rows: [
       { feature: 'POS / payments', us: 'Integrates / imports', them: 'Core strength' },
       { feature: 'Marketing site + SEO control', us: 'Primary focus', them: 'Secondary to POS' },
@@ -72,7 +72,7 @@ export const comparisons: ComparisonPage[] = [
     ],
     verdict: [
       'Keep your POS for tickets and payments.',
-      'Use SindustryOS for the guest-facing website, events, private dining leads, and TVs — then connect data where it helps.',
+      'Use SindustryOS for the guest-facing website, events, private dining leads, and TVs, then connect data where it helps.',
     ],
     ctaHref: '/products',
   },

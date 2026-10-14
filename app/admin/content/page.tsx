@@ -175,7 +175,7 @@ export default function AdminContentPage() {
                 checked={writeContent}
                 onChange={(e) => setWriteContent(e.target.checked)}
               />
-              Write full articles now (slow; leave off — daily cron fills stubs before publish)
+              Write full articles now (slow; leave off, and daily cron fills stubs before publish)
             </label>
             <label className="flex items-center gap-2">
               <input

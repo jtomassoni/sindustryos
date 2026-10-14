@@ -42,7 +42,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-warm-200 text-sm leading-relaxed">
-              Restaurant and bar website CMS, private dining CRM, and digital signage — one platform
+              Restaurant and bar website CMS, private dining CRM, and digital signage. One platform
               for independents.
             </p>
           </div>

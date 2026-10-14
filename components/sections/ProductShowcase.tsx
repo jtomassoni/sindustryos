@@ -104,7 +104,7 @@ export default function ProductShowcase() {
                 <ul className="space-y-2 mb-6 flex-grow">
                   {product.features.map((feature, index) => (
                     <li key={index} className="flex items-start text-gray-400 text-sm">
-                      <span className="text-primary-500 mr-2 mt-0.5 flex-shrink-0">—</span>
+                      <span className="text-primary-500 mr-2 mt-0.5 flex-shrink-0">·</span>
                       <span>{feature}</span>
                     </li>
                   ))}

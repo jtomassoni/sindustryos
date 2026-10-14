@@ -4,7 +4,7 @@ import { FiGlobe, FiUsers, FiMonitor, FiArrowRight, FiShoppingCart, FiPackage, F
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Products — Menu Insights, CMS, Signage & Private Dining',
+  title: 'Products: Menu Insights, CMS, Signage & Private Dining',
   description:
     'SindustryOS products: Menu Insights ($149, or $99 in the bundle), Full Web CMS ($99), Private Dining ($49), Digital Signage ($99), plus upcoming ops tools.',
   alternates: { canonical: '/products' },

@@ -3,9 +3,9 @@ import { FiCode, FiCoffee, FiTarget, FiUsers } from 'react-icons/fi'
 import TargetAudience from '@/components/sections/TargetAudience'
 
 export const metadata: Metadata = {
-  title: 'About — Hospitality Software for Independents',
+  title: 'About: Hospitality Software for Independents',
   description:
-    'SindustryOS builds front-to-back restaurant and bar software for small teams — website CMS, private dining, and signage from people who know hospitality.',
+    'SindustryOS builds front-to-back restaurant and bar software for small teams: website CMS, private dining, and signage from people who know hospitality.',
   alternates: { canonical: '/about' },
 }
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 
                 <p>
                   For over a decade, I've worked in software and quality engineering, helping 
-                  companies build systems that actually work in the real world—under pressure, 
+                  companies build systems that actually work in the real world under pressure, 
                   with real users, and zero tolerance for downtime. Along the way, I spent a lot 
                   of time around bars and restaurants, helping friends and owners solve problems 
                   that weren't tech problems on the surface… but always became tech problems eventually.
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 </p>
                 
                 <p>
-                  I design and manage websites specifically for bars and restaurants—simple, fast, 
+                  I design and manage websites specifically for bars and restaurants: simple, fast, 
                   and built to support day-to-day operations. Not bloated platforms. Not "set it and 
                   forget it" templates. Real tools that help you communicate with customers, promote 
                   specials, and stay current without needing a marketing degree or a full-time staff member.
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 </div>
                 
                 <p>
-                  I work closely with owners to understand how their place actually runs—what changes 
+                  I work closely with owners to understand how their place actually runs: what changes 
                   daily, what matters on a Friday night, and what doesn't need to be overthought. 
                   From there, I build clean, reliable websites that grow with the business and don't 
                   get in the way.

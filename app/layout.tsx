@@ -25,7 +25,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Restaurant & Bar Website CMS, Signage & Private Dining`,
+    default: `${SITE_NAME}: Restaurant & Bar Website CMS, Signage & Private Dining`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: `${SITE_NAME} — Restaurant & Bar Management Platform`,
+    title: `${SITE_NAME}: Restaurant & Bar Management Platform`,
     description:
       'Website CMS, private dining CRM, and digital signage for independent restaurants and bars. Replace multiple vendors.',
     url: SITE_URL,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — Restaurant & Bar Management Platform`,
+    title: `${SITE_NAME}: Restaurant & Bar Management Platform`,
     description:
       'Website CMS, private dining CRM, and digital signage for independent restaurants and bars.',
   },

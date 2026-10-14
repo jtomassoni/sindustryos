@@ -101,7 +101,7 @@ CRON_SECRET=replace-with-a-long-random-string
 ## SEO blog / resources CMS
 
 - Public posts live at `/resources` (and `/blog` redirects there)
-- Admin: `/admin/content` — create, edit, schedule, AI-write, and generate up to a 12-month calendar
+- Admin: `/admin/content`. Create, edit, schedule, AI-write, and generate up to a 12-month calendar
 - Daily cron `/api/cron/publish-content` fills empty stubs and publishes due scheduled posts
 - DB helpers: `npm run db:push` then `npm run db:seed`
 

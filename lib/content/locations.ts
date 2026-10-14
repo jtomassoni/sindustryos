@@ -16,10 +16,10 @@ export const locations: LocationPage[] = [
     region: 'CO',
     title: 'Restaurant & Bar Website Software in Denver, CO',
     description:
-      'SindustryOS helps Denver restaurants and bars run websites, specials, events, private dining inquiries, and digital signage — without juggling vendors.',
+      'SindustryOS helps Denver restaurants and bars run websites, specials, events, private dining inquiries, and digital signage without juggling vendors.',
     intro: [
       'Denver independents compete on atmosphere and regularity: weekly specials, live music, sports nights, and private buyouts. Your website and TVs have to keep up.',
-      'SindustryOS is built for that pace — and already powers hospitality operators in the Denver market.',
+      'SindustryOS is built for that pace, and already powers hospitality operators in the Denver market.',
     ],
     localAngles: [
       'Neighborhood bars that need accurate happy hour and event calendars',
@@ -47,7 +47,7 @@ export const locations: LocationPage[] = [
     description:
       'SindustryOS helps Baltimore restaurants and bars consolidate website CMS, private dining leads, and digital signage into one platform.',
     intro: [
-      'Baltimore’s independent restaurants and bars win on personality — crab specials, trivia, live music, and private events. Guests notice when the site and TVs disagree.',
+      'Baltimore’s independent restaurants and bars win on personality: crab specials, trivia, live music, and private events. Guests notice when the site and TVs disagree.',
       'SindustryOS gives owners a single place to publish menus, specials, events, and signage without paying an agency for every edit.',
     ],
     localAngles: [
