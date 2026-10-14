@@ -5,21 +5,11 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Staff Scheduling - Coming Soon | SindustryOS',
-  description: 'Simplify staff scheduling with automated shift management, availability tracking, and communication tools. Coming soon to SindustryOS.',
-  keywords: [
-    'staff scheduling',
-    'employee scheduling',
-    'shift management',
-    'restaurant scheduling',
-    'workforce management',
-  ],
-  openGraph: {
-    title: 'Staff Scheduling - Coming Soon | SindustryOS',
-    description: 'Simplify staff scheduling with automated shift management, availability tracking, and communication tools.',
-    url: 'https://sindustryos.com/products/staff-scheduling',
-    type: 'website',
-  },
+  title: 'Staff Scheduling — Coming Soon',
+  description:
+    'Simplify staff scheduling with automated shift management, availability tracking, and communication tools. Coming soon to SindustryOS.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: '/products/staff-scheduling' },
 }
 
 const features = [

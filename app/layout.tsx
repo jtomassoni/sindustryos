@@ -1,51 +1,60 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
-import Script from 'next/script'
+import { DM_Sans, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { getOrganizationSchema } from '@/lib/structured-data'
+import JsonLd from '@/components/seo/JsonLd'
+import { getOrganizationSchema, getSoftwareApplicationSchema } from '@/lib/structured-data'
+import { SITE_NAME, SITE_URL } from '@/lib/site'
 
-const inter = Inter({ 
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-dm-sans',
   display: 'swap',
   preload: true,
 })
 
-const playfair = Playfair_Display({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-space-grotesk',
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   preload: true,
 })
 
 export const metadata: Metadata = {
-  title: 'SindustryOS - All-in-One Restaurant & Bar Management Platform',
-  description: 'One platform replaces multiple vendors. SindustryOS handles your website, social media, delivery apps, menu optimization, staff scheduling, and more. Built for small businesses.',
-  keywords: ['restaurant management software', 'bar management system', 'dive bar website', 'all-in-one restaurant solution', 'restaurant CMS', 'menu management', 'event calendar software'],
-  authors: [{ name: 'SindustryOS' }],
-  creator: 'SindustryOS',
-  publisher: 'SindustryOS',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — Restaurant & Bar Website CMS, Signage & Private Dining`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description:
+    'One platform for independent restaurants and bars: website CMS, menu & specials, event calendar, private dining CRM, and digital signage. From $99/month.',
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.sindustryos.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'SindustryOS - All-in-One Restaurant & Bar Management Platform',
-    description: 'One platform replaces multiple vendors. SindustryOS handles your website, social media, delivery apps, menu optimization, staff scheduling, and more.',
-    url: 'https://www.sindustryos.com',
-    siteName: 'SindustryOS',
+    title: `${SITE_NAME} — Restaurant & Bar Management Platform`,
+    description:
+      'Website CMS, private dining CRM, and digital signage for independent restaurants and bars. Replace multiple vendors.',
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SindustryOS - All-in-One Restaurant & Bar Management Platform',
-    description: 'One platform replaces multiple vendors. SindustryOS handles your website, social media, delivery apps, menu optimization, staff scheduling, and more.',
+    title: `${SITE_NAME} — Restaurant & Bar Management Platform`,
+    description:
+      'Website CMS, private dining CRM, and digital signage for independent restaurants and bars.',
   },
   robots: {
     index: true,
@@ -66,15 +75,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const organizationSchema = getOrganizationSchema()
-  
+  const softwareSchema = getSoftwareApplicationSchema()
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <JsonLd id="organization-schema" data={organizationSchema} />
+        <JsonLd id="software-schema" data={softwareSchema} />
+        {gaId ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+            <script
+              id="ga4"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`,
+              }}
+            />
+          </>
+        ) : null}
+      </head>
       <body>
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
         <Header />
         {children}
         <Footer />
@@ -82,4 +103,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -4,12 +4,14 @@ import {
   FiBarChart2, FiShare2, FiSettings, FiShoppingCart, FiDatabase 
 } from 'react-icons/fi'
 import FeatureList from '@/components/products/FeatureList'
+import FeatureHighlights from '@/components/sections/FeatureHighlights'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Features - SindustryOS',
-  description: 'Comprehensive feature list for SindustryOS: Content Management, Staff & Scheduling, Menu & Operations, Analytics & Reporting, Social Media Integration, and more.',
-  keywords: ['restaurant management features', 'bar management features', 'restaurant software features'],
+  title: 'Features — Menus, Events, Signage & More',
+  description:
+    'SindustryOS features for restaurants and bars: content management, menus, specials, events, private dining, digital signage, and upcoming ops tools.',
+  alternates: { canonical: '/features' },
 }
 
 const featureCategories = [
@@ -161,6 +163,8 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+
+      <FeatureHighlights />
 
       {/* Feature Categories */}
       <section className="py-20 bg-dark-900">

@@ -90,17 +90,32 @@ ADMIN_USERS=admin:change-me
 
 # JWT session signing secret (any long random string)
 SESSION_SECRET=replace-with-a-long-random-string
+
+# Neon Postgres (auto-provisioned via Vercel Marketplace)
+DATABASE_URL=postgres://...
+
+# Protects /api/cron/publish-content (Vercel Cron sends Authorization: Bearer …)
+CRON_SECRET=replace-with-a-long-random-string
 ```
+
+## SEO blog / resources CMS
+
+- Public posts live at `/resources` (and `/blog` redirects there)
+- Admin: `/admin/content` — create, edit, schedule, AI-write, and generate up to a 12-month calendar
+- Daily cron `/api/cron/publish-content` fills empty stubs and publishes due scheduled posts
+- DB helpers: `npm run db:push` then `npm run db:seed`
 
 ## API Routes
 
 - `/api/contact` - POST endpoint for contact form submissions
 - `/api/crm/submissions` - GET/POST endpoints for CRM (requires admin session)
 - `/api/admin/login` / `/api/admin/logout` - admin session auth
+- `/api/admin/posts` - content CMS CRUD (admin session)
+- `/api/cron/publish-content` - scheduled publish + AI fill (CRON_SECRET)
 
 ## Admin Dashboard
 
-Sign in at `/admin/login` with credentials from `ADMIN_USERS`. Submissions are also emailed to `CONTACT_EMAIL` via Resend; the `/admin` list is in-memory and resets on deploy.
+Sign in at `/admin/login` with credentials from `ADMIN_USERS`. Contacts stay under `/admin`; SEO content is under `/admin/content`. Contact submissions are also emailed to `CONTACT_EMAIL` via Resend; the contacts list is still in-memory.
 
 ## Deployment
 

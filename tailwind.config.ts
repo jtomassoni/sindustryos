@@ -9,73 +9,72 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Editorial, warm, hospitality-focused palette
-        // Think aged whiskey, worn leather, warm wood, patina
+        // Cool charcoal + teal/forest — clean hospitality ops, not whiskey wood
         primary: {
-          50: '#faf8f5',
-          100: '#f5f0e8',
-          200: '#e8ddd0',
-          300: '#d4c4b0',
-          400: '#b8a085',
-          500: '#9d8266', // Aged wood / whiskey
-          600: '#7d6852',
-          700: '#5f4f40',
-          800: '#453a30',
-          900: '#2e2620',
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          200: '#99f6e4',
+          300: '#5eead4',
+          400: '#2dd4bf',
+          500: '#0d9488', // Teal brand
+          600: '#0f766e',
+          700: '#115e59',
+          800: '#134e4a',
+          900: '#042f2e',
         },
         secondary: {
-          50: '#f7f5f3',
-          100: '#ebe7e2',
-          200: '#d4ccc2',
-          300: '#b8aa9c',
-          400: '#9d8874',
-          500: '#7d6b5a', // Warm taupe
-          600: '#655548',
-          700: '#4f4339',
-          800: '#3d342c',
-          900: '#2a231e',
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b', // Cool slate
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
         },
         accent: {
-          50: '#fef7ed',
-          100: '#fdebd5',
-          200: '#fad4aa',
-          300: '#f6b874',
-          400: '#f0953d', // Warm amber (softer than before)
-          500: '#d97717',
-          600: '#b85f14',
-          700: '#964a16',
-          800: '#7a3c15',
-          900: '#653212',
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399', // Brighter teal-green for hover/emphasis
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
         },
         warm: {
-          50: '#fefaf6',
-          100: '#fdf4eb',
-          200: '#fae6d1',
-          300: '#f5d0b0',
-          400: '#edb584',
-          500: '#e0955a', // Warm terracotta
-          600: '#c77a42',
-          700: '#a35f36',
-          800: '#844d2e',
-          900: '#6c4026',
+          // Name kept for churn control; values are cool soft neutrals
+          50: '#f8fafb',
+          100: '#f1f5f7',
+          200: '#e2e8ed',
+          300: '#c8d2db',
+          400: '#9aabba',
+          500: '#718496',
+          600: '#586a7c',
+          700: '#455564',
+          800: '#384554',
+          900: '#2f3a47',
         },
         dark: {
-          50: '#faf9f7',
-          100: '#f3f1ed',
-          200: '#e6e1d9',
-          300: '#d4ccc0',
-          400: '#b8ada0',
-          500: '#9d8f80',
-          600: '#7d7164',
-          700: '#5f554b',
-          800: '#453d36',
-          900: '#2e2824', // Warm dark (not pure black)
+          50: '#f4f7f8',
+          100: '#e8eef1',
+          200: '#d0dbe2',
+          300: '#a8b8c4',
+          400: '#7a8f9e',
+          500: '#5a6f7e',
+          600: '#455660',
+          700: '#2a3540',
+          800: '#1c2430',
+          900: '#0f1419', // Cool charcoal
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        display: ['var(--font-playfair)', 'Georgia', 'serif'], // For headings
+        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',
@@ -86,12 +85,10 @@ const config: Config = {
         '2xl': '1.5rem',
       },
       boxShadow: {
-        'warm': '0 4px 6px -1px rgba(245, 107, 26, 0.1), 0 2px 4px -1px rgba(245, 107, 26, 0.06)',
+        'warm': '0 4px 6px -1px rgba(13, 148, 136, 0.12), 0 2px 4px -1px rgba(13, 148, 136, 0.06)',
       },
     },
   },
   plugins: [],
 }
 export default config
-
-

@@ -4,12 +4,28 @@ import { FiGlobe, FiUsers, FiMonitor, FiArrowRight, FiShoppingCart, FiPackage, F
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Products - SindustryOS Restaurant & Bar Management Solutions',
-  description: 'Explore SindustryOS products: Full Web CMS ($99/month), Private Dining Inquiries add-on ($49/month), and Digital Signage ($99/month). All-in-one solutions for restaurants and bars.',
-  keywords: ['sindustryos products', 'restaurant management products', 'bar management solutions'],
+  title: 'Products — Menu Insights, CMS, Signage & Private Dining',
+  description:
+    'SindustryOS products: Menu Insights ($149, or $99 in the bundle), Full Web CMS ($99), Private Dining ($49), Digital Signage ($99), plus upcoming ops tools.',
+  alternates: { canonical: '/products' },
 }
 
 const products = [
+  {
+    name: 'Menu Insights',
+    price: '$149/month · $99 in bundle',
+    description:
+      'Flagship: spot leakage, bad margins, and hidden opportunities from one month of sales data.',
+    icon: FiTrendingUp,
+    href: '/products/ingredient-optimization',
+    features: [
+      'Leakage & margin insights',
+      'Actionable menu recommendations',
+      'Same dashboard as your other tools',
+      'Premium POS sync available',
+    ],
+    comingSoon: false,
+  },
   {
     name: 'Full Web CMS',
     price: '$99/month',
@@ -64,15 +80,6 @@ const products = [
     features: ['Automated scheduling', 'Availability tracking', 'Shift swaps', 'Time tracking'],
     comingSoon: true,
   },
-  {
-    name: 'Ingredient Optimization',
-    price: 'Coming Soon',
-    description: 'Optimize your menu and reduce waste by analyzing ingredient usage and suggesting improvements.',
-    icon: FiTrendingUp,
-    href: '/products/ingredient-optimization',
-    features: ['Usage analytics', 'Waste reduction', 'Cost optimization', 'Menu recommendations'],
-    comingSoon: true,
-  },
 ]
 
 export default function ProductsPage() {
@@ -86,7 +93,8 @@ export default function ProductsPage() {
               Our Products
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed">
-              Start with our core CMS and add powerful features as you need them
+              Start with Menu Insights, then add website, signage, and inquiry tools in the same
+              dashboard.
             </p>
           </div>
         </div>
@@ -206,8 +214,8 @@ export default function ProductsPage() {
               Not Sure Which Product You Need?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-5">
-              Start with our Full Web CMS at $99/month. It includes everything you need to get started, 
-              and you can add features as your business grows.
+              Start with Menu Insights at $149/month ($99 in the bundle), or pick the dashboard tools
+              you need. Add more as you grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">

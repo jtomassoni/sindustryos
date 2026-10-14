@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { FiCode, FiCoffee, FiTarget, FiUsers } from 'react-icons/fi'
+import TargetAudience from '@/components/sections/TargetAudience'
 
 export const metadata: Metadata = {
-  title: 'About Us - SindustryOS',
-  description: 'Learn about SindustryOS, our mission to create front-to-back solutions for small businesses using AI, and JT\'s background in software engineering and the hospitality industry.',
-  keywords: ['about sindustryos', 'restaurant software company', 'hospitality technology'],
+  title: 'About — Hospitality Software for Independents',
+  description:
+    'SindustryOS builds front-to-back restaurant and bar software for small teams — website CMS, private dining, and signage from people who know hospitality.',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
@@ -133,6 +135,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <TargetAudience />
 
       {/* Mission & Vision */}
       <section className="py-20 bg-dark-900">

@@ -5,21 +5,11 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Online Ordering - Coming Soon | SindustryOS',
-  description: 'Accept online orders directly through your website. Reduce third-party fees and keep more revenue. Coming soon to SindustryOS.',
-  keywords: [
-    'online ordering',
-    'restaurant online ordering',
-    'direct ordering',
-    'reduce delivery fees',
-    'restaurant order management',
-  ],
-  openGraph: {
-    title: 'Online Ordering - Coming Soon | SindustryOS',
-    description: 'Accept online orders directly through your website. Reduce third-party fees and keep more revenue.',
-    url: 'https://sindustryos.com/products/online-ordering',
-    type: 'website',
-  },
+  title: 'Online Ordering — Coming Soon',
+  description:
+    'Accept online orders directly through your website. Reduce third-party fees and keep more revenue. Coming soon to SindustryOS.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: '/products/online-ordering' },
 }
 
 const features = [

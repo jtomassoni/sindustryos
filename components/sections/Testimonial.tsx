@@ -8,17 +8,17 @@ export default function Testimonial() {
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
           backgroundSize: '50px 50px',
-          color: '#faf9f7',
+          color: '#f4f7f8',
         }} />
       </div>
       
-      {/* Warm accent glow */}
+      {/* Teal accent glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 via-transparent to-accent-900/10" />
       
       {/* Subtle diagonal pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 20px, currentColor 20px, currentColor 21px)',
-        color: '#faf9f7',
+        color: '#f4f7f8',
       }} />
       
       <div className="container mx-auto px-6 md:px-8 relative z-10">
@@ -34,7 +34,12 @@ export default function Testimonial() {
             <div className="flex items-center">
               <div>
                 <p className="text-white font-semibold text-base md:text-lg">Victoria, Owner</p>
-                <p className="text-gray-400 text-sm md:text-base">Monaghan's Bar</p>
+                <a
+                  href="/customers/monaghans-bar-and-grill"
+                  className="text-gray-400 text-sm md:text-base hover:text-primary-400 transition-colors"
+                >
+                  Monaghan&apos;s Bar and Grill — read the story
+                </a>
               </div>
             </div>
           </div>

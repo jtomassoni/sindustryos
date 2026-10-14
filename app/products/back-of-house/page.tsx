@@ -5,21 +5,11 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
-  title: 'Back of House Management - Coming Soon | SindustryOS',
-  description: 'Streamline kitchen operations with inventory tracking, recipe management, and production planning. Coming soon to SindustryOS.',
-  keywords: [
-    'back of house management',
-    'kitchen management',
-    'inventory tracking',
-    'recipe management',
-    'restaurant operations',
-  ],
-  openGraph: {
-    title: 'Back of House Management - Coming Soon | SindustryOS',
-    description: 'Streamline kitchen operations with inventory tracking, recipe management, and production planning.',
-    url: 'https://sindustryos.com/products/back-of-house',
-    type: 'website',
-  },
+  title: 'Back of House Management — Coming Soon',
+  description:
+    'Streamline kitchen operations with inventory tracking, recipe management, and production planning. Coming soon to SindustryOS.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: '/products/back-of-house' },
 }
 
 const features = [

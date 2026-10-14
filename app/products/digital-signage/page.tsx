@@ -7,26 +7,16 @@ import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 
-export const metadata: Metadata = {
-  title: 'Digital Signage - $99/month | TV Display System for Restaurants | SindustryOS',
-  description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements. Designed for 10-30ft viewing distance. 24/7 operation.',
-  keywords: [
-    'digital signage',
-    'TV display',
-    'restaurant signage',
-    'bar signage',
-    'specials display',
-    'restaurant TV display',
-    'bar digital signage',
-    'restaurant menu board',
-  ],
-  openGraph: {
-    title: 'Digital Signage - $99/month | SindustryOS',
-    description: 'TV signage display system for restaurants and bars. Custom slide builder, specials rotator, events display, and announcements.',
-    url: 'https://sindustryos.com/products/digital-signage',
-    type: 'website',
-  },
-}
+import JsonLd from '@/components/seo/JsonLd'
+import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
+import { pageMetadata } from '@/lib/seo-metadata'
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Restaurant Digital Signage Software — $99/month',
+  description:
+    'Digital signage for restaurants and bars: TV menu boards, specials rotator, events, and announcements synced from your CMS. Built for 10–30ft viewing. $99/month.',
+  path: '/products/digital-signage',
+})
 
 const features = [
   {
@@ -108,7 +98,19 @@ const faqItems = [
 ]
 
 export default function DigitalSignagePage() {
+  const productSchema = getProductSchema({
+    name: 'SindustryOS Digital Signage',
+    description:
+      'TV signage display system for restaurants and bars with specials rotator and events display.',
+    price: '99',
+    url: 'https://www.sindustryos.com/products/digital-signage',
+  })
+  const faqSchema = getFaqSchema(faqItems)
+
   return (
+    <>
+      <JsonLd id="product-schema-signage" data={productSchema} />
+      <JsonLd id="faq-schema-signage" data={faqSchema} />
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
@@ -116,7 +118,7 @@ export default function DigitalSignagePage() {
           <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Digital Signage' }]} />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Digital Signage
+              Digital signage for restaurants &amp; bars
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Professional TV signage display system. Show specials, events, and announcements 
@@ -265,7 +267,7 @@ export default function DigitalSignagePage() {
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
               <Image
-                src="https://placehold.co/600x400/1a1d20/f56b1a?text=Slide+Builder+Interface"
+                src="https://placehold.co/600x400/0f1419/0d9488?text=Slide+Builder+Interface"
                 alt="Digital signage slide builder interface for creating custom TV displays with specials, events, and announcements for restaurants and bars"
                 width={600}
                 height={400}
@@ -276,7 +278,7 @@ export default function DigitalSignagePage() {
             
             <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
               <Image
-                src="https://placehold.co/600x400/1a1d20/f56b1a?text=TV+Display+Example"
+                src="https://placehold.co/600x400/0f1419/0d9488?text=TV+Display+Example"
                 alt="Example of digital signage TV display showing restaurant specials and events, optimized for 10-30ft viewing distance"
                 width={600}
                 height={400}
@@ -320,6 +322,7 @@ export default function DigitalSignagePage() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

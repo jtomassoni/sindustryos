@@ -3,9 +3,10 @@ import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Us - SindustryOS',
-  description: 'Get in touch with SindustryOS. Contact us to learn more about our restaurant and bar management platform, request a demo, or ask questions.',
-  keywords: ['contact sindustryos', 'restaurant software contact', 'bar management contact'],
+  title: 'Contact — Get Started with Restaurant Software',
+  description:
+    'Contact SindustryOS to get a restaurant or bar website CMS, private dining CRM, or digital signage demo. No long-term contracts.',
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {

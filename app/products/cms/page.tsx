@@ -1,34 +1,21 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Script from 'next/script'
 import { FiCalendar, FiMenu, FiTag, FiImage, FiSearch, FiGlobe } from 'react-icons/fi'
 import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
-import { getProductSchema } from '@/lib/structured-data'
+import JsonLd from '@/components/seo/JsonLd'
+import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
+import { pageMetadata } from '@/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: 'Full Web CMS - $99/month | Restaurant & Bar Website Builder | SindustryOS',
-  description: 'Complete website CMS for restaurants and bars. Includes menu management, event calendar, specials, gallery, and SEO optimization. All hosting included. Starting at $99/month. No long-term contracts.',
-  keywords: [
-    'restaurant CMS',
-    'bar website',
-    'menu management',
-    'event calendar',
-    'restaurant website builder',
-    'dive bar website',
-    'restaurant website CMS',
-    'bar management website',
-  ],
-  openGraph: {
-    title: 'Full Web CMS - $99/month | SindustryOS',
-    description: 'Complete website CMS for restaurants and bars. Includes menu management, event calendar, specials, gallery, and SEO optimization.',
-    url: 'https://sindustryos.com/products/cms',
-    type: 'website',
-  },
-}
+export const metadata: Metadata = pageMetadata({
+  title: 'Restaurant & Bar Website CMS — $99/month',
+  description:
+    'Restaurant website builder and CMS for bars and independents. Menu management, event calendar, specials, gallery, hosting, and SEO included. $99/month, cancel anytime.',
+  path: '/products/cms',
+})
 
 const features = [
   {
@@ -91,15 +78,19 @@ const faqItems = [
 ]
 
 export default function CMSPage() {
-  const productSchema = getProductSchema()
-  
+  const productSchema = getProductSchema({
+    name: 'SindustryOS Full Web CMS',
+    description:
+      'Complete website CMS for restaurants and bars with menu management, event calendar, specials, and more.',
+    price: '99',
+    url: 'https://www.sindustryos.com/products/cms',
+  })
+  const faqSchema = getFaqSchema(faqItems)
+
   return (
     <>
-      <Script
-        id="product-schema-cms"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
+      <JsonLd id="product-schema-cms" data={productSchema} />
+      <JsonLd id="faq-schema-cms" data={faqSchema} />
       <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
@@ -107,7 +98,7 @@ export default function CMSPage() {
           <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Full Web CMS' }]} />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Full Web CMS
+              Restaurant &amp; bar website CMS
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Complete website solution for your restaurant or bar. Manage content, menus, events, 
@@ -238,7 +229,7 @@ export default function CMSPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-dark-900 border border-dark-700 rounded-xl p-8">
               <Image
-                src="https://placehold.co/1200x800/1a1d20/f56b1a?text=CMS+Interface+Screenshot"
+                src="https://placehold.co/1200x800/0f1419/0d9488?text=CMS+Interface+Screenshot"
                 alt="SindustryOS Full Web CMS interface showing menu management, event calendar, and specials management features for restaurants and bars"
                 width={1200}
                 height={800}

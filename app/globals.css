@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
 }
 
 @layer base {
@@ -13,11 +13,7 @@
   }
   
   body {
-    @apply bg-warm-50 text-dark-900 antialiased;
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(157, 130, 102, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(240, 149, 61, 0.03) 0%, transparent 50%);
-    background-attachment: fixed;
+    @apply bg-dark-900 text-gray-200 antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -42,8 +38,44 @@
   }
 }
 
+@keyframes fade-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .animate-slide-up {
   animation: slide-up 0.3s ease-out;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.animate-fade-up-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.animate-fade-up-delay-3 {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay-1,
+  .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3 {
+    animation: none !important;
+  }
 }
 
 /* Better grid handling for odd numbers of items */

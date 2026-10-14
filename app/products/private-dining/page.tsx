@@ -6,26 +6,16 @@ import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import JsonLd from '@/components/seo/JsonLd'
+import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
+import { pageMetadata } from '@/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: 'Private Dining Inquiries - $49/month | Event Space Booking CRM | SindustryOS',
-  description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients. Perfect for restaurants and bars hosting private parties and corporate events.',
-  keywords: [
-    'private dining',
-    'event space booking',
-    'restaurant CRM',
-    'private party inquiries',
-    'corporate event booking',
-    'private dining room management',
-    'event inquiry system',
-  ],
-  openGraph: {
-    title: 'Private Dining Inquiries - $49/month | SindustryOS',
-    description: 'Lead capture and CRM system for private event inquiries. Manage event space bookings, track contacts, and follow up with potential clients.',
-    url: 'https://sindustryos.com/products/private-dining',
-    type: 'website',
-  },
-}
+export const metadata: Metadata = pageMetadata({
+  title: 'Private Dining Inquiry CRM for Restaurants — $49/month',
+  description:
+    'Private dining and event space inquiry software for restaurants and bars. Capture leads, track follow-ups, and convert more private parties. $49/month.',
+  path: '/products/private-dining',
+})
 
 const features = [
   {
@@ -79,7 +69,19 @@ const faqItems = [
 ]
 
 export default function PrivateDiningPage() {
+  const productSchema = getProductSchema({
+    name: 'SindustryOS Private Dining Inquiries',
+    description:
+      'Lead capture and CRM for private dining and event space inquiries at restaurants and bars.',
+    price: '49',
+    url: 'https://www.sindustryos.com/products/private-dining',
+  })
+  const faqSchema = getFaqSchema(faqItems)
+
   return (
+    <>
+      <JsonLd id="product-schema-private-dining" data={productSchema} />
+      <JsonLd id="faq-schema-private-dining" data={faqSchema} />
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
@@ -87,7 +89,7 @@ export default function PrivateDiningPage() {
           <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Private Dining Inquiries' }]} />
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Private Dining Inquiries
+              Private dining inquiry CRM
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Capture leads and manage private event inquiries with our integrated CRM system. 
@@ -211,7 +213,7 @@ export default function PrivateDiningPage() {
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
               <Image
-                src="https://placehold.co/600x400/1a1d20/f56b1a?text=Lead+Capture+Form"
+                src="https://placehold.co/600x400/0f1419/0d9488?text=Lead+Capture+Form"
                 alt="Private dining inquiry lead capture form for restaurants and bars to collect event booking information from potential clients"
                 width={600}
                 height={400}
@@ -222,7 +224,7 @@ export default function PrivateDiningPage() {
             
             <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
               <Image
-                src="https://placehold.co/600x400/1a1d20/f56b1a?text=CRM+Dashboard"
+                src="https://placehold.co/600x400/0f1419/0d9488?text=CRM+Dashboard"
                 alt="CRM dashboard for managing private dining inquiries, tracking contacts, and following up with potential event clients"
                 width={600}
                 height={400}
@@ -267,6 +269,7 @@ export default function PrivateDiningPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

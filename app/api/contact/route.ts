@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
           subject: `New Contact Form Submission: ${restaurant}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #f56b1a;">New Contact Form Submission</h2>
+              <h2 style="color: #0d9488;">New Contact Form Submission</h2>
               <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
                 <p><strong>Restaurant/Bar:</strong> ${restaurant}</p>
                 <p><strong>Name:</strong> ${name}</p>

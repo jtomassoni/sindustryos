@@ -3,9 +3,19 @@ import type { NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 
 const SESSION_COOKIE = 'admin_session'
+const CANONICAL_HOST = 'www.sindustryos.com'
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const host = request.headers.get('host')?.split(':')[0]
+
+  // Force canonical www host (apex → www)
+  if (host === 'sindustryos.com') {
+    const url = request.nextUrl.clone()
+    url.protocol = 'https'
+    url.host = CANONICAL_HOST
+    return NextResponse.redirect(url, 301)
+  }
 
   // Login page: redirect away if already authenticated
   if (pathname === '/admin/login') {
@@ -46,5 +56,7 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: [
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 }
