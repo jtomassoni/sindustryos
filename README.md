@@ -79,25 +79,28 @@ Create a `.env.local` file with the following variables:
 # Resend API Key for email service
 RESEND_API_KEY=re_your_api_key_here
 
-# Contact email address
+# Where contact form emails are delivered
 CONTACT_EMAIL=contact@sindustryos.com
 
-# Base URL (for API calls)
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
+# Admin login (same format as Monaghan's / EcoLawns)
+# Single user:  ADMIN_USERS="username:password"
+# Multi user:   ADMIN_USERS="user1:pass1,user2:pass2"
+# Or JSON:      ADMIN_USER='{"username":"admin","password":"pass"}'
+ADMIN_USERS=admin:change-me
 
-# CRM Authentication Token
-CRM_AUTH_TOKEN=your_secure_auth_token_here
-NEXT_PUBLIC_CRM_AUTH_TOKEN=your_secure_auth_token_here
+# JWT session signing secret (any long random string)
+SESSION_SECRET=replace-with-a-long-random-string
 ```
 
 ## API Routes
 
 - `/api/contact` - POST endpoint for contact form submissions
-- `/api/crm/submissions` - GET/POST endpoints for CRM (requires auth token)
+- `/api/crm/submissions` - GET/POST endpoints for CRM (requires admin session)
+- `/api/admin/login` / `/api/admin/logout` - admin session auth
 
 ## Admin Dashboard
 
-Access the admin dashboard at `/admin` to view contact form submissions. Requires authentication token set in environment variables.
+Sign in at `/admin/login` with credentials from `ADMIN_USERS`. Submissions are also emailed to `CONTACT_EMAIL` via Resend; the `/admin` list is in-memory and resets on deploy.
 
 ## Deployment
 

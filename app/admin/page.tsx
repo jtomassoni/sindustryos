@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FiMail, FiCalendar, FiCheck, FiX, FiArchive } from 'react-icons/fi'
+import { useRouter } from 'next/navigation'
+import { FiMail } from 'react-icons/fi'
 
 interface Submission {
   id: string
@@ -15,9 +16,11 @@ interface Submission {
 }
 
 export default function AdminPage() {
+  const router = useRouter()
   const [submissions, setSubmissions] = useState<Submission[]>([])
   const [loading, setLoading] = useState(true)
   const [selectedSubmission, setSelectedSubmission] = useState<Submission | null>(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     fetchSubmissions()
@@ -25,22 +28,31 @@ export default function AdminPage() {
 
   const fetchSubmissions = async () => {
     try {
-      const token = process.env.NEXT_PUBLIC_CRM_AUTH_TOKEN || prompt('Enter auth token:')
-      const response = await fetch('/api/crm/submissions', {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-      })
+      const response = await fetch('/api/crm/submissions')
 
-      if (response.ok) {
-        const data = await response.json()
-        setSubmissions(data.submissions || [])
+      if (response.status === 401) {
+        router.push('/admin/login')
+        return
       }
-    } catch (error) {
-      console.error('Failed to fetch submissions:', error)
+
+      if (!response.ok) {
+        setError('Failed to load submissions')
+        return
+      }
+
+      const data = await response.json()
+      setSubmissions(data.submissions || [])
+    } catch {
+      setError('Failed to load submissions')
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleLogout = async () => {
+    await fetch('/api/admin/logout', { method: 'POST' })
+    router.push('/admin/login')
+    router.refresh()
   }
 
   const getStatusColor = (status: string) => {
@@ -69,10 +81,25 @@ export default function AdminPage() {
   return (
     <main className="min-h-screen bg-dark-900">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-white mb-8">Contact Form Submissions</h1>
-        
+        <div className="flex items-center justify-between mb-8 gap-4">
+          <h1 className="text-3xl font-bold text-white">Contact Form Submissions</h1>
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 text-sm border border-dark-700 rounded text-gray-300 hover:text-white hover:border-gray-500 transition-colors"
+          >
+            Sign out
+          </button>
+        </div>
+
+        {error && (
+          <p className="mb-4 text-red-400 text-sm">{error}</p>
+        )}
+
+        <p className="text-gray-400 text-sm mb-6">
+          Durable copy of each submission is emailed via Resend. This list is in-memory and resets on deploy.
+        </p>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Submissions List */}
           <div className="lg:col-span-2">
             <div className="bg-dark-800 border border-dark-700 rounded-xl overflow-hidden">
               <div className="p-4 border-b border-dark-700">
@@ -80,7 +107,7 @@ export default function AdminPage() {
                   Submissions ({submissions.length})
                 </h2>
               </div>
-              
+
               <div className="divide-y divide-dark-700">
                 {submissions.length === 0 ? (
                   <div className="p-8 text-center text-gray-400">
@@ -118,23 +145,22 @@ export default function AdminPage() {
             </div>
           </div>
 
-          {/* Submission Details */}
           <div className="lg:col-span-1">
             {selectedSubmission ? (
               <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
                 <h2 className="text-xl font-semibold text-white mb-4">Details</h2>
-                
+
                 <div className="space-y-4">
                   <div>
                     <label className="text-gray-400 text-sm">Restaurant/Bar</label>
                     <p className="text-white font-semibold">{selectedSubmission.restaurant}</p>
                   </div>
-                  
+
                   <div>
                     <label className="text-gray-400 text-sm">Name</label>
                     <p className="text-white">{selectedSubmission.name}</p>
                   </div>
-                  
+
                   <div>
                     <label className="text-gray-400 text-sm">Email</label>
                     <a
@@ -145,12 +171,12 @@ export default function AdminPage() {
                       {selectedSubmission.email}
                     </a>
                   </div>
-                  
+
                   <div>
                     <label className="text-gray-400 text-sm">Has Website</label>
                     <p className="text-white capitalize">{selectedSubmission.hasWebsite}</p>
                   </div>
-                  
+
                   {selectedSubmission.message && (
                     <div>
                       <label className="text-gray-400 text-sm">Message</label>
@@ -159,7 +185,7 @@ export default function AdminPage() {
                       </p>
                     </div>
                   )}
-                  
+
                   <div>
                     <label className="text-gray-400 text-sm">Submitted</label>
                     <p className="text-white">
@@ -179,5 +205,3 @@ export default function AdminPage() {
     </main>
   )
 }
-
-
