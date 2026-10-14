@@ -1,15 +1,15 @@
 const claims = [
   {
+    product: 'Menu Insights',
+    claim: 'Fix one bad-margin item and you can cover months of the subscription.',
+  },
+  {
     product: 'Private Dining',
-    claim: 'Catch a few high-intent private dining requests a month: parties of 20-100.',
+    claim: 'Catch a few high-intent requests a month—parties of 20–100—before they vanish.',
   },
   {
     product: 'Full Web CMS',
-    claim: 'SEO that helps people who never noticed you find the menu and the door.',
-  },
-  {
-    product: 'Menu Insights',
-    claim: 'Fix one bad-margin item and you can cover months of the subscription.',
+    claim: 'Keep menus and specials honest online so search and walk-ins match the floor.',
   },
   {
     product: 'Digital Signage',
@@ -23,10 +23,10 @@ export default function SubValueStrip() {
       <div className="container mx-auto px-6 md:px-8">
         <div className="max-w-3xl mb-10 md:mb-12">
           <p className="text-accent-400 text-sm font-medium tracking-wide uppercase mb-3">
-            For the cost of one 4-top
+            How it pays for itself
           </p>
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white leading-tight text-balance">
-            Clear payback on a small monthly bill.
+            Around the cost of one 4-top. Clear jobs, clear payback.
           </h2>
         </div>
 

@@ -10,7 +10,9 @@ interface Submission {
   name: string
   email: string
   restaurant: string
-  hasWebsite: string
+  interest?: string
+  pos?: string
+  hasWebsite?: string
   message?: string
   timestamp: string
   status: 'new' | 'contacted' | 'converted' | 'archived'
@@ -161,8 +163,19 @@ export default function AdminPage() {
                   </div>
 
                   <div>
-                    <label className="text-gray-400 text-sm">Has Website</label>
-                    <p className="text-white capitalize">{selectedSubmission.hasWebsite}</p>
+                    <label className="text-gray-400 text-sm">Interest</label>
+                    <p className="text-white capitalize">
+                      {selectedSubmission.interest?.replace(/-/g, ' ') ||
+                        selectedSubmission.hasWebsite ||
+                        '—'}
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="text-gray-400 text-sm">POS</label>
+                    <p className="text-white capitalize">
+                      {selectedSubmission.pos || '—'}
+                    </p>
                   </div>
 
                   {selectedSubmission.message && (

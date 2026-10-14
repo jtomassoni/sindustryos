@@ -122,7 +122,7 @@ export default function PrivateDiningPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/contact" variant="primary" size="lg">
-                  Get Started
+                  Catch private dining leads
                 </Button>
                 <Button href="/pricing" variant="outline" size="lg">
                   View Pricing
@@ -338,7 +338,7 @@ export default function PrivateDiningPage() {
                 Make sure the site can catch them—around the cost of one 4-top a month.
               </p>
               <Button href="/contact" variant="primary" size="lg">
-                Get Started Today
+                Catch private dining leads
               </Button>
             </div>
           </div>

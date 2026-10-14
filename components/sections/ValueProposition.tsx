@@ -1,15 +1,18 @@
 const pillars = [
   {
-    title: 'Website',
-    description: 'Your site, menus, and specials, managed in the same place you already work.',
+    title: 'Website & menus',
+    description:
+      'Publish menus, specials, and events without another vendor or agency ticket for every change.',
   },
   {
     title: 'Digital signage',
-    description: 'In-house screens that stay in sync without another vendor login.',
+    description:
+      'In-house screens stay in sync with what you publish—no separate login to forget.',
   },
   {
-    title: 'External inquiries',
-    description: 'Private dining and event leads land in the dashboard you are already in.',
+    title: 'Private dining leads',
+    description:
+      'High-intent party requests land in the same dashboard instead of dying in email.',
   },
 ]
 
@@ -22,18 +25,14 @@ export default function ValueProposition() {
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="max-w-3xl mb-12 md:mb-14">
           <p className="text-accent-400 text-sm md:text-base font-medium tracking-wide uppercase mb-3">
-            Already in your dashboard
+            Same dashboard
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-white mb-4 leading-tight text-balance">
-            The rest is nice to have, in the same place.
+            After the read, run the guest-facing stack in one place.
           </h2>
           <p className="text-base md:text-lg text-dark-300 leading-relaxed font-light max-w-2xl">
-            Website, digital signage, and external inquiries combine into one easy dashboard you are
-            already going to be in for menu insights. No extra stack to learn.
-          </p>
-          <p className="mt-4 text-sm md:text-base text-primary-300/90 italic max-w-2xl leading-relaxed">
-            Around the cost of one 4-top: SEO walk-ins, private dining catch, or a margin fix—pick
-            where it pays first.
+            Website, signage, and private dining inquiries live where you already check Menu
+            Insights—instead of Squarespace plus a spreadsheet plus another signage login.
           </p>
         </div>
 
@@ -55,14 +54,14 @@ export default function ValueProposition() {
 
         <div className="max-w-3xl">
           <p className="text-accent-400 text-sm md:text-base font-medium tracking-wide uppercase mb-3">
-            Super premium
+            Premium plans
           </p>
           <h3 className="text-2xl md:text-3xl font-display font-semibold text-white mb-4 leading-tight">
-            Direct connections to Square, Toast, and other modern POS systems.
+            Direct Square, Toast, and modern POS connections.
           </h3>
           <p className="text-base md:text-lg text-dark-300 leading-relaxed font-light max-w-2xl">
-            No downloading or uploading data between systems. Premium models stay connected to your
-            POS so insights just know, and keep showing up as the business runs.
+            No downloading and re-uploading files between systems. Connected plans keep feeding
+            insights as the business runs.
           </p>
         </div>
       </div>

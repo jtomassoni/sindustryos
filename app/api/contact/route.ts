@@ -2,12 +2,29 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { addSubmission } from '@/lib/crm-store'
 
+const interestLabels: Record<string, string> = {
+  'menu-insights': 'Menu Insights / menu read',
+  bundle: 'Complete Bundle',
+  website: 'Website CMS',
+  'private-dining': 'Private dining',
+  signage: 'Digital signage',
+  'not-sure': 'Not sure yet',
+}
+
+const posLabels: Record<string, string> = {
+  toast: 'Toast',
+  square: 'Square',
+  clover: 'Clover',
+  other: 'Other',
+  none: 'No POS / not sure',
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, restaurant, hasWebsite, message } = body
+    const { name, email, restaurant, interest, pos, message } = body
 
-    if (!name || !email || !restaurant || !hasWebsite) {
+    if (!name || !email || !restaurant || !interest || !pos) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -22,9 +39,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Save in-process (same instance). Durable copy is the Resend email below.
     try {
-      addSubmission({ name, email, restaurant, hasWebsite, message })
+      addSubmission({ name, email, restaurant, interest, pos, message })
     } catch (error) {
       console.error('CRM save error:', error)
     }
@@ -33,20 +49,23 @@ export async function POST(request: NextRequest) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY)
         const contactEmail = process.env.CONTACT_EMAIL || 'contact@sindustryos.com'
+        const interestLabel = interestLabels[interest] || interest
+        const posLabel = posLabels[pos] || pos
 
         await resend.emails.send({
           from: 'SindustryOS <onboarding@resend.dev>',
           to: contactEmail,
           reply_to: email,
-          subject: `New Contact Form Submission: ${restaurant}`,
+          subject: `Menu read request: ${restaurant}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #0d9488;">New Contact Form Submission</h2>
+              <h2 style="color: #0d9488;">New sales inquiry</h2>
               <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
                 <p><strong>Restaurant/Bar:</strong> ${restaurant}</p>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-                <p><strong>Has Website:</strong> ${hasWebsite === 'yes' ? 'Yes' : 'No'}</p>
+                <p><strong>Interest:</strong> ${interestLabel}</p>
+                <p><strong>POS:</strong> ${posLabel}</p>
                 ${message ? `<p><strong>Message:</strong></p><p style="background: white; padding: 15px; border-radius: 4px; margin-top: 10px;">${message.replace(/\n/g, '<br>')}</p>` : ''}
               </div>
               <p style="color: #666; font-size: 12px;">
@@ -63,7 +82,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { message: "Thank you! We'll be in touch soon." },
+      { message: 'Got it. We typically reply within one business day.' },
       { status: 200 }
     )
   } catch (error) {

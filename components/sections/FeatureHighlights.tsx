@@ -2,24 +2,24 @@ import { FiDatabase, FiMenu, FiGlobe, FiBarChart2 } from 'react-icons/fi'
 
 const features = [
   {
-    icon: FiDatabase,
-    title: 'POS sync',
-    description: 'Pull sales data from the POS you already use.',
+    icon: FiBarChart2,
+    title: 'Menu Insights',
+    description: 'Leakage, margins, and what to fix from one month of sales.',
   },
   {
-    icon: FiMenu,
-    title: 'Menu import',
-    description: 'Bring menus over from your existing providers.',
+    icon: FiDatabase,
+    title: 'POS sync',
+    description: 'Premium plans connect to Square, Toast, and modern POS.',
   },
   {
     icon: FiGlobe,
     title: 'Marketing site',
-    description: 'A guest-facing website built for restaurants and bars.',
+    description: 'Menus, specials, and events that stay honest online.',
   },
   {
-    icon: FiBarChart2,
-    title: 'Admin dashboard',
-    description: 'Menus, specials, events, and signage in one place.',
+    icon: FiMenu,
+    title: 'One dashboard',
+    description: 'Inquiries and signage where you already manage content.',
   },
 ]
 
@@ -41,20 +41,20 @@ export default function FeatureHighlights() {
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white mb-4 leading-tight">
-            Connects to what you already run
+            Built around the floor, not a feature list
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-            Import from your POS and menu providers. Manage the site and back office from one
-            dashboard.
+            Insights first. Website, private dining, and signage ride in the same place—so you are
+            not juggling vendors for every weekly change.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon
             return (
               <div
-                key={index}
+                key={feature.title}
                 className="bg-dark-800 border border-dark-700 rounded-lg p-5 md:p-6 hover:border-primary-500/50 transition-colors"
               >
                 <Icon className="w-9 h-9 md:w-10 md:h-10 text-primary-400 mb-3" />

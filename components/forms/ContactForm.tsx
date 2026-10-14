@@ -8,8 +8,18 @@ interface FormData {
   name: string
   email: string
   restaurant: string
-  hasWebsite: string
+  interest: string
+  pos: string
   message: string
+}
+
+const interestLabels: Record<string, string> = {
+  'menu-insights': 'Menu Insights / menu read',
+  bundle: 'Complete Bundle',
+  website: 'Website CMS',
+  'private-dining': 'Private dining',
+  signage: 'Digital signage',
+  'not-sure': 'Not sure yet',
 }
 
 export default function ContactForm() {
@@ -17,7 +27,8 @@ export default function ContactForm() {
     name: '',
     email: '',
     restaurant: '',
-    hasWebsite: '',
+    interest: 'menu-insights',
+    pos: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -53,18 +64,18 @@ export default function ContactForm() {
       }
 
       setSubmitStatus('success')
-      
-      // Reset form after success
+
       setTimeout(() => {
         setFormData({
           name: '',
           email: '',
           restaurant: '',
-          hasWebsite: '',
+          interest: 'menu-insights',
+          pos: '',
           message: '',
         })
         setSubmitStatus('idle')
-      }, 3000)
+      }, 4000)
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
@@ -103,13 +114,13 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          placeholder="your@email.com"
+          placeholder="you@restaurant.com"
         />
       </div>
 
       <div>
         <label htmlFor="restaurant" className="block text-white font-medium mb-2">
-          Restaurant/Bar Name *
+          Restaurant / bar name *
         </label>
         <input
           type="text"
@@ -119,52 +130,75 @@ export default function ContactForm() {
           value={formData.restaurant}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          placeholder="Your restaurant or bar name"
+          placeholder="Your venue name"
         />
       </div>
 
       <div>
-        <label htmlFor="hasWebsite" className="block text-white font-medium mb-2">
-          Do you currently have a website? *
+        <label htmlFor="interest" className="block text-white font-medium mb-2">
+          What do you want first? *
         </label>
         <select
-          id="hasWebsite"
-          name="hasWebsite"
+          id="interest"
+          name="interest"
           required
-          value={formData.hasWebsite}
+          value={formData.interest}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
-          <option value="">Select an option</option>
-          <option value="yes">Yes, I have a website</option>
-          <option value="no">No, I don't have a website</option>
+          {Object.entries(interestLabels).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="pos" className="block text-white font-medium mb-2">
+          Current POS *
+        </label>
+        <select
+          id="pos"
+          name="pos"
+          required
+          value={formData.pos}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+        >
+          <option value="">Select POS</option>
+          <option value="toast">Toast</option>
+          <option value="square">Square</option>
+          <option value="clover">Clover</option>
+          <option value="other">Other</option>
+          <option value="none">No POS / not sure</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-white font-medium mb-2">
-          Message
+          Anything we should know?
         </label>
         <textarea
           id="message"
           name="message"
-          rows={5}
+          rows={4}
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
-          placeholder="Tell us about your needs or ask any questions..."
+          placeholder="Locations, busy nights, or a link to a sales export if you already have one…"
         />
       </div>
 
       {submitStatus === 'success' && (
         <div className="bg-green-600/20 border border-green-500 rounded-xl p-4 text-green-400">
-          Thank you! We'll be in touch soon.
+          Got it. We typically reply within one business day with next steps for your menu read.
         </div>
       )}
 
       {submitStatus === 'error' && (
         <div className="bg-red-600/20 border border-red-500 rounded-xl p-4 text-red-400">
-          Something went wrong. Please try again.
+          Something went wrong. Email hello@sindustryos.com or try again.
         </div>
       )}
 
@@ -181,10 +215,15 @@ export default function ContactForm() {
             Sending...
           </span>
         ) : (
-          'Send Message'
+          'Request a menu read'
         )}
       </Button>
+      <p className="text-sm text-gray-500 text-center">
+        Or email{' '}
+        <a href="mailto:hello@sindustryos.com" className="text-primary-400 hover:text-primary-300">
+          hello@sindustryos.com
+        </a>
+      </p>
     </form>
   )
 }
-

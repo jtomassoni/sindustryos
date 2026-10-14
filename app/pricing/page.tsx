@@ -159,13 +159,13 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Simple restaurant software pricing
+              Three clear buys
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Flagship Menu Insights, then add the dashboard tools you want. No hidden fees, no
+              Start with a menu read, take the guest-facing stack, or get both. No hidden fees. No
               long-term contracts.
             </p>
-            <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base text-primary-300/90 max-w-2xl mx-auto leading-relaxed">
               Priced around what one good table brings in.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function PricingPage() {
                       bill.
                     </p>
                     <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
-                      Get a menu read
+                      Request a menu read
                     </Button>
                   </div>
 
@@ -248,7 +248,7 @@ export default function PricingPage() {
                     inquiries, and signage.
                   </p>
                   <Button href={bundle.href} variant="outline" size="lg" className="w-full sm:w-auto">
-                    Get Started
+                    Start with the bundle
                   </Button>
                 </div>
 
@@ -439,14 +439,14 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready for a menu read?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Menu Insights from $149 ($99 in the bundle), or the Complete Bundle at $199. No
-              long-term contracts.
+              Menu Insights $149 ($99 in the bundle), or the Complete Bundle at $199. Tell us your
+              POS—we reply within one business day.
             </p>
             <Button href="/contact" variant="primary" size="lg">
-              Get Started Today
+              Request a menu read
             </Button>
           </div>
         </div>

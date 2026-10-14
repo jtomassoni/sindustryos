@@ -41,7 +41,7 @@ export default function Header() {
               href="/contact"
               className="text-white border-b border-primary-500 pb-1 hover:border-primary-400 transition-colors text-sm tracking-wide uppercase"
             >
-              Get Started
+              Menu Read
             </a>
           </div>
           
@@ -74,7 +74,7 @@ export default function Header() {
                 className="text-white border-b border-primary-500 pb-1 w-fit text-sm tracking-wide uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
+                Menu Read
               </a>
             </div>
           </div>

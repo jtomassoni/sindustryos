@@ -66,7 +66,7 @@ export default function IngredientOptimizationPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">
-                Get a menu read
+                Request a menu read
               </Button>
               <Button href="/pricing" variant="outline" size="lg">
                 View pricing
@@ -107,7 +107,7 @@ export default function IngredientOptimizationPage() {
             <PricingDisplay
               price="$149"
               description="$99/month when included in the Complete Bundle"
-              ctaText="Get a menu read"
+              ctaText="Request a menu read"
               features={[
                 'Leakage, margins, and opportunity insights',
                 'Built from your sales data',
@@ -130,7 +130,7 @@ export default function IngredientOptimizationPage() {
               the sub, one margin fix can pay for a whole season.
             </p>
             <Button href="/contact" variant="primary" size="lg">
-              Get a menu read
+              Request a menu read
             </Button>
           </div>
         </div>

@@ -19,7 +19,7 @@ export function getOrganizationSchema(): Organization {
     url: SITE_URL,
     logo: absoluteUrl('/logo.svg'),
     description:
-      'All-in-one restaurant and bar management platform that replaces multiple vendors with one comprehensive solution for independents.',
+      'Menu Insights for independent restaurants and bars, plus website CMS, private dining CRM, and digital signage in one dashboard.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -37,14 +37,14 @@ export function getSoftwareApplicationSchema(): SoftwareApplication {
     '@type': 'SoftwareApplication',
     name: SITE_NAME,
     description:
-      'Restaurant and bar management platform with website CMS, private dining CRM, and digital signage.',
+      'Menu Insights from sales data, plus restaurant website CMS, private dining CRM, and digital signage.',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     url: SITE_URL,
     brand: { '@type': 'Brand', name: SITE_NAME },
     offers: {
       '@type': 'Offer',
-      price: '99',
+      price: '149',
       priceCurrency: 'USD',
       priceValidUntil: PRICE_VALID_UNTIL,
       availability: 'https://schema.org/InStock',
@@ -61,21 +61,21 @@ export function getProductSchema(options?: {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: options?.name ?? 'SindustryOS Full Web CMS',
+    name: options?.name ?? 'SindustryOS Menu Insights',
     description:
       options?.description ??
-      'Complete website CMS for restaurants and bars with menu management, event calendar, specials, and more.',
+      'Spot leakage, bad margins, and menu opportunities from one month of sales data.',
     brand: {
       '@type': 'Brand',
       name: SITE_NAME,
     },
     offers: {
       '@type': 'Offer',
-      price: options?.price ?? '99',
+      price: options?.price ?? '149',
       priceCurrency: 'USD',
       priceValidUntil: PRICE_VALID_UNTIL,
       availability: 'https://schema.org/InStock',
-      url: options?.url ?? absoluteUrl('/products/cms'),
+      url: options?.url ?? absoluteUrl('/products/ingredient-optimization'),
     },
   }
 }
@@ -94,7 +94,7 @@ export function getServiceSchema(): Service {
       name: 'United States',
     },
     description:
-      'Comprehensive restaurant and bar management platform including website CMS, menu management, event calendar, private dining CRM, and digital signage.',
+      'Menu Insights for restaurants and bars, plus website CMS, private dining CRM, and digital signage in one dashboard.',
     url: SITE_URL,
   }
 }

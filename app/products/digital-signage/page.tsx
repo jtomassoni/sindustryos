@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { FiMonitor, FiImage, FiClock, FiEye, FiSettings, FiRotateCw } from 'react-icons/fi'
 import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
@@ -128,7 +127,7 @@ export default function DigitalSignagePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">
-                Get Started
+                Ask about digital signage
               </Button>
               <Button href="/pricing" variant="outline" size="lg">
                 View Pricing
@@ -264,46 +263,25 @@ export default function DigitalSignagePage() {
                 'Announcements integration',
                 '24/7 operation',
               ]}
-              ctaText="Get Started"
+              ctaText="Ask about digital signage"
             />
           </div>
         </div>
       </section>
 
-      {/* Demo Section */}
       <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              See It In Action
+              Driven from the same content as your site
             </h2>
-            <p className="text-xl text-gray-400">
-              Example displays (placeholders)
+            <p className="text-xl text-gray-400 mb-8">
+              Specials and events you publish once show up on guest-facing screens—no separate
+              signage login to forget mid-service.
             </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
-              <Image
-                src="https://placehold.co/600x400/0f1419/0d9488?text=Slide+Builder+Interface"
-                alt="Digital signage slide builder interface for creating custom TV displays with specials, events, and announcements for restaurants and bars"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-semibold text-white">Slide Builder</h3>
-            </div>
-            
-            <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
-              <Image
-                src="https://placehold.co/600x400/0f1419/0d9488?text=TV+Display+Example"
-                alt="Example of digital signage TV display showing restaurant specials and events, optimized for 10-30ft viewing distance"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-semibold text-white">TV Display</h3>
-            </div>
+            <Button href="/contact" variant="primary" size="lg">
+              Ask about digital signage
+            </Button>
           </div>
         </div>
       </section>
@@ -334,7 +312,7 @@ export default function DigitalSignagePage() {
               Professional digital signage that keeps your customers informed and reduces staff workload.
             </p>
             <Button href="/contact" variant="primary" size="lg">
-              Get Started Today
+              Ask about digital signage
             </Button>
           </div>
         </div>

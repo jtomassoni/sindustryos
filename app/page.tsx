@@ -12,15 +12,15 @@ import { absoluteUrl } from '@/lib/site'
 export const metadata: Metadata = {
   title: {
     absolute:
-      'SindustryOS: Restaurant & Bar Website CMS, Digital Signage & Private Dining',
+      'SindustryOS: Menu Insights for Restaurants & Bars — from $149/month',
   },
   description:
-    'Replace multiple vendors with one restaurant and bar platform. Website CMS, menu & specials, event calendar, private dining CRM, and digital signage from $99/month.',
+    'Send one month of sales data. Spot leakage, bad margins, and what to fix first. Add website CMS, private dining, and digital signage in the same dashboard.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'SindustryOS: Restaurant & Bar Management Platform',
+    title: 'SindustryOS: Menu Insights for Independent Restaurants & Bars',
     description:
-      'Website CMS, private dining CRM, and digital signage for independent restaurants and bars.',
+      'Menu Insights from sales data, plus website, private dining, and signage in one dashboard. From $149/month.',
     url: absoluteUrl('/'),
     type: 'website',
   },

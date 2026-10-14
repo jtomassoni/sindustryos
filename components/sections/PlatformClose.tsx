@@ -1,19 +1,19 @@
 const capabilities = [
   {
-    title: 'Menu insights',
-    description: 'Leakage, margins, and opportunities from your sales data.',
+    title: 'Menu Insights',
+    description: 'Leakage, margins, and what to fix from your sales data.',
   },
   {
     title: 'One dashboard',
     description: 'Website, signage, and inquiries where you already work.',
   },
   {
-    title: 'Premium POS sync',
-    description: 'Direct Square, Toast, and modern POS connections. No file shuffle.',
+    title: 'POS sync (premium)',
+    description: 'Square, Toast, and modern POS—without file shuffle.',
   },
   {
-    title: 'Always current',
-    description: 'Connected systems keep feeding insights without manual uploads.',
+    title: 'No long contracts',
+    description: 'Month to month. Cancel if it does not earn its keep.',
   },
 ]
 
@@ -36,11 +36,11 @@ export default function PlatformClose() {
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white mb-4 leading-tight">
-            Insights first. Everything else rides along.
+            Start with a menu read. Add the rest when it pays.
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-            Flagship menu intelligence, a dashboard you are already in, and premium plans that talk
-            straight to your POS.
+            Tell us your POS and we will outline what a first Menu Insights pass looks like—usually
+            within one business day.
           </p>
         </div>
 
@@ -54,18 +54,18 @@ export default function PlatformClose() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center border-t border-dark-600/80 pt-10 md:pt-12">
-          <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed font-light">
-            Menu Insights from $149/month, $99 in the bundle. Add the rest when you want it.
+          <p className="text-lg md:text-xl text-gray-300 mb-2 leading-relaxed font-light">
+            Menu Insights $149/month · $99 with the Complete Bundle · Bundle $199/month
           </p>
-          <p className="text-sm md:text-base text-primary-300/90 italic mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
-            Around the cost of one 4-top. Everything else is upside.
+          <p className="text-sm md:text-base text-primary-300/90 mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
+            Priced around what one good table brings in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
             <a
               href="/contact"
               className="inline-flex items-center text-base md:text-lg text-white border-b-2 border-primary-500 pb-1 hover:border-primary-400 transition-colors font-medium"
             >
-              Get a menu read
+              Request a menu read
               <span className="ml-2">→</span>
             </a>
             <a

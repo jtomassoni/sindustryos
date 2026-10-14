@@ -26,15 +26,12 @@ export default function Hero() {
           </p>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white mb-5 leading-[1.08] tracking-tight text-balance animate-fade-up animate-fade-up-delay-1">
-            Spot leakage, bad margins, and hidden opportunities in your menu.
+            Send one month of sales. See where your menu is leaking money.
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
-            One month of sales data in. Margin analysis that actually accounts for day-of-week and
-            week-of-month patterns. Real math. No contract. Not sold by career salespeople.
-          </p>
-          <p className="text-sm text-primary-300/80 italic mb-10 max-w-lg animate-fade-up animate-fade-up-delay-2">
-            Around the cost of one 4-top a month.
+            Menu Insights turns POS data into clear calls on bad margins, quiet leakage, and
+            what to fix first. Around the cost of one 4-top a month. No long-term contract.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">
@@ -42,7 +39,7 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center text-lg text-white border-b-2 border-primary-500 pb-1 hover:border-primary-400 transition-colors font-medium"
             >
-              Get a menu read
+              Request a menu read
               <span className="ml-2" aria-hidden>
                 →
               </span>
@@ -51,7 +48,7 @@ export default function Hero() {
               href="/products/ingredient-optimization"
               className="inline-flex items-center text-lg text-gray-400 hover:text-white transition-colors"
             >
-              See how it works
+              See what you get
             </a>
           </div>
         </div>

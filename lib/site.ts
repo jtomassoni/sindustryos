@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://www.sindustryos.com'
 export const SITE_NAME = 'SindustryOS'
 export const SITE_TAGLINE =
-  'All-in-one restaurant and bar management platform for independents'
+  'Menu Insights for independent restaurants and bars—plus website, private dining, and signage'
 
 export function absoluteUrl(path = '/'): string {
   if (!path || path === '/') return SITE_URL

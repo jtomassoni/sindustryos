@@ -5,7 +5,10 @@ export interface Submission {
   name: string
   email: string
   restaurant: string
-  hasWebsite: string
+  interest: string
+  pos: string
+  /** @deprecated kept for older in-memory rows */
+  hasWebsite?: string
   message?: string
   timestamp: string
   status: SubmissionStatus
@@ -24,7 +27,8 @@ export function addSubmission(input: {
   name: string
   email: string
   restaurant: string
-  hasWebsite: string
+  interest: string
+  pos: string
   message?: string
 }): Submission {
   const submission: Submission = {
@@ -32,7 +36,8 @@ export function addSubmission(input: {
     name: input.name,
     email: input.email,
     restaurant: input.restaurant,
-    hasWebsite: input.hasWebsite,
+    interest: input.interest,
+    pos: input.pos,
     message: input.message || '',
     timestamp: new Date().toISOString(),
     status: 'new',
