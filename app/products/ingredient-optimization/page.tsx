@@ -81,7 +81,7 @@ export default function IngredientOptimizationPage() {
           <div className="max-w-3xl mx-auto">
             <SubValueClaim
               claim="Fix one bad-margin item and you can cover months of the subscription."
-              detail="For the cost of the sub, we surface leakage and opportunities your gut already suspected — with numbers attached."
+              detail="For the cost of one 4-top, we surface leakage and opportunities your gut already suspected — with numbers attached."
             />
           </div>
         </div>

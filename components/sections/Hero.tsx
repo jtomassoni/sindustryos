@@ -30,15 +30,13 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
-            Our flagship tool turns one month of sales data into clear, actionable insights on leakage,
-            margins, and where your menu is quietly leaving money on the table. No contract, no BS — a
-            software platform built by and owned by lifetime professionals.
-          </p>
-          <p className="text-base text-gray-400 mb-3 animate-fade-up animate-fade-up-delay-2">
-            $149/month · $99/month in the bundle
+            One month of sales data in — margin analysis that actually hits day-of-week and
+            week-of-month patterns better than anyone else. Legit math. Better than the rest of the
+            field. No contract, no BS — not sold by lifetime sales pros. Built by and owned by people
+            who hate that game as much as you do.
           </p>
           <p className="text-sm text-primary-300/80 italic mb-10 max-w-lg animate-fade-up animate-fade-up-delay-2">
-            For the cost of the sub, one margin fix can cover months of the bill.
+            For the cost of one 4-top, optimize your shit.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">

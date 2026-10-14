@@ -23,8 +23,7 @@ export default function ContactPage() {
               Have questions? Want to learn more? We'd love to hear from you.
             </p>
             <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
-              For the cost of the sub: Monaghan’s ~1–2 private dining requests/month, a few SEO
-              walk-ins, or one margin fix — any of those covers the bill.
+              For the cost of one 4-top, optimize your shit.
             </p>
           </div>
         </div>

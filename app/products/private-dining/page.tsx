@@ -15,7 +15,7 @@ import { pageMetadata } from '@/lib/seo-metadata'
 export const metadata: Metadata = pageMetadata({
   title: 'Private Dining Inquiry CRM for Restaurants — $49/month',
   description:
-    'Capture private dining and event space inquiries for neighborhood restaurants and bars. Built for venues near weddings, schools, and local gatherings — like Monaghan’s (~1–2 requests/month). $49/month.',
+    'Capture private dining and event space inquiries for neighborhood restaurants and bars. Built for venues near weddings, schools, and local gatherings. $49/month.',
   path: '/products/private-dining',
 })
 
@@ -60,12 +60,12 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Private Dining Inquiries is $49 per month. At Monaghan’s Bar and Grill, the site has brought about 1–2 private dining requests per month since launch — parties of roughly 20–100. One of those covers the sub; the rest is upside.',
+      'Private Dining Inquiries is $49 per month. For the cost of one 4-top, you’re catching high-intent party requests that would otherwise die in voicemail — one solid booking covers the sub; the rest is upside.',
   },
   {
     question: 'Who is this actually for?',
     answer:
-      'Neighborhood restaurants and bars with a private room or buyout potential — especially places sitting next to built-in demand like wedding venues, schools, and gathering spots. That is the Monaghan’s pattern: catch local, high-intent inquiries instead of hoping they call back.',
+      'Neighborhood restaurants and bars with a private room or buyout potential — especially places sitting next to built-in demand like wedding venues, schools, and gathering spots. Catch local, high-intent inquiries instead of hoping they call back.',
   },
   {
     question: 'Can I customize the inquiry form?',
@@ -80,7 +80,7 @@ const faqItems = [
   {
     question: 'What if I don’t get many inquiries?',
     answer:
-      'This is a niche, high-intent form — a few good requests a month is the job. Monaghan’s sees about 1–2 per month for parties of 20–100. If your location has nearby demand, the form’s job is to catch it cleanly.',
+      'This is a niche, high-intent form — a few good requests a month is the job. If your location has nearby demand, the form’s job is to catch it cleanly before those leads vanish.',
   },
   {
     question: 'Can I use this for other types of events?',
@@ -136,15 +136,15 @@ export default function PrivateDiningPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <SubValueClaim
-                claim="At Monaghan’s: about 1–2 private dining requests a month since launch."
-                detail="Parties of roughly 20–100 people. For $49/month, that cadence more than covers the sub — and it’s a niche form doing exactly what it should."
+                claim="Optimize your shit — catch the private dining asks before they vanish."
+                detail="A few high-intent requests a month for parties of 20–100 is the job. For $49/month, one solid booking covers the sub."
               />
               <p className="mt-4 text-sm text-gray-500">
                 <Link
                   href="/customers/monaghans-bar-and-grill"
                   className="text-primary-400 hover:text-primary-300 transition-colors"
                 >
-                  Read the Monaghan’s story →
+                  Read a customer story →
                 </Link>
               </p>
             </div>
@@ -158,9 +158,9 @@ export default function PrivateDiningPage() {
                 Foolproof lead territory — if the site can take the inquiry
               </h2>
               <p className="text-xl text-gray-400 mb-12 text-center max-w-2xl mx-auto">
-                Monaghan’s sits near Mountain Crust (wedding venue), Mullen High School, and a
-                cemetery. That is built-in demand for rehearsal dinners, school events, and
-                post-service gatherings. The website’s job is catching it.
+                Sit near a wedding venue, a high school, or a cemetery and you’ve got built-in
+                demand for rehearsal dinners, school events, and post-service gatherings. The
+                website’s job is catching it.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -216,8 +216,8 @@ export default function PrivateDiningPage() {
                     Neighborhood bars with a room
                   </h3>
                   <p className="text-gray-400">
-                    Like Monaghan’s — a busy floor plus private dining demand from what’s already
-                    nearby, not from national ad spend.
+                    A busy floor plus private dining demand from what’s already nearby — not from
+                    national ad spend.
                   </p>
                 </div>
 
@@ -259,13 +259,13 @@ export default function PrivateDiningPage() {
                   Simple Monthly Pricing
                 </h2>
                 <p className="text-xl text-gray-400 mb-6">
-                  $49 per month. At Monaghan’s, ~1–2 requests a month for parties of 20–100 makes
-                  that an easy yes.
+                  $49 per month. For the cost of one 4-top, stop letting neighborhood leads die in
+                  email.
                 </p>
                 <SubValueClaim
                   className="text-left max-w-xl mx-auto mb-10"
-                  claim="For the cost of the sub, stop letting neighborhood leads die in email."
-                  detail="Capture the inquiry, track the follow-up, fill the room — same dashboard as your site."
+                  claim="Optimize your shit — capture the ask, track the follow-up, fill the room."
+                  detail="Same dashboard as your site. No extra stack."
                 />
               </div>
 
@@ -335,8 +335,7 @@ export default function PrivateDiningPage() {
                 Your neighborhood is already sending leads
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Make sure the site can catch them. Monaghan’s gets about 1–2 private dining requests
-                a month — parties of 20–100 — since launch.
+                Make sure the site can catch them. For the cost of one 4-top, optimize your shit.
               </p>
               <Button href="/contact" variant="primary" size="lg">
                 Get Started Today

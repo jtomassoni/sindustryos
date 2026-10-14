@@ -19,7 +19,7 @@ export const locations: LocationPage[] = [
       'SindustryOS helps Denver restaurants and bars run websites, specials, events, private dining inquiries, and digital signage — without juggling vendors.',
     intro: [
       'Denver independents compete on atmosphere and regularity: weekly specials, live music, sports nights, and private buyouts. Your website and TVs have to keep up.',
-      'SindustryOS is built for that pace — and already powers hospitality operators in the Denver market, including Monaghan’s Bar and Grill.',
+      'SindustryOS is built for that pace — and already powers hospitality operators in the Denver market.',
     ],
     localAngles: [
       'Neighborhood bars that need accurate happy hour and event calendars',
@@ -30,7 +30,7 @@ export const locations: LocationPage[] = [
       {
         question: 'Do you only work with Denver restaurants?',
         answer:
-          'No. We serve restaurants and bars across the United States, with strong roots and customer proof in Denver — including Monaghan’s, which has seen about 1–2 private dining requests per month since launch.',
+          'No. We serve restaurants and bars across the United States, with strong roots and live customer sites in Denver.',
       },
       {
         question: 'Can you replace our current Denver web vendor?',

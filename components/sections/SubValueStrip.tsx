@@ -1,8 +1,7 @@
 const claims = [
   {
     product: 'Private Dining',
-    claim:
-      'Monaghan’s: ~1–2 private dining requests a month since launch — parties of 20–100.',
+    claim: 'Catch a few high-intent private dining requests a month — parties of 20–100.',
   },
   {
     product: 'Full Web CMS',
@@ -24,10 +23,10 @@ export default function SubValueStrip() {
       <div className="container mx-auto px-6 md:px-8">
         <div className="max-w-3xl mb-10 md:mb-12">
           <p className="text-accent-400 text-sm font-medium tracking-wide uppercase mb-3">
-            For the cost of the sub
+            For the cost of one 4-top
           </p>
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white leading-tight text-balance">
-            Reasonable math. Slightly aggressive marketing.
+            Optimize your shit. Slightly aggressive marketing.
           </h2>
         </div>
 

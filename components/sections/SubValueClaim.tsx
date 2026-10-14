@@ -12,7 +12,7 @@ export default function SubValueClaim({ claim, detail, className = '' }: SubValu
       aria-label="Subscription value"
     >
       <p className="text-accent-400 text-xs md:text-sm font-medium tracking-wide uppercase mb-2">
-        For the cost of the sub
+        For the cost of one 4-top
       </p>
       <p className="text-lg md:text-xl text-white font-display font-medium leading-snug text-balance">
         {claim}

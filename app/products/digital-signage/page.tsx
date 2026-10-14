@@ -79,7 +79,7 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Digital Signage is $99 per month. For the cost of the sub, one extra special sold because someone saw it on the screen covers the month. Everything else — events, announcements, fewer “what’s on special?” questions — is upside.',
+      'Digital Signage is $99 per month. For the cost of one 4-top, one extra special sold because someone saw it on the screen covers the month. Everything else — events, announcements, fewer “what’s on special?” questions — is upside.',
   },
   {
     question: 'Can I customize the slides?',
@@ -143,7 +143,7 @@ export default function DigitalSignagePage() {
           <div className="max-w-3xl mx-auto">
             <SubValueClaim
               claim="One extra special sold off the screen covers the month."
-              detail="For the cost of the sub, your TVs stop being wallpaper and start selling the thing you already prepped."
+              detail="For the cost of one 4-top, your TVs stop being wallpaper and start selling the thing you already prepped."
             />
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function DigitalSignagePage() {
               </p>
               <SubValueClaim
                 className="text-left max-w-xl mx-auto mb-10"
-                claim="For the cost of the sub, one special sold off the screen covers the bill."
+                claim="For the cost of one 4-top, one special sold off the screen covers the bill."
                 detail="Everything else — fewer staff questions, always-current events — is free upside."
               />
             </div>

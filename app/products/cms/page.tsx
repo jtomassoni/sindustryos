@@ -79,7 +79,7 @@ const faqItems = [
   {
     question: 'Is the SEO actually worth $99/month?',
     answer:
-      'We think so. For the cost of the sub, we build and maintain SEO so people who never would have noticed you find the menu, the specials, and the door. One new walk-in table a month and the math gets friendly fast.',
+      'We think so. For the cost of one 4-top, we build and maintain SEO so people who never would have noticed you find the menu, the specials, and the door. One new walk-in table a month and the math gets friendly fast.',
   },
 ]
 

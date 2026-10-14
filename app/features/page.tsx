@@ -248,7 +248,7 @@ export default function FeaturesPage() {
               Start with our Full Web CMS at $99/month and add features as you need them.
             </p>
             <p className="text-sm text-primary-300/90 italic mb-8 max-w-xl mx-auto">
-              For the cost of the sub, we rip SEO so people who never would have noticed you walk in.
+              For the cost of one 4-top, optimize your shit.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Get Started Today

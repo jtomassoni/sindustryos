@@ -16,7 +16,7 @@ const products = [
     price: '$149/month · $99 in bundle',
     description:
       'Flagship: spot leakage, bad margins, and hidden opportunities from one month of sales data.',
-    valueClaim: 'For the cost of the sub, fix one bad-margin item and cover months of the bill.',
+    valueClaim: 'For the cost of one 4-top, fix one bad-margin item and cover months of the bill.',
     icon: FiTrendingUp,
     href: '/products/ingredient-optimization',
     features: [
@@ -31,7 +31,7 @@ const products = [
     name: 'Full Web CMS',
     price: '$99/month',
     description: 'Complete website CMS with menu management, event calendar, specials, gallery, and SEO optimization. All hosting included.',
-    valueClaim: 'For the cost of the sub, we rip SEO so strangers who never noticed you walk in.',
+    valueClaim: 'For the cost of one 4-top, we rip SEO so strangers who never noticed you walk in.',
     icon: FiGlobe,
     href: '/products/cms',
     features: ['1-5 pages of content', 'Menu management', 'Event calendar', 'Specials management', 'Gallery', 'SEO-optimized'],
@@ -41,7 +41,7 @@ const products = [
     name: 'Private Dining Inquiries',
     price: '$49/month',
     description: 'Add-on: Lead capture and CRM for private event inquiries. You handle calls and emails.',
-    valueClaim: 'Monaghan’s: ~1–2 private dining requests/month since launch (parties ~20–100).',
+    valueClaim: 'For the cost of one 4-top, stop letting private dining leads die in email.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: ['Lead capture form', 'CRM functionality', 'Contact tracking', 'Event space management'],
@@ -51,7 +51,7 @@ const products = [
     name: 'Digital Signage',
     price: '$99/month',
     description: 'TV signage display system with custom slide builder. Show specials, events, and announcements automatically.',
-    valueClaim: 'For the cost of the sub, one extra special sold off the screen covers the month.',
+    valueClaim: 'For the cost of one 4-top, one extra special sold off the screen covers the month.',
     icon: FiMonitor,
     href: '/products/digital-signage',
     features: ['TV display system', 'Custom slide builder', 'Specials rotator', 'Events display'],
@@ -229,8 +229,7 @@ export default function ProductsPage() {
               you need. Add more as you grow.
             </p>
             <p className="text-sm text-primary-300/90 italic mb-5 max-w-xl mx-auto">
-              For the cost of the sub: Monaghan’s ~1–2 private dining requests/month, or a few SEO
-              walk-ins — that usually does the math.
+              For the cost of one 4-top, optimize your shit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">

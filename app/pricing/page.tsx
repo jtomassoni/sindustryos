@@ -37,8 +37,7 @@ const products = [
     price: '$99',
     period: '/month',
     description: 'Complete website CMS with all core features',
-    valueClaim:
-      'For the cost of the sub, we rip SEO so people who never would have noticed you show up.',
+    valueClaim: 'For the cost of one 4-top, we rip SEO so strangers show up.',
     features: [
       '1-5 pages of content',
       'Calendar of events management',
@@ -57,8 +56,7 @@ const products = [
     price: '$49',
     period: '/month',
     description: 'Add-on: Lead capture and CRM for private events (you handle communications)',
-    valueClaim:
-      'Monaghan’s: ~1–2 private dining requests/month since launch (parties ~20–100).',
+    valueClaim: 'For the cost of one 4-top, stop letting private dining leads die in email.',
     features: [
       'Lead capture form',
       'CRM functionality',
@@ -74,8 +72,7 @@ const products = [
     price: '$99',
     period: '/month',
     description: 'TV signage display system',
-    valueClaim:
-      'For the cost of the sub, one extra special sold off the screen covers the month.',
+    valueClaim: 'For the cost of one 4-top, one special sold off the screen covers the month.',
     features: [
       'TV display system (10-30ft viewing)',
       'Custom slide builder',
@@ -138,7 +135,7 @@ const faqItems = [
   {
     question: 'How does this pay for itself?',
     answer:
-      'At Monaghan’s, Private Dining brings about 1–2 requests a month since launch — parties of roughly 20–100 — which more than covers $49. For the CMS ($99), we rip SEO so people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
+      'For the cost of one 4-top, optimize your shit. Private Dining catches high-intent party requests that more than cover $49. For the CMS ($99), we rip SEO so people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -169,8 +166,7 @@ export default function PricingPage() {
               long-term contracts.
             </p>
             <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
-              For the cost of the sub: Monaghan’s ~1–2 private dining requests/month, a few SEO
-              walk-ins, or one margin fix — any of those covers the bill.
+              For the cost of one 4-top, optimize your shit.
             </p>
           </div>
         </div>
@@ -207,8 +203,8 @@ export default function PricingPage() {
                     </p>
                     <p className="text-gray-300 mb-3 leading-relaxed">{flagship.description}</p>
                     <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
-                      For the cost of the sub, fix one bad-margin item and you can cover months of
-                      the bill.
+                      For the cost of one 4-top, fix one bad-margin item and cover months of the
+                      bill.
                     </p>
                     <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
                       Get a menu read
@@ -314,13 +310,13 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <SubValueClaim
-              claim="Monaghan’s ~1–2 private dining requests a month, a few SEO walk-ins, or one margin fix."
-              detail="Real inquiry cadence where we have it — for the cost of the sub, the math is supposed to feel obvious."
+              claim="Optimize your shit — private dining catch, SEO walk-ins, or one margin fix."
+              detail="For the cost of one 4-top, the math is supposed to feel obvious."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               <p className="text-sm text-gray-400 leading-relaxed">
                 <span className="text-white font-medium block mb-1">$49 private dining</span>
-                Monaghan’s: ~1–2 requests/month, parties ~20–100.
+                Catch high-intent requests before they die in email.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 <span className="text-white font-medium block mb-1">$99 CMS + SEO</span>

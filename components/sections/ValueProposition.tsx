@@ -32,8 +32,8 @@ export default function ValueProposition() {
             already going to be in for menu insights. No extra stack to learn.
           </p>
           <p className="mt-4 text-sm md:text-base text-primary-300/90 italic max-w-2xl leading-relaxed">
-            For the cost of the sub: SEO that brings in strangers, Monaghan’s ~1–2 private dining
-            requests a month, or a margin fix that covers the bill — pick your favorite story.
+            For the cost of one 4-top, optimize your shit — SEO, private dining catch, or a margin
+            fix. Pick your favorite story.
           </p>
         </div>
 
