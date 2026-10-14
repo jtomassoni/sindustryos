@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -7,17 +7,19 @@ import JsonLd from '@/components/seo/JsonLd'
 import { getOrganizationSchema, getSoftwareApplicationSchema } from '@/lib/structured-data'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
+// Self-hosted: next/font/google can flake on Vercel as Module not found.
+const dmSans = localFont({
+  src: './fonts/DMSans-latin.woff2',
   variable: '--font-dm-sans',
+  weight: '100 1000',
   display: 'swap',
   preload: true,
 })
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
+const spaceGrotesk = localFont({
+  src: './fonts/SpaceGrotesk-latin.woff2',
   variable: '--font-space-grotesk',
-  weight: ['400', '500', '600', '700'],
+  weight: '300 700',
   display: 'swap',
   preload: true,
 })
