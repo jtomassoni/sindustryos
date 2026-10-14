@@ -19,9 +19,11 @@ export default function Footer() {
       { name: 'vs Agency', href: '/compare/sindustryos-vs-agency' },
       { name: 'Denver', href: '/locations/denver' },
       { name: 'Baltimore', href: '/locations/baltimore' },
+      { name: 'Orlando', href: '/locations/orlando' },
     ],
     company: [
       { name: 'About', href: '/about' },
+      { name: 'Partners', href: '/partners' },
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
     ],

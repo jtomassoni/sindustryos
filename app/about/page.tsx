@@ -5,7 +5,7 @@ import TargetAudience from '@/components/sections/TargetAudience'
 export const metadata: Metadata = {
   title: 'About: Hospitality Software for Independents',
   description:
-    'SindustryOS builds front-to-back restaurant and bar software for small teams: website CMS, private dining, and signage from people who know hospitality.',
+    'SindustryOS partners with independent restaurants and bars to cut busywork — website CMS, private dining, and signage. Less copy-paste, not fewer jobs.',
   alternates: { canonical: '/about' },
 }
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
               About SindustryOS
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              Building solutions for small businesses that actually work
+              We partner with restaurants to build solutions — less busywork, not fewer jobs.
             </p>
           </div>
         </div>
@@ -36,15 +36,16 @@ export default function AboutPage() {
             
             <div className="prose prose-invert max-w-none space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                SindustryOS started with a simple idea: small businesses shouldn't need to juggle 
-                multiple vendors and platforms to run their operations. We're building a total 
-                front-to-back solution that empowers small teams to do big tasks using AI tooling.
+                SindustryOS started with a simple idea: small restaurants and bars should not need
+                a stack of vendors just to keep specials, events, and the website honest. We build
+                with owners — tools that cut copy-paste and pointless clicks, not tools that promise
+                to replace their people.
               </p>
-              
+
               <p>
-                We're a team of builders working with partners to bring this solution to market. 
-                Our goal is simple: make restaurant and bar management accessible, affordable, 
-                and powerful enough to compete with enterprise solutions.
+                We are builders working with a few partners who know their cities. The goal is
+                straightforward: deliver what we say we can deliver, learn the floor with the
+                restaurant, and keep the busywork down.
               </p>
             </div>
           </div>
@@ -147,19 +148,19 @@ export default function AboutPage() {
                 <FiTarget className="w-12 h-12 text-primary-500 mb-6" />
                 <h2 className="text-2xl font-bold text-white mb-4">Mission</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  To create a front-to-back solution top to bottom for small businesses using AI 
-                  tooling to empower small teams to do big tasks. Making restaurant management 
-                  accessible, affordable, and powerful.
+                  Partner with independent restaurants and bars to build software that cuts
+                  busywork — copy-paste, duplicate updates, and vendor wait time — so the floor can
+                  stay focused on guests.
                 </p>
               </div>
-              
+
               <div className="bg-dark-800 border border-dark-700 rounded-2xl p-8">
                 <FiUsers className="w-12 h-12 text-primary-500 mb-6" />
                 <h2 className="text-2xl font-bold text-white mb-4">Vision</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  AI-powered solutions that help small restaurants and bars compete with enterprise 
-                  tools. One platform that replaces multiple vendors, reduces overhead, and helps 
-                  businesses thrive.
+                  A platform owners trust because we deliver: website, specials, events, private
+                  dining catch, and signage that stay in sync — built with the business, not sold
+                  over it.
                 </p>
               </div>
             </div>
@@ -177,30 +178,30 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Practical Solutions</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Partner, don’t displace</h3>
                 <p className="text-gray-400">
-                  We build tools that solve real problems, not features that look good in demos.
+                  We build with restaurants. We do not sell software as a way to cut hospitality jobs.
                 </p>
               </div>
-              
+
               <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Industry Understanding</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Cut the busywork</h3>
                 <p className="text-gray-400">
-                  We've worked in the industry and understand the day-to-day challenges you face.
+                  Less copy-paste between tools. Fewer clicks for the same update. Specials stay current.
                 </p>
               </div>
-              
+
               <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">No Upsells</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Deliver what we promise</h3>
                 <p className="text-gray-400">
-                  We offer what you need, when you need it. No pressure to buy features you don't want.
+                  Fed-up owners buy into ability to deliver — not a roadmap slide. We show the live work.
                 </p>
               </div>
-              
+
               <div className="bg-dark-900 border border-dark-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Affordable Pricing</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">No upsell theater</h3>
                 <p className="text-gray-400">
-                  Small businesses shouldn't pay enterprise prices. We keep costs reasonable and transparent.
+                  What you need, when you need it. Transparent pricing. No pressure features.
                 </p>
               </div>
             </div>

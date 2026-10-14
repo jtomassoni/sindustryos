@@ -68,6 +68,35 @@ export const locations: LocationPage[] = [
       },
     ],
   },
+  {
+    slug: 'orlando',
+    city: 'Orlando',
+    region: 'FL',
+    title: 'Restaurant & Bar Website Software in Orlando, FL',
+    description:
+      'SindustryOS helps Orlando restaurants and bars run websites, specials, events, private dining inquiries, and digital signage — without juggling vendors.',
+    intro: [
+      'Orlando independents compete with tourism noise and neighborhood regularity at once: specials, events, and private buyouts still have to stay accurate.',
+      'SindustryOS gives owners one place to publish menus, specials, events, and signage — built with the floor, not piled on as another stack.',
+    ],
+    localAngles: [
+      'Neighborhood spots that change specials weekly and hate waiting on a web person',
+      'Venues that get private dining and group asks and lose them in email',
+      'Owners fed up with restaurant tech that adds clicks instead of cutting busywork',
+    ],
+    faqs: [
+      {
+        question: 'Is SindustryOS available in Orlando?',
+        answer:
+          'Yes. The platform is web-based and available to restaurants and bars throughout the United States, including the Orlando area.',
+      },
+      {
+        question: 'What is the best starting package?',
+        answer:
+          'Most venues start with Full Web CMS at $99/month. Add Private Dining ($49) and Digital Signage ($99) as needed, or bundle for $199/month.',
+      },
+    ],
+  },
 ]
 
 export function getLocationBySlug(slug: string): LocationPage | undefined {
