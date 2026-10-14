@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
+import SubValueClaim from '@/components/sections/SubValueClaim'
 
 export const metadata: Metadata = {
   title: 'Menu Insights — Spot Leakage, Bad Margins & Hidden Opportunities',
@@ -75,6 +76,17 @@ export default function IngredientOptimizationPage() {
         </div>
       </section>
 
+      <section className="py-12 bg-dark-900 border-b border-dark-700/60">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <SubValueClaim
+              claim="Fix one bad-margin item and you can cover months of the subscription."
+              detail="For the cost of the sub, we surface leakage and opportunities your gut already suspected — with numbers attached."
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -114,7 +126,8 @@ export default function IngredientOptimizationPage() {
               Ready for a clearer read on your menu?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start with Menu Insights alone, or add it to the bundle for $99/month.
+              Start with Menu Insights alone, or add it to the bundle for $99/month. For the cost of
+              the sub, one margin fix can pay for a whole season.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Get a menu read

@@ -7,6 +7,8 @@ const products = [
     price: '$99/month',
     description:
       'Complete website with content management, menu management, event calendar, and specials.',
+    valueClaim:
+      'For the cost of the sub, we rip SEO so strangers who never would have noticed you show up hungry.',
     icon: FiGlobe,
     href: '/products/cms',
     features: [
@@ -23,6 +25,8 @@ const products = [
     price: '$49/month',
     description:
       'Add-on: Lead capture and CRM for private event inquiries. You handle calls and emails.',
+    valueClaim:
+      'Monaghan’s gets ~1–2 private dining requests a month since launch — parties of 20–100.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: [
@@ -38,6 +42,8 @@ const products = [
     price: '$99/month',
     description:
       'TV signage display system with custom slide builder for specials, events, and announcements.',
+    valueClaim:
+      'For the cost of the sub, one extra special sold off the screen covers the month.',
     icon: FiMonitor,
     href: '/products/digital-signage',
     features: [
@@ -89,8 +95,11 @@ export default function ProductShowcase() {
                     {product.name}
                   </h3>
                   <p className="text-primary-400 text-lg font-medium mb-3">{product.price}</p>
-                  <p className="text-gray-400 mb-4 leading-relaxed text-sm md:text-base">
+                  <p className="text-gray-400 mb-3 leading-relaxed text-sm md:text-base">
                     {product.description}
+                  </p>
+                  <p className="text-sm text-primary-300/90 italic mb-4 leading-snug">
+                    {product.valueClaim}
                   </p>
                 </div>
 

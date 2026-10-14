@@ -54,8 +54,12 @@ export default function PlatformClose() {
         </div>
 
         <div className="max-w-3xl mx-auto text-center border-t border-dark-600/80 pt-10 md:pt-12">
-          <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed font-light">
             Menu Insights from $149/month — $99 in the bundle. Add the rest when you want it.
+          </p>
+          <p className="text-sm md:text-base text-primary-300/90 italic mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
+            For the cost of the sub: Monaghan’s ~1–2 private dining requests a month, a few SEO
+            walk-ins, or one margin fix — any of those covers the bill. The rest is gravy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
             <a

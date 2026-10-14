@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/sections/Hero'
 import ValueProposition from '@/components/sections/ValueProposition'
+import SubValueStrip from '@/components/sections/SubValueStrip'
 import ProductShowcase from '@/components/sections/ProductShowcase'
 import Testimonial from '@/components/sections/Testimonial'
 import PlatformClose from '@/components/sections/PlatformClose'
@@ -36,6 +37,7 @@ export default function Home() {
       <main className="min-h-screen">
         <Hero />
         <ValueProposition />
+        <SubValueStrip />
         <ProductShowcase />
         <Testimonial />
         <PlatformClose />

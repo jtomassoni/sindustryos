@@ -1,14 +1,14 @@
 export default function Hero() {
   return (
     <section className="relative min-h-[88vh] flex items-end md:items-center overflow-hidden">
-      {/* Full-bleed atmosphere — save ChatGPT/DALL·E output as /public/hero-bg.jpg */}
+      {/* Full-bleed atmosphere — /public/hero-bg.jpg */}
       <div className="absolute inset-0 bg-dark-900" aria-hidden>
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 md:scale-100"
+          style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: '65% center' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/85 to-dark-900/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-900/90 via-dark-900/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-dark-900/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-900/95 via-dark-900/55 to-dark-900/20" />
         <div
           className="absolute inset-0 opacity-[0.035]"
           style={{
@@ -31,10 +31,14 @@ export default function Hero() {
 
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
             Our flagship tool turns one month of sales data into clear, actionable insights on leakage,
-            margins, and where your menu is quietly leaving money on the table.
+            margins, and where your menu is quietly leaving money on the table. No contract, no BS — a
+            software platform built by and owned by lifetime professionals.
           </p>
-          <p className="text-base text-gray-400 mb-10 animate-fade-up animate-fade-up-delay-2">
+          <p className="text-base text-gray-400 mb-3 animate-fade-up animate-fade-up-delay-2">
             $149/month · $99/month in the bundle
+          </p>
+          <p className="text-sm text-primary-300/80 italic mb-10 max-w-lg animate-fade-up animate-fade-up-delay-2">
+            For the cost of the sub, one margin fix can cover months of the bill.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">

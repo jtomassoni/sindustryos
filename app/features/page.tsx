@@ -244,8 +244,11 @@ export default function FeaturesPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-4">
               Start with our Full Web CMS at $99/month and add features as you need them.
+            </p>
+            <p className="text-sm text-primary-300/90 italic mb-8 max-w-xl mx-auto">
+              For the cost of the sub, we rip SEO so people who never would have noticed you walk in.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Get Started Today

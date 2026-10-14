@@ -6,6 +6,7 @@ import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import SubValueClaim from '@/components/sections/SubValueClaim'
 import JsonLd from '@/components/seo/JsonLd'
 import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
@@ -75,6 +76,11 @@ const faqItems = [
     question: 'Can I cancel anytime?',
     answer: 'Yes, there are no long-term contracts. You can cancel anytime if the service doesn\'t meet your needs.',
   },
+  {
+    question: 'Is the SEO actually worth $99/month?',
+    answer:
+      'We think so. For the cost of the sub, we build and maintain SEO so people who never would have noticed you find the menu, the specials, and the door. One new walk-in table a month and the math gets friendly fast.',
+  },
 ]
 
 export default function CMSPage() {
@@ -112,6 +118,17 @@ export default function CMSPage() {
                 View Pricing
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-dark-900 border-b border-dark-700/60">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <SubValueClaim
+              claim="We rip SEO so people who never would have noticed you walk through the door."
+              detail="Ninety-nine bucks a month. One new table from search, and the subscription already feels cheap."
+            />
           </div>
         </div>
       </section>
@@ -192,9 +209,14 @@ export default function CMSPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Simple, Transparent Pricing
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-gray-400 mb-6">
                 All hosting included. No hidden fees.
               </p>
+              <SubValueClaim
+                className="text-left max-w-xl mx-auto mb-10"
+                claim="For the cost of an agency retainer's coffee budget, you get a site that actually ranks."
+                detail="Hosting, SEO, menus, events, specials — the whole stack for less than one slow Tuesday's waste."
+              />
             </div>
             
             <PricingDisplay

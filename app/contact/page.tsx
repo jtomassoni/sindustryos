@@ -19,8 +19,12 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Get In Touch
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
               Have questions? Want to learn more? We'd love to hear from you.
+            </p>
+            <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
+              For the cost of the sub: Monaghan’s ~1–2 private dining requests/month, a few SEO
+              walk-ins, or one margin fix — any of those covers the bill.
             </p>
           </div>
         </div>

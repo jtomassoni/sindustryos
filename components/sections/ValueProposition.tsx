@@ -31,6 +31,10 @@ export default function ValueProposition() {
             Website, digital signage, and external inquiries combine into one easy dashboard you are
             already going to be in for menu insights. No extra stack to learn.
           </p>
+          <p className="mt-4 text-sm md:text-base text-primary-300/90 italic max-w-2xl leading-relaxed">
+            For the cost of the sub: SEO that brings in strangers, Monaghan’s ~1–2 private dining
+            requests a month, or a margin fix that covers the bill — pick your favorite story.
+          </p>
         </div>
 
         <div className="max-w-5xl border-t border-dark-600/80 pt-10 md:pt-12 mb-14 md:mb-16">

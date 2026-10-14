@@ -3,6 +3,7 @@ import { FiCheck, FiX } from 'react-icons/fi'
 import Button from '@/components/ui/Button'
 import FAQ from '@/components/products/FAQ'
 import JsonLd from '@/components/seo/JsonLd'
+import SubValueClaim from '@/components/sections/SubValueClaim'
 import { getFaqSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
@@ -36,6 +37,8 @@ const products = [
     price: '$99',
     period: '/month',
     description: 'Complete website CMS with all core features',
+    valueClaim:
+      'For the cost of the sub, we rip SEO so people who never would have noticed you show up.',
     features: [
       '1-5 pages of content',
       'Calendar of events management',
@@ -54,6 +57,8 @@ const products = [
     price: '$49',
     period: '/month',
     description: 'Add-on: Lead capture and CRM for private events (you handle communications)',
+    valueClaim:
+      'Monaghan’s: ~1–2 private dining requests/month since launch (parties ~20–100).',
     features: [
       'Lead capture form',
       'CRM functionality',
@@ -69,6 +74,8 @@ const products = [
     price: '$99',
     period: '/month',
     description: 'TV signage display system',
+    valueClaim:
+      'For the cost of the sub, one extra special sold off the screen covers the month.',
     features: [
       'TV display system (10-30ft viewing)',
       'Custom slide builder',
@@ -129,6 +136,11 @@ const faqItems = [
     answer: 'No setup fees. You only pay the monthly or annual subscription price.',
   },
   {
+    question: 'How does this pay for itself?',
+    answer:
+      'At Monaghan’s, Private Dining brings about 1–2 requests a month since launch — parties of roughly 20–100 — which more than covers $49. For the CMS ($99), we rip SEO so people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
+  },
+  {
     question: 'What payment methods do you accept?',
     answer: 'We accept all major credit cards. Annual plans are paid upfront.',
   },
@@ -155,6 +167,10 @@ export default function PricingPage() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Flagship Menu Insights, then add the dashboard tools you want. No hidden fees, no
               long-term contracts.
+            </p>
+            <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
+              For the cost of the sub: Monaghan’s ~1–2 private dining requests/month, a few SEO
+              walk-ins, or one margin fix — any of those covers the bill.
             </p>
           </div>
         </div>
@@ -189,7 +205,11 @@ export default function PricingPage() {
                     <p className="inline-block mb-4 text-sm font-semibold text-primary-300 bg-primary-500/15 border border-primary-500/30 px-3 py-1 rounded-md">
                       {flagship.bundlePrice}/month in the Complete Bundle
                     </p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">{flagship.description}</p>
+                    <p className="text-gray-300 mb-3 leading-relaxed">{flagship.description}</p>
+                    <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
+                      For the cost of the sub, fix one bad-margin item and you can cover months of
+                      the bill.
+                    </p>
                     <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
                       Get a menu read
                     </Button>
@@ -226,7 +246,11 @@ export default function PricingPage() {
                   <p className="inline-block mb-4 text-sm font-semibold text-primary-300 bg-primary-500/15 border border-primary-500/30 px-3 py-1 rounded-md">
                     {bundle.savings}
                   </p>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{bundle.description}</p>
+                  <p className="text-gray-300 mb-3 leading-relaxed">{bundle.description}</p>
+                  <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
+                    For less than one mid-week private party, you get the whole stack — site, SEO,
+                    inquiries, and signage.
+                  </p>
                   <Button href={bundle.href} variant="outline" size="lg" className="w-full sm:w-auto">
                     Get Started
                   </Button>
@@ -259,7 +283,10 @@ export default function PricingPage() {
                       <span className="text-4xl font-bold text-white">{product.price}</span>
                       <span className="text-gray-400">{product.period}</span>
                     </div>
-                    <p className="text-gray-400 mb-6">{product.description}</p>
+                    <p className="text-gray-400 mb-3">{product.description}</p>
+                    <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
+                      {product.valueClaim}
+                    </p>
 
                     <ul className="space-y-3">
                       {product.features.map((feature, index) => (
@@ -278,6 +305,31 @@ export default function PricingPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-dark-800/80 border-y border-dark-700/60">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <SubValueClaim
+              claim="Monaghan’s ~1–2 private dining requests a month, a few SEO walk-ins, or one margin fix."
+              detail="Real inquiry cadence where we have it — for the cost of the sub, the math is supposed to feel obvious."
+            />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+              <p className="text-sm text-gray-400 leading-relaxed">
+                <span className="text-white font-medium block mb-1">$49 private dining</span>
+                Monaghan’s: ~1–2 requests/month, parties ~20–100.
+              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                <span className="text-white font-medium block mb-1">$99 CMS + SEO</span>
+                We rip search so strangers find the door.
+              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                <span className="text-white font-medium block mb-1">$149 Menu Insights</span>
+                One bad-margin fix can cover months.
+              </p>
             </div>
           </div>
         </div>

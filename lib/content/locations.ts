@@ -23,14 +23,14 @@ export const locations: LocationPage[] = [
     ],
     localAngles: [
       'Neighborhood bars that need accurate happy hour and event calendars',
-      'Restaurants capturing private dining and patio buyout inquiries',
+      'Venues near wedding spots, schools, and gathering places that need to catch private dining inquiries',
       'Operators who want one system instead of an agency plus three point tools',
     ],
     faqs: [
       {
         question: 'Do you only work with Denver restaurants?',
         answer:
-          'No. We serve restaurants and bars across the United States, with strong roots and customer proof in Denver.',
+          'No. We serve restaurants and bars across the United States, with strong roots and customer proof in Denver — including Monaghan’s, which has seen about 1–2 private dining requests per month since launch.',
       },
       {
         question: 'Can you replace our current Denver web vendor?',

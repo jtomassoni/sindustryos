@@ -6,6 +6,7 @@ import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import SubValueClaim from '@/components/sections/SubValueClaim'
 
 import JsonLd from '@/components/seo/JsonLd'
 import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
@@ -77,7 +78,8 @@ const faqItems = [
   },
   {
     question: 'How does the pricing work?',
-    answer: 'Digital Signage is $99 per month. This includes all features: TV display system, custom slide builder, specials rotator, events display, and announcements integration.',
+    answer:
+      'Digital Signage is $99 per month. For the cost of the sub, one extra special sold because someone saw it on the screen covers the month. Everything else — events, announcements, fewer “what’s on special?” questions — is upside.',
   },
   {
     question: 'Can I customize the slides?',
@@ -132,6 +134,17 @@ export default function DigitalSignagePage() {
                 View Pricing
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-dark-900 border-b border-dark-700/60">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <SubValueClaim
+              claim="One extra special sold off the screen covers the month."
+              detail="For the cost of the sub, your TVs stop being wallpaper and start selling the thing you already prepped."
+            />
           </div>
         </div>
       </section>
@@ -229,9 +242,14 @@ export default function DigitalSignagePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Pricing
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-gray-400 mb-6">
                 Simple, straightforward pricing for all features.
               </p>
+              <SubValueClaim
+                className="text-left max-w-xl mx-auto mb-10"
+                claim="For the cost of the sub, one special sold off the screen covers the bill."
+                detail="Everything else — fewer staff questions, always-current events — is free upside."
+              />
             </div>
             
             <PricingDisplay
