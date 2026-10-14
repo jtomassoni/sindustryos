@@ -136,7 +136,7 @@ export default function PrivateDiningPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <SubValueClaim
-                claim="Optimize your shit: catch the private dining asks before they vanish."
+                claim="Catch the private dining asks before they vanish."
                 detail="A few high-intent requests a month for parties of 20-100 is the job. For $49/month, one solid booking covers the sub."
               />
               <p className="mt-4 text-sm text-gray-500">
@@ -264,7 +264,7 @@ export default function PrivateDiningPage() {
                 </p>
                 <SubValueClaim
                   className="text-left max-w-xl mx-auto mb-10"
-                  claim="Optimize your shit: capture the ask, track the follow-up, fill the room."
+                  claim="Capture the ask, track the follow-up, fill the room."
                   detail="Same dashboard as your site. No extra stack."
                 />
               </div>
@@ -335,7 +335,7 @@ export default function PrivateDiningPage() {
                 Your neighborhood is already sending leads
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Make sure the site can catch them. For the cost of one 4-top, optimize your shit.
+                Make sure the site can catch them—around the cost of one 4-top a month.
               </p>
               <Button href="/contact" variant="primary" size="lg">
                 Get Started Today

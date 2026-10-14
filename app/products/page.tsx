@@ -31,7 +31,7 @@ const products = [
     name: 'Full Web CMS',
     price: '$99/month',
     description: 'Complete website CMS with menu management, event calendar, specials, gallery, and SEO optimization. All hosting included.',
-    valueClaim: 'For the cost of one 4-top, we rip SEO so strangers who never noticed you walk in.',
+    valueClaim: 'For the cost of one 4-top, SEO that helps people who never noticed you walk in.',
     icon: FiGlobe,
     href: '/products/cms',
     features: ['1-5 pages of content', 'Menu management', 'Event calendar', 'Specials management', 'Gallery', 'SEO-optimized'],
@@ -97,8 +97,9 @@ export default function ProductsPage() {
               Our Products
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed">
-              Start with Menu Insights, then add website, signage, and inquiry tools in the same
-              dashboard.
+              The model is simple: real products, and a partner mission — we build with restaurants
+              to cut busywork, not jobs. Start with Menu Insights, then add website, signage, and
+              inquiry tools in the same dashboard.
             </p>
           </div>
         </div>
@@ -229,7 +230,7 @@ export default function ProductsPage() {
               you need. Add more as you grow.
             </p>
             <p className="text-sm text-primary-300/90 italic mb-5 max-w-xl mx-auto">
-              For the cost of one 4-top, optimize your shit.
+              Priced around what one good table brings in.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">

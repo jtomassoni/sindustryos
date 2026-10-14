@@ -7,7 +7,7 @@ const products = [
     price: '$99/month',
     description:
       'Complete website with content management, menu management, event calendar, and specials.',
-    valueClaim: 'For the cost of one 4-top, we rip SEO so strangers show up hungry.',
+    valueClaim: 'For the cost of one 4-top, SEO that helps strangers find the door.',
     icon: FiGlobe,
     href: '/products/cms',
     features: [

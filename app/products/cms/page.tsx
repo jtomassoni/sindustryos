@@ -126,7 +126,7 @@ export default function CMSPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <SubValueClaim
-              claim="We rip SEO so people who never would have noticed you walk through the door."
+              claim="SEO that helps people who never would have noticed you walk through the door."
               detail="Ninety-nine bucks a month. One new table from search, and the subscription already feels cheap."
             />
           </div>

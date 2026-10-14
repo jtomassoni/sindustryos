@@ -37,7 +37,7 @@ const products = [
     price: '$99',
     period: '/month',
     description: 'Complete website CMS with all core features',
-    valueClaim: 'For the cost of one 4-top, we rip SEO so strangers show up.',
+    valueClaim: 'For the cost of one 4-top, SEO that helps strangers find the door.',
     features: [
       '1-5 pages of content',
       'Calendar of events management',
@@ -135,7 +135,7 @@ const faqItems = [
   {
     question: 'How does this pay for itself?',
     answer:
-      'For the cost of one 4-top, optimize your shit. Private Dining catches high-intent party requests that more than cover $49. For the CMS ($99), we rip SEO so people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
+      'Around the cost of one 4-top. Private Dining catches high-intent party requests that more than cover $49. For the CMS ($99), SEO helps people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -166,7 +166,7 @@ export default function PricingPage() {
               long-term contracts.
             </p>
             <p className="text-base text-primary-300/90 italic max-w-2xl mx-auto leading-relaxed">
-              For the cost of one 4-top, optimize your shit.
+              Priced around what one good table brings in.
             </p>
           </div>
         </div>
@@ -310,8 +310,8 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <SubValueClaim
-              claim="Optimize your shit: private dining catch, SEO walk-ins, or one margin fix."
-              detail="For the cost of one 4-top, the math is supposed to feel obvious."
+              claim="Private dining catch, SEO walk-ins, or one margin fix."
+              detail="Around the cost of one 4-top, the math should feel obvious."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -320,7 +320,7 @@ export default function PricingPage() {
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 <span className="text-white font-medium block mb-1">$99 CMS + SEO</span>
-                We rip search so strangers find the door.
+                SEO that helps strangers find the door.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 <span className="text-white font-medium block mb-1">$149 Menu Insights</span>

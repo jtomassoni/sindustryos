@@ -34,7 +34,7 @@ export default function Hero() {
             week-of-month patterns. Real math. No contract. Not sold by career salespeople.
           </p>
           <p className="text-sm text-primary-300/80 italic mb-10 max-w-lg animate-fade-up animate-fade-up-delay-2">
-            For the cost of one 4-top, optimize your shit.
+            Around the cost of one 4-top a month.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">

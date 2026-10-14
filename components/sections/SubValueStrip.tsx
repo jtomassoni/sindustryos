@@ -5,7 +5,7 @@ const claims = [
   },
   {
     product: 'Full Web CMS',
-    claim: 'We rip SEO so people who never would have noticed you walk through the door.',
+    claim: 'SEO that helps people who never noticed you find the menu and the door.',
   },
   {
     product: 'Menu Insights',
@@ -26,7 +26,7 @@ export default function SubValueStrip() {
             For the cost of one 4-top
           </p>
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white leading-tight text-balance">
-            Optimize your shit. Slightly aggressive marketing.
+            Clear payback on a small monthly bill.
           </h2>
         </div>
 

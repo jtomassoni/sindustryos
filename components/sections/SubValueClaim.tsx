@@ -4,7 +4,7 @@ type SubValueClaimProps = {
   className?: string
 }
 
-/** Confident, slightly cheeky “pays for itself” lines used across marketing pages. */
+/** Short “pays for itself” value lines used across marketing pages. */
 export default function SubValueClaim({ claim, detail, className = '' }: SubValueClaimProps) {
   return (
     <aside

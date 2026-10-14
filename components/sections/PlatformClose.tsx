@@ -58,7 +58,7 @@ export default function PlatformClose() {
             Menu Insights from $149/month, $99 in the bundle. Add the rest when you want it.
           </p>
           <p className="text-sm md:text-base text-primary-300/90 italic mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
-            For the cost of one 4-top, optimize your shit. The rest is gravy.
+            Around the cost of one 4-top. Everything else is upside.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
             <a
