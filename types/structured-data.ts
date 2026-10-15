@@ -9,7 +9,8 @@ export interface Organization {
   contactPoint?: {
     '@type': 'ContactPoint'
     contactType: string
-    email: string
+    email?: string
+    url?: string
     areaServed: string
     availableLanguage: string
   }

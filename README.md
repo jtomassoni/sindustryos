@@ -80,7 +80,7 @@ Create a `.env.local` file with the following variables:
 RESEND_API_KEY=re_your_api_key_here
 
 # Where contact form emails are delivered
-CONTACT_EMAIL=contact@sindustryos.com
+CONTACT_EMAIL=jtomassoni@gmail.com
 
 # Admin login (same format as Monaghan's / EcoLawns)
 # Single user:  ADMIN_USERS="username:password"

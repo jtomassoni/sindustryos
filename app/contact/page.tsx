@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { FiMail, FiClock, FiCheckCircle } from 'react-icons/fi'
+import { FiClock, FiCheckCircle, FiMessageSquare } from 'react-icons/fi'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
@@ -69,21 +69,14 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-primary-500/20 p-3 rounded-lg">
-                    <FiMail className="w-6 h-6 text-primary-500" />
+                    <FiMessageSquare className="w-6 h-6 text-primary-500" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">Email us directly</h3>
+                    <h3 className="text-white font-semibold mb-1">Use the form—not a shared inbox</h3>
                     <p className="text-gray-400">
-                      <a
-                        href="mailto:hello@sindustryos.com"
-                        className="text-primary-400 hover:text-primary-300 transition-colors"
-                      >
-                        hello@sindustryos.com
-                      </a>
-                      <span className="block mt-1 text-sm">
-                        Serving restaurants and bars across the U.S. Stronger on-the-ground roots
-                        in Denver and Baltimore.
-                      </span>
+                      Submissions land in our CRM so nothing gets buried. Serving restaurants and
+                      bars across the U.S., with stronger on-the-ground roots in Denver and
+                      Baltimore.
                     </p>
                   </div>
                 </div>

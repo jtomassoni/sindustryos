@@ -199,7 +199,7 @@ export default function ContactForm() {
 
       {submitStatus === 'error' && (
         <div className="bg-red-600/20 border border-red-500 rounded-xl p-4 text-red-400">
-          Something went wrong. Email hello@sindustryos.com or try again.
+          Something went wrong. Please try submitting the form again.
         </div>
       )}
 
@@ -219,12 +219,6 @@ export default function ContactForm() {
           'Request a menu read'
         )}
       </Button>
-      <p className="text-sm text-gray-500 text-center">
-        Or email{' '}
-        <a href="mailto:hello@sindustryos.com" className="text-primary-400 hover:text-primary-300">
-          hello@sindustryos.com
-        </a>
-      </p>
     </form>
   )
 }

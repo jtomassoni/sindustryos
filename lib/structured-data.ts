@@ -24,7 +24,7 @@ export function getOrganizationSchema(): Organization {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: 'hello@sindustryos.com',
+      url: absoluteUrl('/contact'),
       areaServed: 'US',
       availableLanguage: 'English',
     },

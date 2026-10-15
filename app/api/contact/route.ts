@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY)
-        const contactEmail = process.env.CONTACT_EMAIL || 'contact@sindustryos.com'
+        const contactEmail = process.env.CONTACT_EMAIL || 'jtomassoni@gmail.com'
         const interestLabel = interestLabels[interest] || interest
         const posLabel = posLabels[pos] || pos
 
