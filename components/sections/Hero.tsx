@@ -30,8 +30,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
-            Menu Insights turns POS data into clear calls on bad margins, quiet leakage, and
-            what to fix first. Around the cost of one 4-top a month. No long-term contract.
+            An analytics engine that digests your sales reports and responds with actionable
+            insights—bad margins, quiet leakage, what to fix first. Around the cost of one 4-top a
+            month. No long-term contract.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">

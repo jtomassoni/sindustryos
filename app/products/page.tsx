@@ -1,35 +1,37 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { FiGlobe, FiUsers, FiMonitor, FiArrowRight, FiTrendingUp } from 'react-icons/fi'
+import { FiGlobe, FiUsers, FiMonitor, FiArrowRight, FiTrendingUp, FiShare2 } from 'react-icons/fi'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Products: Menu Insights, CMS, Signage & Private Dining',
+  title: 'Products: Analytics Engine, Website & Add-ons',
   description:
-    'SindustryOS products: Menu Insights ($149, or $99 in the bundle), Full Web CMS ($99), Private Dining ($49), Digital Signage ($99).',
+    'SindustryOS: analytics engine that digests sales reports into actionable insights, customizable website (Tier 1), plus add-ons for private dining, digital signage, and social media.',
   alternates: { canonical: '/products' },
 }
 
 const products = [
   {
-    name: 'Menu Insights',
+    name: 'Analytics engine',
     price: '$149/month · $99 in bundle',
+    badge: 'Core product',
     description:
-      'Flagship: spot leakage, bad margins, and what to fix from one month of sales data.',
+      'Digests your sales reports and responds with actionable insights—leakage, margins, and what to fix first.',
     valueClaim: 'Fix one bad-margin item and cover months of the bill.',
     icon: FiTrendingUp,
     href: '/products/ingredient-optimization',
     features: [
-      'Leakage & margin insights',
-      'Actionable menu recommendations',
+      'Sales report digestion',
+      'Actionable menu & margin insights',
       'Same dashboard as your other tools',
       'Premium POS sync available',
     ],
     primary: true,
   },
   {
-    name: 'Full Web CMS',
+    name: 'Customizable website',
     price: '$99/month',
+    badge: 'Tier 1',
     description:
       'Guest-facing website with menus, events, specials, gallery, hosting, and SEO.',
     valueClaim: 'SEO that helps people who never noticed you walk in.',
@@ -45,24 +47,26 @@ const products = [
     primary: false,
   },
   {
-    name: 'Private Dining Inquiries',
+    name: 'Private dining',
     price: '$49/month',
+    badge: 'Add-on',
     description:
-      'Lead capture and CRM for private event inquiries. You handle calls and emails.',
+      'Private dining page plus lead capture and CRM for event inquiries. You handle calls and emails.',
     valueClaim: 'Stop letting private dining leads die in email.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: [
+      'Private dining page',
       'Lead capture form',
-      'CRM functionality',
-      'Contact tracking',
+      'CRM & contact tracking',
       'Event space management',
     ],
     primary: false,
   },
   {
-    name: 'Digital Signage',
+    name: 'Digital signage',
     price: '$99/month',
+    badge: 'Add-on',
     description:
       'TV signage with a slide builder for specials, events, and announcements.',
     valueClaim: 'One extra special sold off the screen covers the month.',
@@ -73,6 +77,23 @@ const products = [
       'Custom slide builder',
       'Specials rotator',
       'Events display',
+    ],
+    primary: false,
+  },
+  {
+    name: 'Social media connection',
+    price: 'Ask about pricing',
+    badge: 'Add-on',
+    description:
+      'Connect and manage all your social pages within one app—alongside your site and insights.',
+    valueClaim: 'One login for the channels guests actually scroll.',
+    icon: FiShare2,
+    href: '/contact',
+    features: [
+      'Connect multiple social pages',
+      'Manage posts from one dashboard',
+      'Keep specials & events consistent',
+      'Works with your website content',
     ],
     primary: false,
   },
@@ -88,8 +109,8 @@ export default function ProductsPage() {
               Products that ship today
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed">
-              Start with Menu Insights. Add website, private dining, and signage in the same
-              dashboard—or take the Complete Bundle at $199/month.
+              Start with the analytics engine. Add a customizable website, then bundle private
+              dining, signage, and social when you need them.
             </p>
           </div>
         </div>
@@ -109,11 +130,9 @@ export default function ProductsPage() {
                       : 'border-dark-700'
                   }`}
                 >
-                  {product.primary && (
-                    <span className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
-                      Start here
-                    </span>
-                  )}
+                  <span className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
+                    {product.badge}
+                  </span>
                   <Icon className="w-9 h-9 md:w-10 md:h-10 mb-3 text-primary-500" />
                   <h2 className="text-xl md:text-2xl font-bold text-white mb-1.5">{product.name}</h2>
                   <p className="text-lg md:text-xl font-semibold mb-2 text-primary-500">
@@ -137,7 +156,8 @@ export default function ProductsPage() {
                     href={product.href}
                     className="inline-flex items-center gap-2 font-semibold transition-colors text-sm md:text-base text-primary-500 hover:text-primary-400"
                   >
-                    Learn more <FiArrowRight className="w-4 h-4" />
+                    {product.href === '/contact' ? 'Ask about social' : 'Learn more'}{' '}
+                    <FiArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               )
@@ -153,8 +173,8 @@ export default function ProductsPage() {
               Not sure where to start?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-3">
-              Request a menu read. We will tell you if Insights, the bundle, or a single tool is
-              the right first buy.
+              Request a menu read. We will tell you if Insights, the website, or an add-on is the
+              right first buy.
             </p>
             <p className="text-sm text-primary-300/90 mb-5 max-w-xl mx-auto">
               Priced around what one good table brings in.

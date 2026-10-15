@@ -1,25 +1,25 @@
-import { FiDatabase, FiMenu, FiGlobe, FiBarChart2 } from 'react-icons/fi'
+import { FiShare2, FiGlobe, FiBarChart2, FiLayers } from 'react-icons/fi'
 
 const features = [
   {
     icon: FiBarChart2,
-    title: 'Menu Insights',
-    description: 'Leakage, margins, and what to fix from one month of sales.',
-  },
-  {
-    icon: FiDatabase,
-    title: 'POS sync',
-    description: 'Premium plans connect to Square, Toast, and modern POS.',
+    title: 'Analytics engine',
+    description: 'Digests sales reports into actionable insights—what to fix and why.',
   },
   {
     icon: FiGlobe,
-    title: 'Marketing site',
-    description: 'Menus, specials, and events that stay honest online.',
+    title: 'Customizable website',
+    description: 'Tier 1: menus, specials, events, and SEO in one place.',
   },
   {
-    icon: FiMenu,
-    title: 'One dashboard',
-    description: 'Inquiries and signage where you already manage content.',
+    icon: FiLayers,
+    title: 'Guest-facing add-ons',
+    description: 'Private dining page + inquiries, and digital signage when you need them.',
+  },
+  {
+    icon: FiShare2,
+    title: 'Social connection',
+    description: 'Manage all your social pages from the same app.',
   },
 ]
 
@@ -44,8 +44,8 @@ export default function FeatureHighlights() {
             Built around the floor, not a feature list
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-            Insights first. Website, private dining, and signage ride in the same place—so you are
-            not juggling vendors for every weekly change.
+            Insights first. Website, private dining, signage, and social ride in the same
+            place—so you are not juggling vendors for every weekly change.
           </p>
         </div>
 

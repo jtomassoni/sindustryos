@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import { FiGlobe, FiUsers, FiMonitor } from 'react-icons/fi'
+import { FiGlobe, FiUsers, FiMonitor, FiShare2 } from 'react-icons/fi'
 
 const products = [
   {
-    name: 'Full Web CMS',
+    name: 'Customizable website',
     price: '$99/month',
+    badge: 'Tier 1',
     description:
       'Guest-facing site with menus, specials, events, and SEO—built for weekly restaurant updates.',
     valueClaim: 'SEO that helps strangers find the door, not another static brochure site.',
@@ -19,23 +20,25 @@ const products = [
     ],
   },
   {
-    name: 'Private Dining Inquiries',
+    name: 'Private dining',
     price: '$49/month',
+    badge: 'Add-on',
     description:
-      'Lead capture and CRM for private events. You still own the calls and emails—we catch the ask.',
+      'Private dining page plus lead capture and CRM. You still own the calls—we catch the ask.',
     valueClaim: 'Stop losing party requests in voicemail and shared inboxes.',
     icon: FiUsers,
     href: '/products/private-dining',
     features: [
+      'Private dining page',
       'Inquiry form',
       'Contact tracking',
       'Notes & follow-up',
-      'Tied to your website',
     ],
   },
   {
-    name: 'Digital Signage',
+    name: 'Digital signage',
     price: '$99/month',
+    badge: 'Add-on',
     description:
       'TV displays for specials, events, and announcements, driven from the same content you already publish.',
     valueClaim: 'One special sold off the screen covers the month.',
@@ -46,6 +49,22 @@ const products = [
       'Specials rotator',
       'Events display',
       '10–30ft viewing',
+    ],
+  },
+  {
+    name: 'Social media connection',
+    price: 'Ask about pricing',
+    badge: 'Add-on',
+    description:
+      'Manage all your social pages within one app—alongside your site and insights.',
+    valueClaim: 'One place for the channels guests actually scroll.',
+    icon: FiShare2,
+    href: '/contact',
+    features: [
+      'Connect multiple social pages',
+      'Manage from one dashboard',
+      'Keep specials consistent',
+      'Tied to your content',
     ],
   },
 ]
@@ -68,22 +87,25 @@ export default function ProductShowcase() {
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white mb-3 leading-tight">
-            Add the guest-facing tools when you are ready
+            Bundle the tools that sit next to insights
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-            Buy them alone, or take the Complete Bundle at $199/month and add Menu Insights for
-            $99 instead of $149.
+            Tier 1 is a customizable website. Add private dining, digital signage, and social when
+            you are ready—or take the Complete Bundle at $199/month.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-6xl mx-auto">
           {products.map((product) => {
             const Icon = product.icon
             return (
               <div
                 key={product.name}
-                className="flex flex-col w-full bg-dark-900/60 border border-dark-700 rounded-2xl p-6 hover:border-primary-500/40 transition-colors"
+                className="flex flex-col w-full bg-dark-900/60 border border-dark-700 rounded-2xl p-6 hover:border-primary-500/40 transition-colors relative"
               >
+                <span className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
+                  {product.badge}
+                </span>
                 <div className="mb-4">
                   <Icon className="w-9 h-9 text-primary-400 mb-4" />
                   <h3 className="text-xl md:text-2xl font-display font-semibold text-white mb-2">
@@ -111,7 +133,7 @@ export default function ProductShowcase() {
                   href={product.href}
                   className="inline-flex items-center text-white border-b border-primary-500 pb-1 hover:border-primary-400 transition-colors text-sm mt-auto w-fit"
                 >
-                  Learn more
+                  {product.href === '/contact' ? 'Ask about social' : 'Learn more'}
                   <span className="ml-2">→</span>
                 </Link>
               </div>

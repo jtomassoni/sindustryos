@@ -1,11 +1,11 @@
 const capabilities = [
   {
-    title: 'Menu Insights',
-    description: 'Leakage, margins, and what to fix from your sales data.',
+    title: 'Analytics engine',
+    description: 'Digests sales reports into actionable insights.',
   },
   {
     title: 'One dashboard',
-    description: 'Website, signage, and inquiries where you already work.',
+    description: 'Website, private dining, signage, and social in one place.',
   },
   {
     title: 'POS sync (premium)',
@@ -39,7 +39,7 @@ export default function PlatformClose() {
             Start with a menu read. Add the rest when it pays.
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-            Tell us your POS and we will outline what a first Menu Insights pass looks like—usually
+            Tell us your POS and we will outline what a first analytics pass looks like—usually
             within one business day.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function PlatformClose() {
 
         <div className="max-w-3xl mx-auto text-center border-t border-dark-600/80 pt-10 md:pt-12">
           <p className="text-lg md:text-xl text-gray-300 mb-2 leading-relaxed font-light">
-            Menu Insights $149/month · $99 with the Complete Bundle · Bundle $199/month
+            Analytics engine $149/month · $99 with the Complete Bundle · Bundle $199/month
           </p>
           <p className="text-sm md:text-base text-primary-300/90 mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
             Priced around what one good table brings in.

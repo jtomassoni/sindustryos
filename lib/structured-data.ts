@@ -19,7 +19,7 @@ export function getOrganizationSchema(): Organization {
     url: SITE_URL,
     logo: absoluteUrl('/logo.svg'),
     description:
-      'Menu Insights for independent restaurants and bars, plus website CMS, private dining CRM, and digital signage in one dashboard.',
+      'Analytics engine for independent restaurants and bars that digests sales reports into actionable insights—plus customizable website, private dining, digital signage, and social in one dashboard.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -37,7 +37,7 @@ export function getSoftwareApplicationSchema(): SoftwareApplication {
     '@type': 'SoftwareApplication',
     name: SITE_NAME,
     description:
-      'Menu Insights from sales data, plus restaurant website CMS, private dining CRM, and digital signage.',
+      'Analytics engine that digests sales reports into actionable insights, plus customizable restaurant website, private dining, digital signage, and social.',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     url: SITE_URL,
@@ -61,10 +61,10 @@ export function getProductSchema(options?: {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: options?.name ?? 'SindustryOS Menu Insights',
+    name: options?.name ?? 'SindustryOS Analytics Engine',
     description:
       options?.description ??
-      'Spot leakage, bad margins, and menu opportunities from one month of sales data.',
+      'Digests your sales reports and responds with actionable insights—leakage, bad margins, and what to fix first.',
     brand: {
       '@type': 'Brand',
       name: SITE_NAME,
@@ -94,7 +94,7 @@ export function getServiceSchema(): Service {
       name: 'United States',
     },
     description:
-      'Menu Insights for restaurants and bars, plus website CMS, private dining CRM, and digital signage in one dashboard.',
+      'Analytics engine for restaurants and bars, plus customizable website, private dining, digital signage, and social in one dashboard.',
     url: SITE_URL,
   }
 }

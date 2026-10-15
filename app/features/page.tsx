@@ -1,40 +1,46 @@
 import type { Metadata } from 'next'
-import { FiUsers, FiMonitor, FiBarChart2, FiGlobe } from 'react-icons/fi'
+import { FiUsers, FiMonitor, FiBarChart2, FiGlobe, FiShare2 } from 'react-icons/fi'
 import FeatureHighlights from '@/components/sections/FeatureHighlights'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Features: Menu Insights, CMS, Signage & Private Dining',
+  title: 'Features: Analytics Engine, Website & Add-ons',
   description:
-    'What ships today in SindustryOS: Menu Insights, restaurant website CMS, private dining CRM, and digital signage—for independent restaurants and bars.',
+    'SindustryOS: an analytics engine that digests your sales reports into actionable insights—plus a customizable website and add-ons for private dining, digital signage, and social media.',
   alternates: { canonical: '/features' },
 }
 
 const featureCategories = [
   {
-    title: 'Menu Insights',
+    title: 'Analytics engine',
+    badge: 'Core product',
     icon: FiBarChart2,
+    intro:
+      'The main product: upload or sync your sales reports and get clear, actionable insights—not another dashboard you ignore.',
     features: [
       {
-        title: 'Leakage & margin spotting',
+        title: 'Sales report digestion',
         description:
-          'Surface items and patterns that look busy but quietly drain food cost or margin.',
+          'One month of sales data in. The engine reads what’s selling, what’s lagging, and where money quietly leaks.',
       },
       {
-        title: 'Actionable next steps',
+        title: 'Actionable insights',
         description:
-          'One month of sales data in; clear calls on what to fix first—not a report you ignore.',
+          'Clear next steps on margins, leakage, and menu opportunities—so you know what to fix first.',
       },
       {
         title: 'Premium POS sync',
         description:
-          'Direct connections to Square, Toast, and modern POS systems so insights stay current.',
+          'Direct connections to Square, Toast, and modern POS systems so insights stay current without manual uploads.',
       },
     ],
   },
   {
-    title: 'Website & content',
+    title: 'Customizable website',
+    badge: 'Tier 1',
     icon: FiGlobe,
+    intro:
+      'Your guest-facing site—menus, specials, events, and SEO—managed in the same place as your insights.',
     features: [
       {
         title: 'Menus & specials',
@@ -57,8 +63,15 @@ const featureCategories = [
   },
   {
     title: 'Private dining',
+    badge: 'Add-on',
     icon: FiUsers,
+    intro: 'A dedicated private dining page plus inquiry capture so party leads don’t die in email.',
     features: [
+      {
+        title: 'Private dining page',
+        description:
+          'A guest-facing page for spaces, packages, and how to book—tied to your site.',
+      },
       {
         title: 'Inquiry capture',
         description: 'Headcount, date, and occasion before the lead dies in voicemail.',
@@ -71,7 +84,9 @@ const featureCategories = [
   },
   {
     title: 'Digital signage',
+    badge: 'Add-on',
     icon: FiMonitor,
+    intro: 'In-house TVs that show specials, events, and announcements from the same content you already manage.',
     features: [
       {
         title: 'TV display system',
@@ -80,6 +95,24 @@ const featureCategories = [
       {
         title: 'Slide builder',
         description: 'Custom slides driven from the same content you publish elsewhere.',
+      },
+    ],
+  },
+  {
+    title: 'Social media connection',
+    badge: 'Add-on',
+    icon: FiShare2,
+    intro: 'Connect and manage all your social pages from one app—so posts and updates don’t live in five logins.',
+    features: [
+      {
+        title: 'One-app management',
+        description:
+          'Connect your social accounts and manage pages from the same dashboard as your site and insights.',
+      },
+      {
+        title: 'Cross-channel updates',
+        description:
+          'Keep specials, events, and announcements consistent across the channels guests actually scroll.',
       },
     ],
   },
@@ -92,11 +125,11 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              What ships today
+              Analytics first. Tools that bundle.
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Menu Insights plus the guest-facing tools that keep menus, leads, and screens honest.
-              No vaporware on this page.
+              Digests your sales reports into actionable insights. Then add a customizable website
+              and the guest-facing tools that belong next to it.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Request a menu read
@@ -114,10 +147,14 @@ export default function FeaturesPage() {
               const Icon = category.icon
               return (
                 <div key={category.title}>
-                  <div className="flex items-center gap-4 mb-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
                     <Icon className="w-10 h-10 text-primary-500" />
                     <h2 className="text-3xl md:text-4xl font-bold text-white">{category.title}</h2>
+                    <span className="text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
+                      {category.badge}
+                    </span>
                   </div>
+                  <p className="text-gray-400 mb-8 max-w-3xl leading-relaxed">{category.intro}</p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {category.features.map((feature) => (
@@ -141,7 +178,7 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Start with Menu Insights
+              Start with the analytics engine
             </h2>
             <p className="text-xl text-gray-300 mb-4">
               $149/month alone, or $99 when added to the Complete Bundle at $199.

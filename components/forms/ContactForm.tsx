@@ -14,11 +14,12 @@ interface FormData {
 }
 
 const interestLabels: Record<string, string> = {
-  'menu-insights': 'Menu Insights / menu read',
+  'menu-insights': 'Analytics engine / menu read',
   bundle: 'Complete Bundle',
-  website: 'Website CMS',
+  website: 'Customizable website',
   'private-dining': 'Private dining',
   signage: 'Digital signage',
+  social: 'Social media connection',
   'not-sure': 'Not sure yet',
 }
 

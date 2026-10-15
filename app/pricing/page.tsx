@@ -8,20 +8,21 @@ import { getFaqSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant Software Pricing: Menu Insights from $99/month',
+  title: 'Restaurant Software Pricing: Analytics Engine from $99/month',
   description:
-    'SindustryOS pricing: Menu Insights $149/month ($99 in the bundle), Full Web CMS $99, Private Dining $49, Digital Signage $99, Complete Bundle $199. No long-term contracts.',
+    'SindustryOS pricing: Analytics engine $149/month ($99 in the bundle), Customizable website $99, Private dining $49, Digital signage $99, Social add-on, Complete Bundle $199. No long-term contracts.',
   path: '/pricing',
 })
 
 const flagship = {
-  name: 'Menu Insights',
+  name: 'Analytics engine',
   price: '$149',
   period: '/month',
   bundlePrice: '$99',
   description:
-    'Our flagship: spot leakage, bad margins, and hidden opportunities from one month of sales data.',
+    'Our core product: digests your sales reports and responds with actionable insights—leakage, bad margins, and what to fix first.',
   features: [
+    'Sales report digestion',
     'Actionable menu and margin insights',
     'Leakage and opportunity spotting',
     'Works from one month of sales data',
@@ -33,10 +34,11 @@ const flagship = {
 
 const products = [
   {
-    name: 'Full Web CMS',
+    name: 'Customizable website',
     price: '$99',
     period: '/month',
-    description: 'Complete website CMS with all core features',
+    badge: 'Tier 1',
+    description: 'Guest-facing site you can customize—menus, events, specials, and SEO',
     valueClaim: 'For the cost of one 4-top, SEO that helps strangers find the door.',
     features: [
       '1-5 pages of content',
@@ -52,12 +54,14 @@ const products = [
     href: '/products/cms',
   },
   {
-    name: 'Private Dining Inquiries',
+    name: 'Private dining',
     price: '$49',
     period: '/month',
-    description: 'Add-on: Lead capture and CRM for private events (you handle communications)',
+    badge: 'Add-on',
+    description: 'Private dining page + inquiries and CRM (you handle communications)',
     valueClaim: 'For the cost of one 4-top, stop letting private dining leads die in email.',
     features: [
+      'Private dining page',
       'Lead capture form',
       'CRM functionality',
       'Event space inquiry management',
@@ -68,9 +72,10 @@ const products = [
     href: '/products/private-dining',
   },
   {
-    name: 'Digital Signage',
+    name: 'Digital signage',
     price: '$99',
     period: '/month',
+    badge: 'Add-on',
     description: 'TV signage display system',
     valueClaim: 'For the cost of one 4-top, one special sold off the screen covers the month.',
     features: [
@@ -83,6 +88,21 @@ const products = [
     ],
     href: '/products/digital-signage',
   },
+  {
+    name: 'Social media connection',
+    price: 'Ask',
+    period: '',
+    badge: 'Add-on',
+    description: 'Manage all your social pages within one app',
+    valueClaim: 'One login for the channels guests actually scroll.',
+    features: [
+      'Connect multiple social pages',
+      'Manage posts from one dashboard',
+      'Keep specials & events consistent',
+      'Works alongside your website',
+    ],
+    href: '/contact',
+  },
 ]
 
 const bundle = {
@@ -92,12 +112,12 @@ const bundle = {
   compareAt: '$247',
   savings: 'Save $48/month',
   description:
-    'Full Web CMS, Private Dining Inquiries, and Digital Signage on one bill. Add Menu Insights for $99/month instead of $149.',
+    'Customizable website, private dining, and digital signage on one bill. Add the analytics engine for $99/month instead of $149.',
   features: [
-    'Everything in Full Web CMS',
-    'Everything in Private Dining Inquiries',
-    'Everything in Digital Signage',
-    'Menu Insights for $99/mo when added (vs $149 alone)',
+    'Everything in Customizable website',
+    'Everything in Private dining',
+    'Everything in Digital signage',
+    'Analytics engine for $99/mo when added (vs $149 alone)',
     'One platform, one bill',
     'Dedicated support',
   ],
@@ -110,19 +130,19 @@ const faqItems = [
     answer: 'No, there are no long-term contracts. You can cancel anytime if the service doesn\'t meet your needs.',
   },
   {
-    question: 'How much is Menu Insights?',
+    question: 'How much is the analytics engine?',
     answer:
-      'Menu Insights is $149/month on its own, or $99/month when included in the Complete Bundle.',
+      'The analytics engine (Menu Insights) is $149/month on its own, or $99/month when included in the Complete Bundle.',
   },
   {
-    question: 'Can I start with just the CMS and add features later?',
+    question: 'Can I start with just the website and add features later?',
     answer:
-      'Absolutely! Start with the Full Web CMS at $99/month and add Private Dining, Digital Signage, or Menu Insights when you need them, or grab the Complete Bundle at $199/month and add Menu Insights for $99.',
+      'Absolutely! Start with the customizable website at $99/month and add private dining, digital signage, social, or the analytics engine when you need them—or grab the Complete Bundle at $199/month and add the analytics engine for $99.',
   },
   {
     question: 'What\'s included in the Complete Bundle?',
     answer:
-      'The Complete Bundle includes Full Web CMS, Private Dining Inquiries, and Digital Signage for $199/month ($48 less than buying all three separately at $247). Menu Insights is $99/month when added to the bundle (vs $149 alone).',
+      'The Complete Bundle includes the customizable website, private dining, and digital signage for $199/month ($48 less than buying all three separately at $247). The analytics engine is $99/month when added to the bundle (vs $149 alone). Social media connection is a separate add-on—ask us for pricing.',
   },
   {
     question: 'What happens if I need to cancel?',
@@ -189,7 +209,7 @@ export default function PricingPage() {
                 <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
                   <div className="lg:w-2/5 shrink-0">
                     <p className="text-primary-400 text-sm font-semibold uppercase tracking-wider mb-2">
-                      Menu intelligence
+                      Core product
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
                       {flagship.name}
@@ -267,17 +287,24 @@ export default function PricingPage() {
             </div>
 
             {/* Individual products */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {products.map((product) => (
                 <div
                   key={product.name}
-                  className="bg-dark-800 border-2 border-dark-700 rounded-2xl p-8 flex flex-col"
+                  className="bg-dark-800 border-2 border-dark-700 rounded-2xl p-8 flex flex-col relative"
                 >
+                  <span className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
+                    {product.badge}
+                  </span>
                   <div className="mb-6 flex-grow">
-                    <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2 pr-20">{product.name}</h3>
                     <div className="flex items-baseline gap-2 mb-4">
                       <span className="text-4xl font-bold text-white">{product.price}</span>
-                      <span className="text-gray-400">{product.period}</span>
+                      {product.period ? (
+                        <span className="text-gray-400">{product.period}</span>
+                      ) : (
+                        <span className="text-gray-400">about pricing</span>
+                      )}
                     </div>
                     <p className="text-gray-400 mb-3">{product.description}</p>
                     <p className="text-sm text-primary-300/90 italic mb-6 leading-snug">
@@ -296,7 +323,7 @@ export default function PricingPage() {
 
                   <div className="mt-auto">
                     <Button href={product.href} variant="outline" size="md" className="w-full">
-                      Learn More
+                      {product.href === '/contact' ? 'Ask about social' : 'Learn More'}
                     </Button>
                   </div>
                 </div>
@@ -319,11 +346,11 @@ export default function PricingPage() {
                 Catch high-intent requests before they die in email.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
-                <span className="text-white font-medium block mb-1">$99 CMS + SEO</span>
+                <span className="text-white font-medium block mb-1">$99 website + SEO</span>
                 SEO that helps strangers find the door.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
-                <span className="text-white font-medium block mb-1">$149 Menu Insights</span>
+                <span className="text-white font-medium block mb-1">$149 analytics engine</span>
                 One bad-margin fix can cover months.
               </p>
             </div>
@@ -345,9 +372,9 @@ export default function PricingPage() {
                   <thead>
                     <tr className="border-b border-dark-700">
                       <th className="text-left p-4 text-white font-semibold">Feature</th>
-                      <th className="text-center p-4 text-white font-semibold">Full Web CMS</th>
-                      <th className="text-center p-4 text-white font-semibold">Private Dining</th>
-                      <th className="text-center p-4 text-white font-semibold">Digital Signage</th>
+                      <th className="text-center p-4 text-white font-semibold">Website</th>
+                      <th className="text-center p-4 text-white font-semibold">Private dining</th>
+                      <th className="text-center p-4 text-white font-semibold">Digital signage</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -442,8 +469,8 @@ export default function PricingPage() {
               Ready for a menu read?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Menu Insights $149 ($99 in the bundle), or the Complete Bundle at $199. Tell us your
-              POS—we reply within one business day.
+              Analytics engine $149 ($99 in the bundle), or the Complete Bundle at $199. Tell us
+              your POS—we reply within one business day.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Request a menu read

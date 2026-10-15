@@ -5,10 +5,11 @@ export default function Footer() {
 
   const footerLinks = {
     product: [
-      { name: 'Menu Insights', href: '/products/ingredient-optimization' },
-      { name: 'Full Web CMS', href: '/products/cms' },
-      { name: 'Private Dining', href: '/products/private-dining' },
-      { name: 'Digital Signage', href: '/products/digital-signage' },
+      { name: 'Analytics engine', href: '/products/ingredient-optimization' },
+      { name: 'Customizable website', href: '/products/cms' },
+      { name: 'Private dining', href: '/products/private-dining' },
+      { name: 'Digital signage', href: '/products/digital-signage' },
+      { name: 'Social media', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
     ],
     learn: [
@@ -42,8 +43,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-warm-200 text-sm leading-relaxed">
-              Menu Insights for independents—plus website CMS, private dining, and digital signage
-              in one dashboard.
+              Analytics for independents—plus customizable website, private dining, digital
+              signage, and social in one dashboard.
             </p>
           </div>
 
