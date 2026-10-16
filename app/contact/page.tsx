@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { FiClock, FiCheckCircle, FiMessageSquare } from 'react-icons/fi'
+import { FiCheckCircle, FiClock, FiMessageSquare } from 'react-icons/fi'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
@@ -9,86 +9,63 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
 }
 
+const nextSteps = [
+  {
+    icon: FiClock,
+    title: 'Reply in one business day',
+    body: 'We confirm fit, pricing, and how to share a sales export.',
+  },
+  {
+    icon: FiCheckCircle,
+    title: 'First menu read',
+    body: 'A short pass on leakage, margins, and what to fix first.',
+  },
+  {
+    icon: FiMessageSquare,
+    title: 'Form, not a shared inbox',
+    body: 'Submissions land in the CRM. Denver and Baltimore roots, U.S.-wide.',
+  },
+]
+
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+    <main className="min-h-screen bg-dark-900">
+      <section className="pt-5 pb-8 md:pt-6">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <div className="mb-4 max-w-2xl">
+            <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl">
               Request a menu read
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
-              Tell us your POS and what you want first. We reply within one business day with next
-              steps—usually how to send one month of sales data.
-            </p>
-            <p className="text-base text-primary-300/90 max-w-2xl mx-auto leading-relaxed">
-              Menu Insights from $149/month · Complete Bundle $199/month · No long-term contracts
+            <p className="mt-2 text-base leading-snug text-gray-300 md:text-lg">
+              Tell us your POS. Analytics from $149, bundle $199. No long-term contract.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section className="py-20 bg-dark-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Start here</h2>
-              <ContactForm />
+          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+            <div className="order-2 lg:order-1">
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-300">
+                What happens next
+              </h2>
+              <ul className="space-y-3">
+                {nextSteps.map((step) => {
+                  const Icon = step.icon
+                  return (
+                    <li key={step.title} className="flex items-start gap-3">
+                      <Icon className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" />
+                      <div>
+                        <p className="text-sm font-semibold text-white">{step.title}</p>
+                        <p className="text-sm leading-snug text-gray-400">{step.body}</p>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ul>
+              <p className="mt-4 rounded-lg border border-dark-700 bg-dark-800 px-3 py-2 text-sm text-gray-400">
+                Already a customer? Include your account email so we can prioritize you.
+              </p>
             </div>
-
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">What happens next</h2>
-
-              <div className="space-y-6 mb-12">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-500/20 p-3 rounded-lg">
-                    <FiClock className="w-6 h-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Reply in one business day</h3>
-                    <p className="text-gray-400">
-                      We confirm fit, pricing, and how to share a sales export (or connect POS on
-                      premium plans).
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-500/20 p-3 rounded-lg">
-                    <FiCheckCircle className="w-6 h-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">First menu read</h3>
-                    <p className="text-gray-400">
-                      You get a clear pass on leakage, margins, and what to fix first—not a
-                      40-page report you will ignore.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-500/20 p-3 rounded-lg">
-                    <FiMessageSquare className="w-6 h-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Use the form—not a shared inbox</h3>
-                    <p className="text-gray-400">
-                      Submissions land in our CRM so nothing gets buried. Serving restaurants and
-                      bars across the U.S., with stronger on-the-ground roots in Denver and
-                      Baltimore.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-dark-800 border border-dark-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Already a customer?</h3>
-                <p className="text-gray-400">
-                  Use the dedicated support email and number from onboarding, or include your
-                  account email in the form so we can prioritize you.
-                </p>
-              </div>
+            <div className="order-1 lg:order-2">
+              <ContactForm />
             </div>
           </div>
         </div>

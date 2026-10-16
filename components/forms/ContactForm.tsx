@@ -86,9 +86,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-3">
       <div>
-        <label htmlFor="name" className="block text-white font-medium mb-2">
+        <label htmlFor="name" className="block text-sm text-white font-medium mb-1">
           Name *
         </label>
         <input
@@ -98,13 +98,13 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="Your name"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-white font-medium mb-2">
+        <label htmlFor="email" className="block text-sm text-white font-medium mb-1">
           Email *
         </label>
         <input
@@ -114,13 +114,13 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="you@restaurant.com"
         />
       </div>
 
       <div>
-        <label htmlFor="restaurant" className="block text-white font-medium mb-2">
+        <label htmlFor="restaurant" className="block text-sm text-white font-medium mb-1">
           Restaurant / bar name *
         </label>
         <input
@@ -130,13 +130,13 @@ export default function ContactForm() {
           required
           value={formData.restaurant}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="Your venue name"
         />
       </div>
 
       <div>
-        <label htmlFor="interest" className="block text-white font-medium mb-2">
+        <label htmlFor="interest" className="block text-sm text-white font-medium mb-1">
           What do you want first? *
         </label>
         <select
@@ -145,7 +145,7 @@ export default function ContactForm() {
           required
           value={formData.interest}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
           {Object.entries(interestLabels).map(([value, label]) => (
             <option key={value} value={value}>
@@ -156,7 +156,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="pos" className="block text-white font-medium mb-2">
+        <label htmlFor="pos" className="block text-sm text-white font-medium mb-1">
           Current POS *
         </label>
         <select
@@ -165,7 +165,7 @@ export default function ContactForm() {
           required
           value={formData.pos}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
           <option value="">Select POS</option>
           <option value="toast">Toast</option>
@@ -177,16 +177,16 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-white font-medium mb-2">
+        <label htmlFor="message" className="block text-sm text-white font-medium mb-1">
           Anything we should know?
         </label>
         <textarea
           id="message"
           name="message"
-          rows={4}
+          rows={3}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-800 border border-dark-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
+          className="w-full px-3 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
           placeholder="Locations, busy nights, or a link to a sales export if you already have one…"
         />
       </div>

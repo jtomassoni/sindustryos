@@ -29,13 +29,13 @@ export default async function ComparePage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-dark-900">
-      <section className="py-16">
-        <div className="container mx-auto px-6 md:px-8 max-w-4xl">
+      <section className="py-5 md:py-6">
+        <div className="container mx-auto px-4 max-w-4xl">
           <Breadcrumbs
             items={[{ label: 'Compare', href: '/resources' }, { label: page.title }]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{page.title}</h1>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed">{page.summary}</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">{page.title}</h1>
+          <p className="text-base md:text-lg text-gray-300 mb-4 leading-snug">{page.summary}</p>
 
           <div className="overflow-x-auto border border-dark-700 rounded-xl mb-12">
             <table className="w-full text-left">

@@ -58,8 +58,8 @@ export default async function ResourceArticlePage({ params }: Props) {
     <>
       <JsonLd id={`article-${article.slug}`} data={schema} />
       <main className="min-h-screen bg-dark-900">
-        <article className="py-16">
-          <div className="container mx-auto px-6 md:px-8 max-w-3xl">
+        <article className="py-5 md:py-6">
+          <div className="container mx-auto px-4 max-w-3xl">
             <Breadcrumbs
               items={[
                 { label: 'Resources', href: '/resources' },
@@ -69,10 +69,10 @@ export default async function ResourceArticlePage({ params }: Props) {
             <p className="text-sm text-primary-400 mb-3 uppercase tracking-wide">
               {article.category}
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
               {article.title}
             </h1>
-            <p className="text-xl text-gray-300 mb-12">{article.description}</p>
+            <p className="text-base md:text-lg text-gray-300 mb-6">{article.description}</p>
 
             <div className="space-y-10">
               {article.sections.map((section) => (

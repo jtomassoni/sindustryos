@@ -174,30 +174,56 @@ export default function PricingPage() {
     <>
       <JsonLd id="faq-schema-pricing" data={faqSchema} />
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+      <section className="bg-dark-900 pt-5 pb-4 md:pt-6">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Three clear buys
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Start with a menu read, take the guest-facing stack, or get both. No hidden fees. No
-              long-term contracts.
+          <div className="mb-4 max-w-3xl">
+            <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl">Pricing</h1>
+            <p className="mt-2 text-base leading-snug text-gray-300 md:text-lg">
+              No setup fee. No long-term contract. Analytics is $149 alone, or $99 when you add it
+              to the $199 bundle.
             </p>
-            <p className="text-base text-primary-300/90 max-w-2xl mx-auto leading-relaxed">
-              Priced around what one good table brings in.
-            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-5">
+            <a href="#analytics" className="rounded-xl border border-primary-500/50 bg-dark-800 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Core</p>
+              <p className="mt-1 text-sm font-semibold text-white">Analytics</p>
+              <p className="text-xl font-bold text-white">$149</p>
+              <p className="text-xs text-gray-400">$99 in the bundle</p>
+            </a>
+            <a href="#website" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Tier 1</p>
+              <p className="mt-1 text-sm font-semibold text-white">Website</p>
+              <p className="text-xl font-bold text-white">$99</p>
+              <p className="text-xs text-gray-400">per month</p>
+            </a>
+            <a href="#dining" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Add-on</p>
+              <p className="mt-1 text-sm font-semibold text-white">Private dining</p>
+              <p className="text-xl font-bold text-white">$49</p>
+              <p className="text-xs text-gray-400">per month</p>
+            </a>
+            <a href="#signage" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Add-on</p>
+              <p className="mt-1 text-sm font-semibold text-white">Signage</p>
+              <p className="text-xl font-bold text-white">$99</p>
+              <p className="text-xs text-gray-400">per month</p>
+            </a>
+            <a href="#bundle" className="col-span-2 rounded-xl border border-dark-600 bg-dark-800 p-3 md:col-span-1">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Bundle</p>
+              <p className="mt-1 text-sm font-semibold text-white">Site + dining + TVs</p>
+              <p className="text-xl font-bold text-white">$199</p>
+              <p className="text-xs text-gray-400">was $247</p>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-20 bg-dark-900">
+      <section className="bg-dark-900 py-6 md:py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-10">
             {/* Flagship */}
-            <div className="relative overflow-hidden rounded-2xl border-2 border-primary-500 bg-gradient-to-br from-primary-600/25 via-dark-800 to-dark-900 shadow-[0_0_40px_-12px_rgba(13,148,136,0.45)]">
+            <div id="analytics" className="relative scroll-mt-20 overflow-hidden rounded-2xl border-2 border-primary-500 bg-gradient-to-br from-primary-600/25 via-dark-800 to-dark-900 shadow-[0_0_40px_-12px_rgba(13,148,136,0.45)]">
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600" />
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                 <span className="bg-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-semibold tracking-wide shadow-lg">
@@ -247,7 +273,7 @@ export default function PricingPage() {
             </div>
 
             {/* Complete Bundle */}
-            <div className="rounded-2xl border border-dark-600 bg-dark-800 p-8 md:p-10">
+            <div id="bundle" className="scroll-mt-20 rounded-2xl border border-dark-600 bg-dark-800 p-8 md:p-10">
               <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
                 <div className="lg:w-2/5 shrink-0">
                   <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">
@@ -291,7 +317,16 @@ export default function PricingPage() {
               {products.map((product) => (
                 <div
                   key={product.name}
-                  className="bg-dark-800 border-2 border-dark-700 rounded-2xl p-8 flex flex-col relative"
+                  id={
+                    product.name === 'Customizable website'
+                      ? 'website'
+                      : product.name === 'Private dining'
+                        ? 'dining'
+                        : product.name === 'Digital signage'
+                          ? 'signage'
+                          : undefined
+                  }
+                  className="bg-dark-800 border-2 border-dark-700 rounded-2xl p-8 flex flex-col relative scroll-mt-20"
                 >
                   <span className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide text-primary-300 bg-primary-500/15 border border-primary-500/30 px-2.5 py-1 rounded-md">
                     {product.badge}
@@ -333,7 +368,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-dark-800/80 border-y border-dark-700/60">
+      <section className="py-10 md:py-12 bg-dark-800/80 border-y border-dark-700/60">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <SubValueClaim
@@ -359,7 +394,7 @@ export default function PricingPage() {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-10 md:py-12 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -447,7 +482,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-10 md:py-12 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -462,7 +497,7 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

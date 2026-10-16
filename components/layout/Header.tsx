@@ -20,10 +20,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-700">
       <nav className="container mx-auto px-6 md:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-display font-semibold text-white tracking-tight">SindustryOS</span>
+            <span className="text-xl font-display font-semibold text-white tracking-tight">SindustryOS</span>
           </Link>
           
           {/* Desktop Navigation */}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { FiClock, FiUsers, FiRefreshCw, FiCheckCircle } from 'react-icons/fi'
 import Button from '@/components/ui/Button'
-import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import ProductFold from '@/components/products/ProductFold'
 import FeatureList from '@/components/products/FeatureList'
 
 export const metadata: Metadata = {
@@ -38,34 +38,19 @@ const features = [
 export default function StaffSchedulingPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-        <div className="container mx-auto px-4">
-          <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Staff Scheduling' }]} />
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-primary-500/20 text-primary-400 text-sm font-semibold px-4 py-2 rounded-full border border-primary-500/30 mb-6">
-              Coming Soon
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Staff Scheduling
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Simplify staff scheduling with automated shift management, availability tracking, and communication tools.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" size="lg">
-                Get Notified When Available
-              </Button>
-              <Button href="/products" variant="outline" size="lg">
-                View All Products
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductFold
+        crumbs={[{ label: 'Products', href: '/products' }, { label: 'Staff Scheduling' }]}
+        eyebrow="Coming soon"
+        title="Staff scheduling"
+        lede="Shift management, availability, and swaps. Not shipping yet."
+        points={features.map((feature) => feature.title)}
+        primaryLabel="Get notified"
+        secondaryHref="/products"
+        secondaryLabel="View products"
+      />
 
       {/* Features Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -81,7 +66,7 @@ export default function StaffSchedulingPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
@@ -123,7 +108,7 @@ export default function StaffSchedulingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-8 md:py-10 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -23,7 +23,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <>
       <JsonLd id={`breadcrumb-${items.map((i) => i.label).join('-')}`} data={schema} />
-      <nav aria-label="Breadcrumb" className="mb-8">
+      <nav aria-label="Breadcrumb" className="mb-3">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link

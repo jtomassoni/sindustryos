@@ -4,7 +4,7 @@ import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
-import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import ProductFold from '@/components/products/ProductFold'
 import SubValueClaim from '@/components/sections/SubValueClaim'
 
 import JsonLd from '@/components/seo/JsonLd'
@@ -113,29 +113,15 @@ export default function DigitalSignagePage() {
       <JsonLd id="product-schema-signage" data={productSchema} />
       <JsonLd id="faq-schema-signage" data={faqSchema} />
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-        <div className="container mx-auto px-4">
-          <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Digital Signage' }]} />
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Digital signage for restaurants &amp; bars
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Professional TV signage display system. Show specials, events, and announcements 
-              automatically. Designed for 10-30ft viewing distance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" size="lg">
-                Ask about digital signage
-              </Button>
-              <Button href="/pricing" variant="outline" size="lg">
-                View Pricing
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductFold
+        crumbs={[{ label: 'Products', href: '/products' }, { label: 'Digital Signage' }]}
+        eyebrow="Add-on · $99/month"
+        title="Digital signage for restaurants & bars"
+        lede="TV slides for specials, events, and announcements. Built for 10–30ft viewing."
+        price="$99/month · one special sold off the screen covers it"
+        points={features.map((feature) => feature.title)}
+        primaryLabel="Ask about digital signage"
+      />
 
       <section className="py-12 bg-dark-900 border-b border-dark-700/60">
         <div className="container mx-auto px-4">
@@ -149,7 +135,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -165,7 +151,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
@@ -188,7 +174,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* Technical Specs */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
@@ -234,7 +220,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -269,7 +255,7 @@ export default function DigitalSignagePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -287,7 +273,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -302,7 +288,7 @@ export default function DigitalSignagePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-8 md:py-10 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

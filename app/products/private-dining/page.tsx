@@ -6,7 +6,7 @@ import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
-import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import ProductFold from '@/components/products/ProductFold'
 import SubValueClaim from '@/components/sections/SubValueClaim'
 import JsonLd from '@/components/seo/JsonLd'
 import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
@@ -104,33 +104,18 @@ export default function PrivateDiningPage() {
       <JsonLd id="product-schema-private-dining" data={productSchema} />
       <JsonLd id="faq-schema-private-dining" data={faqSchema} />
       <main className="min-h-screen">
-        <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-          <div className="container mx-auto px-4">
-            <Breadcrumbs
-              items={[
-                { label: 'Products', href: '/products' },
-                { label: 'Private Dining Inquiries' },
-              ]}
-            />
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Catch the private dining leads your neighborhood already sends
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Inquiry form + CRM for restaurants and bars with a room to fill, especially when
-                weddings, schools, and local gatherings are already around the corner.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/contact" variant="primary" size="lg">
-                  Catch private dining leads
-                </Button>
-                <Button href="/pricing" variant="outline" size="lg">
-                  View Pricing
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ProductFold
+          crumbs={[
+            { label: 'Products', href: '/products' },
+            { label: 'Private Dining Inquiries' },
+          ]}
+          eyebrow="Add-on · $49/month"
+          title="Catch private dining leads before they vanish"
+          lede="Inquiry form and CRM for restaurants and bars with a room to fill."
+          price="$49/month · one booking covers the subscription"
+          points={features.map((feature) => feature.title)}
+          primaryLabel="Catch private dining leads"
+        />
 
         <section className="py-12 bg-dark-900 border-b border-dark-700/60">
           <div className="container mx-auto px-4">
@@ -151,7 +136,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-dark-800">
+        <section className="py-8 md:py-10 bg-dark-800">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 text-center">
@@ -190,7 +175,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-dark-900">
+        <section className="py-8 md:py-10 bg-dark-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,7 +190,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-dark-800">
+        <section className="py-8 md:py-10 bg-dark-800">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Built for</h2>
@@ -251,7 +236,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-dark-900">
+        <section className="py-8 md:py-10 bg-dark-900">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
@@ -316,7 +301,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-dark-900">
+        <section className="py-8 md:py-10 bg-dark-900">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
@@ -328,7 +313,7 @@ export default function PrivateDiningPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+        <section className="py-8 md:py-10 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

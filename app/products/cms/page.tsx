@@ -4,7 +4,7 @@ import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import FAQ from '@/components/products/FAQ'
 import Button from '@/components/ui/Button'
-import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import ProductFold from '@/components/products/ProductFold'
 import SubValueClaim from '@/components/sections/SubValueClaim'
 import JsonLd from '@/components/seo/JsonLd'
 import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
@@ -97,29 +97,15 @@ export default function CMSPage() {
       <JsonLd id="product-schema-cms" data={productSchema} />
       <JsonLd id="faq-schema-cms" data={faqSchema} />
       <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-        <div className="container mx-auto px-4">
-          <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Full Web CMS' }]} />
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Restaurant &amp; bar website CMS
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Complete website solution for your restaurant or bar. Manage content, menus, events, 
-              and specials all in one place.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" size="lg">
-                Talk to us about CMS
-              </Button>
-              <Button href="/pricing" variant="outline" size="lg">
-                View Pricing
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductFold
+        crumbs={[{ label: 'Products', href: '/products' }, { label: 'Full Web CMS' }]}
+        eyebrow="Tier 1 · $99/month"
+        title="Restaurant & bar website CMS"
+        lede="Menus, events, specials, gallery, hosting, and SEO in one place."
+        price="$99/month · hosting included · cancel anytime"
+        points={features.map((feature) => feature.title)}
+        primaryLabel="Talk to us about CMS"
+      />
 
       <section className="py-12 bg-dark-900 border-b border-dark-700/60">
         <div className="container mx-auto px-4">
@@ -133,7 +119,7 @@ export default function CMSPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -149,7 +135,7 @@ export default function CMSPage() {
       </section>
 
       {/* Detailed Features */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
@@ -201,7 +187,7 @@ export default function CMSPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -235,7 +221,7 @@ export default function CMSPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">See a live customer site</h2>
@@ -260,7 +246,7 @@ export default function CMSPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -275,7 +261,7 @@ export default function CMSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-8 md:py-10 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { FiUsers, FiMonitor, FiBarChart2, FiGlobe, FiShare2 } from 'react-icons/fi'
-import FeatureHighlights from '@/components/sections/FeatureHighlights'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
@@ -121,28 +120,39 @@ const featureCategories = [
 export default function FeaturesPage() {
   return (
     <main className="min-h-screen">
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+      <section className="bg-dark-900 pt-5 pb-4 md:pt-6">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Analytics first. Tools that bundle.
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Digests your sales reports into actionable insights. Then add a customizable website
-              and the guest-facing tools that belong next to it.
-            </p>
-            <Button href="/contact" variant="primary" size="lg">
+          <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl">
+                Analytics first. Tools that bundle.
+              </h1>
+              <p className="mt-2 text-base leading-snug text-gray-300 md:text-lg">
+                Sales reports become a short list of what to fix. Website, dining, signage, and
+                social live in the same dashboard.
+              </p>
+            </div>
+            <Button href="/contact" variant="primary" size="md">
               Request a menu read
             </Button>
+          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
+            {featureCategories.map((category) => (
+              <div key={category.title} className="rounded-xl border border-dark-700 bg-dark-800 p-3">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">
+                  {category.badge}
+                </p>
+                <h2 className="mt-1 text-base font-semibold text-white">{category.title}</h2>
+                <p className="mt-1 line-clamp-3 text-sm leading-snug text-gray-400">{category.intro}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <FeatureHighlights />
-
-      <section className="py-20 bg-dark-900">
+      <section className="bg-dark-900 py-8 md:py-10">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto space-y-16">
+          <div className="max-w-6xl mx-auto space-y-10">
             {featureCategories.map((category) => {
               const Icon = category.icon
               return (
@@ -154,7 +164,7 @@ export default function FeaturesPage() {
                       {category.badge}
                     </span>
                   </div>
-                  <p className="text-gray-400 mb-8 max-w-3xl leading-relaxed">{category.intro}</p>
+                  <p className="text-gray-400 mb-4 max-w-3xl leading-relaxed">{category.intro}</p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {category.features.map((feature) => (
@@ -174,7 +184,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

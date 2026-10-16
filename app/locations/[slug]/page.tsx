@@ -36,15 +36,15 @@ export default async function LocationPage({ params }: Props) {
     <>
       <JsonLd id={`faq-location-${page.slug}`} data={faqSchema} />
       <main className="min-h-screen bg-dark-900">
-        <section className="py-16">
-          <div className="container mx-auto px-6 md:px-8 max-w-3xl">
+        <section className="py-5 md:py-6">
+          <div className="container mx-auto px-4 max-w-3xl">
             <Breadcrumbs
               items={[
                 { label: 'Locations', href: '/contact' },
                 { label: `${page.city}, ${page.region}` },
               ]}
             />
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
               {page.title}
             </h1>
             <div className="space-y-4 text-lg text-gray-300 leading-relaxed mb-10">

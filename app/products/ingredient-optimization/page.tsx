@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { FiTrendingUp, FiBarChart2, FiDollarSign, FiZap } from 'react-icons/fi'
 import Button from '@/components/ui/Button'
-import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import ProductFold from '@/components/products/ProductFold'
 import FeatureList from '@/components/products/FeatureList'
 import PricingDisplay from '@/components/products/PricingDisplay'
 import SubValueClaim from '@/components/sections/SubValueClaim'
@@ -43,38 +43,18 @@ const features = [
 export default function IngredientOptimizationPage() {
   return (
     <main className="min-h-screen">
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
-        <div className="container mx-auto px-4">
-          <Breadcrumbs
-            items={[
-              { label: 'Products', href: '/products' },
-              { label: 'Menu Insights' },
-            ]}
-          />
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-primary-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Flagship
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Menu Insights
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
-              Spot leakage, bad margins, and hidden opportunities from one month of sales data.
-            </p>
-            <p className="text-lg text-gray-400 mb-8">
-              $149/month · $99/month in the Complete Bundle
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" size="lg">
-                Request a menu read
-              </Button>
-              <Button href="/pricing" variant="outline" size="lg">
-                View pricing
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductFold
+        crumbs={[
+          { label: 'Products', href: '/products' },
+          { label: 'Menu Insights' },
+        ]}
+        eyebrow="Flagship"
+        title="Menu Insights"
+        lede="Spot leakage, bad margins, and hidden opportunities from one month of sales data."
+        price="$149/month · $99/month in the Complete Bundle"
+        points={features.map((feature) => feature.title)}
+        primaryLabel="Request a menu read"
+      />
 
       <section className="py-12 bg-dark-900 border-b border-dark-700/60">
         <div className="container mx-auto px-4">
@@ -87,7 +67,7 @@ export default function IngredientOptimizationPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What you get</h2>
@@ -100,7 +80,7 @@ export default function IngredientOptimizationPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Simple pricing</h2>
@@ -119,7 +99,7 @@ export default function IngredientOptimizationPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
+      <section className="py-8 md:py-10 bg-gradient-to-br from-primary-600/20 via-primary-500/10 to-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

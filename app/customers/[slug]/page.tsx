@@ -29,8 +29,8 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-dark-900">
-      <section className="py-16">
-        <div className="container mx-auto px-6 md:px-8 max-w-3xl">
+      <section className="py-5 md:py-6">
+        <div className="container mx-auto px-4 max-w-3xl">
           <Breadcrumbs
             items={[
               { label: 'Customers', href: '/resources' },
@@ -40,11 +40,11 @@ export default async function CaseStudyPage({ params }: Props) {
           <p className="text-sm text-primary-400 mb-3 uppercase tracking-wide">
             Case study · {study.location}
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
             {study.title}
           </h1>
 
-          <blockquote className="border-l-4 border-primary-500 pl-6 mb-12">
+          <blockquote className="border-l-4 border-primary-500 pl-4 mb-6">
             <p className="text-xl text-gray-200 italic leading-relaxed mb-4">
               &ldquo;{study.quote}&rdquo;
             </p>

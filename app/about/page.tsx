@@ -13,21 +13,36 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+      <section className="bg-dark-900 pt-5 pb-6 md:pt-6">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl">
               About SindustryOS
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              We partner with restaurants to build solutions — less busywork, not fewer jobs.
+            <p className="mt-3 text-base leading-snug text-gray-300 md:text-lg">
+              Small restaurants and bars should not need a stack of vendors just to keep specials,
+              events, and the website honest. We build with owners — tools that cut copy-paste, not
+              tools that promise to replace their people.
             </p>
           </div>
+          <ul className="mt-4 grid max-w-5xl grid-cols-1 gap-2 sm:grid-cols-3">
+            {[
+              'If it’s hard to update, it’s broken.',
+              'If guests can’t find it in seconds, it’s broken.',
+              'If it doesn’t help a Friday night, it’s broken.',
+            ].map((line) => (
+              <li
+                key={line}
+                className="rounded-lg border border-dark-700 bg-dark-800 px-3 py-2 text-sm text-gray-200"
+              >
+                {line}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* Company Story */}
-      <section className="py-20 bg-dark-900">
+      <section className="bg-dark-900 py-8 md:py-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
@@ -53,7 +68,7 @@ export default function AboutPage() {
       </section>
 
       {/* JT's Background */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -140,7 +155,7 @@ export default function AboutPage() {
       <TargetAudience />
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-8 md:py-10 bg-dark-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -169,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-dark-800">
+      <section className="py-8 md:py-10 bg-dark-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">

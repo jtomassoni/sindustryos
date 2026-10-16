@@ -1,57 +1,94 @@
+import Link from 'next/link'
+
+const offers = [
+  {
+    name: 'Analytics engine',
+    price: '$149/mo',
+    note: '$99 in the bundle',
+    href: '/products/ingredient-optimization',
+  },
+  {
+    name: 'Website',
+    price: '$99/mo',
+    note: 'Menus, events, SEO',
+    href: '/products/cms',
+  },
+  {
+    name: 'Private dining',
+    price: '$49/mo',
+    note: 'Inquiries and CRM',
+    href: '/products/private-dining',
+  },
+  {
+    name: 'Digital signage',
+    price: '$99/mo',
+    note: 'Specials on the TVs',
+    href: '/products/digital-signage',
+  },
+  {
+    name: 'Complete bundle',
+    price: '$199/mo',
+    note: 'Site, dining, signage',
+    href: '/pricing',
+  },
+]
+
 export default function Hero() {
   return (
-    <section className="relative min-h-[88vh] flex items-end md:items-center overflow-hidden">
-      {/* Full-bleed atmosphere: /public/hero-bg.jpg */}
+    <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-dark-900" aria-hidden>
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 md:scale-100"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: '65% center' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-dark-900/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-900/95 via-dark-900/55 to-dark-900/20" />
-        <div
-          className="absolute inset-0 opacity-[0.035]"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 1px 1px, #f4f7f8 1px, transparent 0)',
-            backgroundSize: '28px 28px',
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/85 to-dark-900/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-900/95 via-dark-900/70 to-dark-900/40" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-8 relative z-10 pt-28 pb-16 md:py-24">
-        <div className="max-w-3xl">
-          <p className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8 animate-fade-up">
-            SindustryOS
-          </p>
-
-          <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white mb-5 leading-[1.08] tracking-tight text-balance animate-fade-up animate-fade-up-delay-1">
-            Send one month of sales. See where your menu is leaking money.
-          </h1>
-
-          <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed max-w-xl animate-fade-up animate-fade-up-delay-2">
-            An analytics engine that digests your sales reports and responds with actionable
-            insights—bad margins, quiet leakage, what to fix first. Around the cost of one 4-top a
-            month. No long-term contract.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-start animate-fade-up animate-fade-up-delay-3">
-            <a
-              href="/contact"
-              className="inline-flex items-center text-lg text-white border-b-2 border-primary-500 pb-1 hover:border-primary-400 transition-colors font-medium"
-            >
-              Request a menu read
-              <span className="ml-2" aria-hidden>
-                →
-              </span>
-            </a>
-            <a
-              href="/products/ingredient-optimization"
-              className="inline-flex items-center text-lg text-gray-400 hover:text-white transition-colors"
-            >
-              See what you get
-            </a>
+      <div className="container relative z-10 mx-auto px-4 pb-6 pt-5 md:px-8 md:pb-8 md:pt-7">
+        <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-8">
+          <div>
+            <h1 className="font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white text-balance md:text-4xl lg:text-[2.6rem]">
+              Send one month of sales. See where your menu is leaking money.
+            </h1>
+            <p className="mt-3 max-w-xl text-base leading-snug text-gray-300 md:text-lg">
+              The analytics engine reads your sales reports and tells you what to fix first. Around
+              the cost of one 4-top a month. No long-term contract.
+            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+              <a
+                href="/contact"
+                className="inline-flex items-center border-b-2 border-primary-500 pb-0.5 text-base font-medium text-white hover:border-primary-400"
+              >
+                Request a menu read
+                <span className="ml-2" aria-hidden>
+                  →
+                </span>
+              </a>
+              <a href="/pricing" className="text-base text-gray-400 hover:text-white">
+                See pricing
+              </a>
+            </div>
           </div>
+
+          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1">
+            {offers.map((offer) => (
+              <li key={offer.name}>
+                <Link
+                  href={offer.href}
+                  className="flex items-baseline justify-between gap-3 rounded-lg border border-dark-700/80 bg-dark-900/70 px-3 py-2 hover:border-primary-500/50"
+                >
+                  <span>
+                    <span className="block text-sm font-semibold text-white">{offer.name}</span>
+                    <span className="block text-xs text-gray-400">{offer.note}</span>
+                  </span>
+                  <span className="whitespace-nowrap text-sm font-semibold text-primary-300">
+                    {offer.price}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

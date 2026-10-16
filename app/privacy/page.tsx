@@ -10,10 +10,10 @@ export const metadata: Metadata = pageMetadata({
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-dark-900">
-      <section className="py-20">
-        <div className="container mx-auto px-6 md:px-8 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Privacy Policy</h1>
-          <p className="text-gray-400 mb-10">Last updated: October 13, 2026</p>
+      <section className="py-5 md:py-6">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Privacy Policy</h1>
+          <p className="text-gray-400 mb-6">Last updated: October 13, 2026</p>
           <div className="space-y-8 text-gray-300 leading-relaxed">
             <section>
               <h2 className="text-2xl font-semibold text-white mb-3">Who we are</h2>

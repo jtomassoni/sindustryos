@@ -18,12 +18,12 @@ const pillars = [
 
 export default function ValueProposition() {
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-dark-800 overflow-hidden">
+    <section className="relative py-8 md:py-10 bg-dark-800 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 via-transparent to-dark-900/40" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-900/15 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-        <div className="max-w-3xl mb-12 md:mb-14">
+        <div className="max-w-3xl mb-6 md:mb-8">
           <p className="text-accent-400 text-sm md:text-base font-medium tracking-wide uppercase mb-3">
             Same dashboard
           </p>
