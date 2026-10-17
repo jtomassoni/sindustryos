@@ -191,7 +191,7 @@ export default function FeaturesPage() {
               Start with the analytics engine
             </h2>
             <p className="text-xl text-gray-300 mb-4">
-              $149/month alone, or $99 when added to the Complete Bundle at $199.
+              $249/month alone, or $199 when added to the Complete Bundle at $349.
             </p>
             <p className="text-sm text-primary-300/90 mb-8 max-w-xl mx-auto">
               Priced around what one good table brings in.

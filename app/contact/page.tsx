@@ -23,7 +23,7 @@ const nextSteps = [
   {
     icon: FiMessageSquare,
     title: 'Form, not a shared inbox',
-    body: 'Submissions land in the CRM. Denver and Baltimore roots, U.S.-wide.',
+    body: 'Submissions land in the CRM. We sell in Baltimore first.',
   },
 ]
 
@@ -37,7 +37,7 @@ export default function ContactPage() {
               Request a menu read
             </h1>
             <p className="mt-2 text-base leading-snug text-gray-300 md:text-lg">
-              Tell us your POS. Analytics from $149, bundle $199. No long-term contract.
+              Tell us your POS. Website from $99, or $891 for the year.
             </p>
           </div>
 

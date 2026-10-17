@@ -21,7 +21,7 @@ const products = [
   },
   {
     name: 'Private dining',
-    price: '$49/month',
+    price: '$149/month',
     badge: 'Add-on',
     description:
       'Private dining page plus lead capture and CRM. You still own the calls—we catch the ask.',
@@ -37,7 +37,7 @@ const products = [
   },
   {
     name: 'Digital signage',
-    price: '$99/month',
+    price: '$199/month',
     badge: 'Add-on',
     description:
       'TV displays for specials, events, and announcements, driven from the same content you already publish.',
@@ -53,7 +53,7 @@ const products = [
   },
   {
     name: 'Social media connection',
-    price: 'Ask about pricing',
+    price: '$149/month',
     badge: 'Add-on',
     description:
       'Manage all your social pages within one app—alongside your site and insights.',
@@ -91,7 +91,7 @@ export default function ProductShowcase() {
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
             Tier 1 is a customizable website. Add private dining, digital signage, and social when
-            you are ready—or take the Complete Bundle at $199/month.
+            you are ready—or take the Complete Bundle at $349/month.
           </p>
         </div>
 

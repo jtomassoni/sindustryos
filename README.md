@@ -54,15 +54,14 @@ sindustryos/
 
 ### Colors
 
-- **Primary**: Warm amber/gold tones (`primary-500: #f56b1a`)
-- **Secondary**: Deep burgundy/brown tones (`secondary-600: #735044`)
-- **Dark**: Dark base colors (not pure black, `dark-900: #1a1d20`)
-- **Accent**: Warm amber accents
+- **Primary**: Teal (`primary-500: #0d9488`)
+- **Dark**: Cool charcoal (`dark-900: #0f1419`)
+- **Accent**: Teal-green for emphasis
 
 ### Typography
 
-- **Sans**: Inter (system font fallback)
-- **Serif**: Playfair Display (for headings, optional)
+- **Sans**: DM Sans
+- **Display**: Space Grotesk (headings)
 
 ## Development
 
@@ -82,11 +81,11 @@ RESEND_API_KEY=re_your_api_key_here
 # Where contact form emails are delivered
 CONTACT_EMAIL=jtomassoni@gmail.com
 
-# Admin login (same format as Monaghan's / EcoLawns)
-# Single user:  ADMIN_USERS="username:password"
-# Multi user:   ADMIN_USERS="user1:pass1,user2:pass2"
-# Or JSON:      ADMIN_USER='{"username":"admin","password":"pass"}'
-ADMIN_USERS=admin:change-me
+# Admin logins. One shared CRM. Both people see every lead.
+# Sales login should be the username "mandi" unless DEFAULT_LEAD_ASSIGNEE is set.
+# James is engineer/owner. Mandi is sales/owner.
+ADMIN_USERS=james:change-me,mandi:change-me
+DEFAULT_LEAD_ASSIGNEE=mandi
 
 # JWT session signing secret (any long random string)
 SESSION_SECRET=replace-with-a-long-random-string
@@ -108,14 +107,25 @@ CRON_SECRET=replace-with-a-long-random-string
 ## API Routes
 
 - `/api/contact` - POST endpoint for contact form submissions
-- `/api/crm/submissions` - GET/POST endpoints for CRM (requires admin session)
+- `/api/crm/submissions` - GET/POST/PATCH for the shared CRM (requires admin session; PATCH claims an unassigned lead)
 - `/api/admin/login` / `/api/admin/logout` - admin session auth
 - `/api/admin/posts` - content CMS CRUD (admin session)
 - `/api/cron/publish-content` - scheduled publish + AI fill (CRON_SECRET)
 
+## How we sell
+
+Decisions live in `docs/mandi-feagans-partnership-email.md` and `docs/open-questions.md`.
+
+- Independents only. About 200 restaurants and a small team, not a national book.
+- **Baltimore first.** Denver only if a room there wants in. Do not build for a global market.
+- Website is $99/month. Year one monthly is 10 payments ($990). Paying the year up front is 9 times the monthly price ($891) and is always cheaper. Every product uses that same rule. After hosting and onboarding the website should be almost no work. They edit their own content and can request features.
+- Any payment calendar can be custom. James approves it. A pause only skips payments. Nothing else about the product changes. No special pages for a type of business.
+- Restaurants run all year. Some months are quieter. That does not change Mandi’s commission. James eats unpaid months.
+- The operator product is multi-tenant. Owner-permission users get reminders for Baltimore-relevant US holidays. Not a global calendar. If they ignore the reminder, that is their business.
+
 ## Admin Dashboard
 
-Sign in at `/admin/login` with credentials from `ADMIN_USERS`. Contacts stay under `/admin`; SEO content is under `/admin/content`. Contact submissions are also emailed to `CONTACT_EMAIL` via Resend; the contacts list is still in-memory.
+Sign in at `/admin/login` with credentials from `ADMIN_USERS`. James and Mandi are separate logins on one shared book. Every lead is visible to both. New leads are assigned to `DEFAULT_LEAD_ASSIGNEE` (Mandi). Contacts stay under `/admin`; SEO content is under `/admin/content`. Contact submissions are also emailed to `CONTACT_EMAIL` via Resend; the contacts list is still in-memory and resets on deploy.
 
 ## Deployment
 

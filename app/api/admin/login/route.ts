@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    await createSession()
+    await createSession(username)
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Admin login error:', error)

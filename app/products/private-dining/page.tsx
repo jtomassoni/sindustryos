@@ -13,9 +13,9 @@ import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Private Dining Inquiry CRM for Restaurants: $49/month',
+  title: 'Private Dining Inquiry CRM for Restaurants: $149/month',
   description:
-    'Capture private dining and event space inquiries for neighborhood restaurants and bars. Built for venues near weddings, schools, and local gatherings. $49/month.',
+    'Capture private dining and event space inquiries for neighborhood restaurants and bars. Built for venues near weddings, schools, and local gatherings. $149/month.',
   path: '/products/private-dining',
 })
 
@@ -60,7 +60,7 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Private Dining Inquiries is $49 per month. For the cost of one 4-top, you’re catching high-intent party requests that would otherwise die in voicemail. One solid booking covers the sub; the rest is upside.',
+      'Private Dining Inquiries is $149 per month. One solid booking covers the month. The rest is upside.',
   },
   {
     question: 'Who is this actually for?',
@@ -94,7 +94,7 @@ export default function PrivateDiningPage() {
     name: 'SindustryOS Private Dining Inquiries',
     description:
       'Lead capture and CRM for private dining and event space inquiries at restaurants and bars.',
-    price: '49',
+    price: '149',
     url: 'https://www.sindustryos.com/products/private-dining',
   })
   const faqSchema = getFaqSchema(faqItems)
@@ -109,10 +109,10 @@ export default function PrivateDiningPage() {
             { label: 'Products', href: '/products' },
             { label: 'Private Dining Inquiries' },
           ]}
-          eyebrow="Add-on · $49/month"
+          eyebrow="Add-on · $149/month"
           title="Catch private dining leads before they vanish"
           lede="Inquiry form and CRM for restaurants and bars with a room to fill."
-          price="$49/month · one booking covers the subscription"
+          price="$149/month · one booking covers the subscription"
           points={features.map((feature) => feature.title)}
           primaryLabel="Catch private dining leads"
         />
@@ -122,7 +122,7 @@ export default function PrivateDiningPage() {
             <div className="max-w-3xl mx-auto">
               <SubValueClaim
                 claim="Catch the private dining asks before they vanish."
-                detail="A few high-intent requests a month for parties of 20-100 is the job. For $49/month, one solid booking covers the sub."
+                detail="A few high-intent requests a month for parties of 20-100 is the job. At $149/month, one solid booking covers it."
               />
               <p className="mt-4 text-sm text-gray-500">
                 <Link
@@ -244,7 +244,7 @@ export default function PrivateDiningPage() {
                   Simple Monthly Pricing
                 </h2>
                 <p className="text-xl text-gray-400 mb-6">
-                  $49 per month. For the cost of one 4-top, stop letting neighborhood leads die in
+                  $149 per month. One booking covers it. Stop letting neighborhood leads die in
                   email.
                 </p>
                 <SubValueClaim
@@ -255,7 +255,7 @@ export default function PrivateDiningPage() {
               </div>
 
               <PricingDisplay
-                price="$49"
+                price="$149"
                 period="/month"
                 description="Private dining inquiry capture + CRM"
                 features={[

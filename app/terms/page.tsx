@@ -34,9 +34,13 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-3">Accounts &amp; billing</h2>
               <p>
-                Paid plans are billed according to the pricing you select. Unless otherwise agreed in
-                writing, subscriptions renew monthly and may be canceled at any time. Fees already
-                paid are non-refundable except where required by law or explicitly stated.
+                The website is $99 per month. Paying for a year up front is 9 times the monthly price
+                ($891), which is less than the 10 monthly payments in the first year. Every other
+                product uses the same rule. Monthly plans are a 12-month partnership. The first
+                month and the first anniversary month are free unless a different calendar is agreed
+                in writing. Any other schedule, including a pause, requires our approval. A pause
+                stops payments only. The service does not change. Fees already paid are
+                non-refundable except where required by law or explicitly stated.
               </p>
             </section>
             <section>

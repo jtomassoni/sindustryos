@@ -12,8 +12,8 @@ const capabilities = [
     description: 'Square, Toast, and modern POS—without file shuffle.',
   },
   {
-    title: 'No long contracts',
-    description: 'Month to month. Cancel if it does not earn its keep.',
+    title: 'First month free',
+    description: 'Month one and your first anniversary are on us.',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function PlatformClose() {
 
         <div className="max-w-3xl mx-auto text-center border-t border-dark-600/80 pt-10 md:pt-12">
           <p className="text-lg md:text-xl text-gray-300 mb-2 leading-relaxed font-light">
-            Analytics engine $149/month · $99 with the Complete Bundle · Bundle $199/month
+            Website from $99/month · Analytics $249 · Bundle $349/month
           </p>
           <p className="text-sm md:text-base text-primary-300/90 mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
             Priced around what one good table brings in.

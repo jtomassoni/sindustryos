@@ -12,9 +12,9 @@ import { getFaqSchema, getProductSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant Digital Signage Software: $99/month',
+  title: 'Restaurant Digital Signage Software: $199/month',
   description:
-    'Digital signage for restaurants and bars: TV menu boards, specials rotator, events, and announcements synced from your CMS. Built for 10-30ft viewing. $99/month.',
+    'Digital signage for restaurants and bars: TV menu boards, specials rotator, events, and announcements synced from your CMS. Built for 10-30ft viewing. $199/month.',
   path: '/products/digital-signage',
 })
 
@@ -78,7 +78,7 @@ const faqItems = [
   {
     question: 'How does the pricing work?',
     answer:
-      'Digital Signage is $99 per month. For the cost of one 4-top, one extra special sold because someone saw it on the screen covers the month. Everything else (events, announcements, fewer “what’s on special?” questions) is upside.',
+      'Digital Signage is $199 per month. One extra special sold because someone saw it on the screen covers the month. Everything else (events, announcements, fewer “what’s on special?” questions) is upside.',
   },
   {
     question: 'Can I customize the slides?',
@@ -103,7 +103,7 @@ export default function DigitalSignagePage() {
     name: 'SindustryOS Digital Signage',
     description:
       'TV signage display system for restaurants and bars with specials rotator and events display.',
-    price: '99',
+    price: '199',
     url: 'https://www.sindustryos.com/products/digital-signage',
   })
   const faqSchema = getFaqSchema(faqItems)
@@ -115,10 +115,10 @@ export default function DigitalSignagePage() {
     <main className="min-h-screen">
       <ProductFold
         crumbs={[{ label: 'Products', href: '/products' }, { label: 'Digital Signage' }]}
-        eyebrow="Add-on · $99/month"
+        eyebrow="Add-on · $199/month"
         title="Digital signage for restaurants & bars"
         lede="TV slides for specials, events, and announcements. Built for 10–30ft viewing."
-        price="$99/month · one special sold off the screen covers it"
+        price="$199/month · one special sold off the screen covers it"
         points={features.map((feature) => feature.title)}
         primaryLabel="Ask about digital signage"
       />
@@ -238,7 +238,7 @@ export default function DigitalSignagePage() {
             </div>
             
             <PricingDisplay
-              price="$99"
+              price="$199"
               period="/month"
               description="All features included"
               features={[

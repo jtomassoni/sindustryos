@@ -13,7 +13,7 @@ import { pageMetadata } from '@/lib/seo-metadata'
 export const metadata: Metadata = pageMetadata({
   title: 'Restaurant & Bar Website CMS: $99/month',
   description:
-    'Restaurant website builder and CMS for bars and independents. Menu management, event calendar, specials, gallery, hosting, and SEO included. $99/month, cancel anytime.',
+    'Restaurant website builder and CMS for bars and independents. Menu management, event calendar, specials, gallery, hosting, and SEO included. $99/month.',
   path: '/products/cms',
 })
 
@@ -72,8 +72,9 @@ const faqItems = [
     answer: 'You\'ll receive dedicated support once you\'re onboarded. We\'re here to help you succeed.',
   },
   {
-    question: 'Can I cancel anytime?',
-    answer: 'Yes, there are no long-term contracts. You can cancel anytime if the service doesn\'t meet your needs.',
+    question: 'How long is the agreement?',
+    answer:
+      'The website is $99/month. Pay the year up front and it is $891, which is 9 times the monthly price and less than the 10 payments in year one. The monthly partnership is 12 months, with the first month and the first anniversary month free. Any other calendar, including a pause, is only with our approval. A pause stops payments and nothing else.',
   },
   {
     question: 'Is the SEO actually worth $99/month?',
@@ -102,7 +103,7 @@ export default function CMSPage() {
         eyebrow="Tier 1 · $99/month"
         title="Restaurant & bar website CMS"
         lede="Menus, events, specials, gallery, hosting, and SEO in one place."
-        price="$99/month · hosting included · cancel anytime"
+        price="$99/month · hosting included"
         points={features.map((feature) => feature.title)}
         primaryLabel="Talk to us about CMS"
       />
@@ -214,7 +215,7 @@ export default function CMSPage() {
                 'SEO optimization',
                 'Mobile-responsive design',
                 'Dedicated support',
-                'No long-term contracts',
+                'First month and first anniversary free',
               ]}
             />
           </div>
@@ -268,7 +269,7 @@ export default function CMSPage() {
               Ready for a site that stays honest?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Full Web CMS is $99/month, or included in the Complete Bundle at $199.
+              Full Web CMS is $99/month, or $891 if you pay the year up front. The Complete Bundle is $349.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Talk to us about CMS

@@ -80,6 +80,11 @@ export default function Footer() {
           <p className="text-warm-300 text-sm text-center">
             © {currentYear} SindustryOS. All rights reserved.
           </p>
+          <p className="mx-auto mt-3 max-w-3xl text-center text-xs leading-relaxed text-warm-400">
+            The website is $99/month. Paying the year up front is 9 times that monthly price, $891,
+            which is less than the 10 payments in the first year. The same rule applies to every
+            product. A pause only stops payments, and only with our approval.
+          </p>
         </div>
       </div>
     </footer>

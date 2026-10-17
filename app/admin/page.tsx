@@ -16,6 +16,7 @@ interface Submission {
   message?: string
   timestamp: string
   status: 'new' | 'contacted' | 'converted' | 'archived'
+  assignee?: string | null
 }
 
 export default function AdminPage() {
@@ -24,6 +25,8 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [selectedSubmission, setSelectedSubmission] = useState<Submission | null>(null)
   const [error, setError] = useState('')
+  const [viewer, setViewer] = useState('')
+  const [claiming, setClaiming] = useState(false)
 
   useEffect(() => {
     fetchSubmissions()
@@ -44,6 +47,7 @@ export default function AdminPage() {
       }
 
       const data = await response.json()
+      setViewer(typeof data.viewer === 'string' ? data.viewer : '')
       setSubmissions(data.submissions || [])
     } catch {
       setError('Failed to load submissions')
@@ -79,7 +83,14 @@ export default function AdminPage() {
     <main className="min-h-screen bg-dark-900">
       <div className="container mx-auto px-4 py-8">
         <AdminNav />
-        <h1 className="text-3xl font-bold text-white mb-8">Contact Form Submissions</h1>
+        <div className="mb-8 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <h1 className="text-3xl font-bold text-white">Contact Form Submissions</h1>
+          {viewer ? (
+            <p className="text-sm text-gray-400">
+              Signed in as <span className="text-white">{viewer}</span>
+            </p>
+          ) : null}
+        </div>
 
         {error && (
           <p className="mb-4 text-red-400 text-sm">{error}</p>
@@ -118,6 +129,7 @@ export default function AdminPage() {
                           <p className="text-gray-400 text-sm">{submission.name}</p>
                           <p className="text-gray-500 text-xs mt-1">
                             {new Date(submission.timestamp).toLocaleDateString()}
+                            {` · ${submission.assignee || 'unclaimed'}`}
                           </p>
                         </div>
                         <span
@@ -186,6 +198,53 @@ export default function AdminPage() {
                       </p>
                     </div>
                   )}
+
+                  <div>
+                    <label className="text-gray-400 text-sm">Owner</label>
+                    <p className="text-white">
+                      {selectedSubmission.assignee || 'Unclaimed'}
+                    </p>
+                    {viewer && !selectedSubmission.assignee ? (
+                      <button
+                        type="button"
+                        disabled={claiming}
+                        onClick={async () => {
+                          setClaiming(true)
+                          try {
+                            const response = await fetch('/api/crm/submissions', {
+                              method: 'PATCH',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({
+                                id: selectedSubmission.id,
+                                action: 'claim',
+                              }),
+                            })
+                            if (response.status === 401) {
+                              router.push('/admin/login')
+                              return
+                            }
+                            if (!response.ok) {
+                              setError('Could not claim this lead')
+                              return
+                            }
+                            const data = await response.json()
+                            const updated = data.submission as Submission
+                            setSubmissions((current) =>
+                              current.map((item) => (item.id === updated.id ? updated : item))
+                            )
+                            setSelectedSubmission(updated)
+                          } catch {
+                            setError('Could not claim this lead')
+                          } finally {
+                            setClaiming(false)
+                          }
+                        }}
+                        className="mt-2 text-sm font-medium text-primary-400 hover:text-primary-300 disabled:opacity-50"
+                      >
+                        {claiming ? 'Claiming…' : 'Take this lead'}
+                      </button>
+                    ) : null}
+                  </div>
 
                   <div>
                     <label className="text-gray-400 text-sm">Submitted</label>

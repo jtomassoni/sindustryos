@@ -12,6 +12,8 @@ export interface Submission {
   message?: string
   timestamp: string
   status: SubmissionStatus
+  /** Salesperson username who owns the lead. Null until someone claims it. */
+  assignee: string | null
 }
 
 // In-memory only. Resets on deploy / cold start. Email via Resend is the durable copy.
@@ -41,8 +43,17 @@ export function addSubmission(input: {
     message: input.message || '',
     timestamp: new Date().toISOString(),
     status: 'new',
+    assignee: process.env.DEFAULT_LEAD_ASSIGNEE?.trim() || 'mandi',
   }
 
   submissions.push(submission)
+  return submission
+}
+
+export function claimSubmission(id: string, username: string): Submission | null {
+  const submission = submissions.find((item) => item.id === id)
+  if (!submission) return null
+  submission.assignee = username
+  if (submission.status === 'new') submission.status = 'contacted'
   return submission
 }

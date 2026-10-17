@@ -81,8 +81,8 @@ export function validateCredentials(username: string, password: string): boolean
   )
 }
 
-export async function createSession() {
-  const token = await new SignJWT({ admin: true })
+export async function createSession(username: string) {
+  const token = await new SignJWT({ admin: true, username })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime(`${SESSION_DURATION}s`)
@@ -99,14 +99,18 @@ export async function createSession() {
 }
 
 export async function verifySession(): Promise<boolean> {
+  return (await getSessionUsername()) !== null
+}
+
+export async function getSessionUsername(): Promise<string | null> {
   const cookieStore = await cookies()
   const token = cookieStore.get(SESSION_COOKIE)?.value
-  if (!token) return false
+  if (!token) return null
   try {
-    await jwtVerify(token, getSecret())
-    return true
+    const { payload } = await jwtVerify(token, getSecret())
+    return typeof payload.username === 'string' ? payload.username : null
   } catch {
-    return false
+    return null
   }
 }
 

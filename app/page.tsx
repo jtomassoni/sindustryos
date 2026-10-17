@@ -12,7 +12,7 @@ import { absoluteUrl } from '@/lib/site'
 export const metadata: Metadata = {
   title: {
     absolute:
-      'SindustryOS: Analytics Engine for Restaurants & Bars — from $149/month',
+      'SindustryOS: Analytics Engine for Restaurants & Bars — from $99/month',
   },
   description:
     'Digests your sales reports into actionable insights. Add a customizable website, private dining, digital signage, and social in the same dashboard.',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SindustryOS: Analytics Engine for Independent Restaurants & Bars',
     description:
-      'Analytics from sales data, plus website, private dining, signage, and social in one dashboard. From $149/month.',
+      'Analytics from sales data, plus website, private dining, signage, and social in one dashboard. From $99/month.',
     url: absoluteUrl('/'),
     type: 'website',
   },

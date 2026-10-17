@@ -3,8 +3,8 @@ import Link from 'next/link'
 const offers = [
   {
     name: 'Analytics engine',
-    price: '$149/mo',
-    note: '$99 in the bundle',
+    price: '$249/mo',
+    note: '$199 in the bundle',
     href: '/products/ingredient-optimization',
   },
   {
@@ -15,19 +15,19 @@ const offers = [
   },
   {
     name: 'Private dining',
-    price: '$49/mo',
+    price: '$149/mo',
     note: 'Inquiries and CRM',
     href: '/products/private-dining',
   },
   {
     name: 'Digital signage',
-    price: '$99/mo',
+    price: '$199/mo',
     note: 'Specials on the TVs',
     href: '/products/digital-signage',
   },
   {
     name: 'Complete bundle',
-    price: '$199/mo',
+    price: '$349/mo',
     note: 'Site, dining, signage',
     href: '/pricing',
   },
@@ -53,7 +53,7 @@ export default function Hero() {
             </h1>
             <p className="mt-3 max-w-xl text-base leading-snug text-gray-300 md:text-lg">
               The analytics engine reads your sales reports and tells you what to fix first. Around
-              the cost of one 4-top a month. No long-term contract.
+              the cost of one 4-top a month.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
               <a

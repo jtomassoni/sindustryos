@@ -64,7 +64,7 @@ export const locations: LocationPage[] = [
       {
         question: 'What is the best starting package?',
         answer:
-          'Most venues start with Full Web CMS at $99/month. Add Private Dining ($49) and Digital Signage ($99) as needed, or bundle for $199/month.',
+          'Most venues start with Full Web CMS at $99/month. Add Private Dining ($149) and Digital Signage ($199) as needed, or bundle for $349/month.',
       },
     ],
   },
@@ -93,7 +93,7 @@ export const locations: LocationPage[] = [
       {
         question: 'What is the best starting package?',
         answer:
-          'Most venues start with Full Web CMS at $99/month. Add Private Dining ($49) and Digital Signage ($99) as needed, or bundle for $199/month.',
+          'Most venues start with Full Web CMS at $99/month. Add Private Dining ($149) and Digital Signage ($199) as needed, or bundle for $349/month.',
       },
     ],
   },

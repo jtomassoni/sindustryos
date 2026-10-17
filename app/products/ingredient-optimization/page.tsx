@@ -9,7 +9,7 @@ import SubValueClaim from '@/components/sections/SubValueClaim'
 export const metadata: Metadata = {
   title: 'Menu Insights: Spot Leakage, Bad Margins & Hidden Opportunities',
   description:
-    'SindustryOS flagship Menu Insights: turn one month of sales data into actionable guidance on leakage, margins, and menu opportunities. $149/month, or $99 in the bundle.',
+    'SindustryOS flagship Menu Insights: turn one month of sales data into actionable guidance on leakage, margins, and menu opportunities. $249/month, or $199 in the bundle.',
   alternates: { canonical: '/products/ingredient-optimization' },
 }
 
@@ -51,7 +51,7 @@ export default function IngredientOptimizationPage() {
         eyebrow="Flagship"
         title="Menu Insights"
         lede="Spot leakage, bad margins, and hidden opportunities from one month of sales data."
-        price="$149/month · $99/month in the Complete Bundle"
+        price="$249/month · $199/month in the Complete Bundle"
         points={features.map((feature) => feature.title)}
         primaryLabel="Request a menu read"
       />
@@ -85,8 +85,8 @@ export default function IngredientOptimizationPage() {
           <div className="max-w-xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Simple pricing</h2>
             <PricingDisplay
-              price="$149"
-              description="$99/month when included in the Complete Bundle"
+              price="$249"
+              description="$199/month when included in the Complete Bundle"
               ctaText="Request a menu read"
               features={[
                 'Leakage, margins, and opportunity insights',
@@ -106,7 +106,7 @@ export default function IngredientOptimizationPage() {
               Ready for a clearer read on your menu?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start with Menu Insights alone, or add it to the bundle for $99/month. For the cost of
+              Start with Menu Insights alone, or add it to the bundle for $199/month. For the cost of
               the sub, one margin fix can pay for a whole season.
             </p>
             <Button href="/contact" variant="primary" size="lg">

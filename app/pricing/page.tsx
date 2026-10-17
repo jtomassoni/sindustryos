@@ -8,17 +8,17 @@ import { getFaqSchema } from '@/lib/structured-data'
 import { pageMetadata } from '@/lib/seo-metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Restaurant Software Pricing: Analytics Engine from $99/month',
+  title: 'Restaurant Software Pricing: Website from $99/month',
   description:
-    'SindustryOS pricing: Analytics engine $149/month ($99 in the bundle), Customizable website $99, Private dining $49, Digital signage $99, Social add-on, Complete Bundle $199. No long-term contracts.',
+    'SindustryOS pricing: Website $99/month ($891/year), Private dining $149, Digital signage $199, Social $149, Analytics engine $249 ($199 in the bundle), Complete Bundle $349. Pay the year up front at 9× the monthly price.',
   path: '/pricing',
 })
 
 const flagship = {
   name: 'Analytics engine',
-  price: '$149',
+  price: '$249',
   period: '/month',
-  bundlePrice: '$99',
+  bundlePrice: '$199',
   description:
     'Our core product: digests your sales reports and responds with actionable insights—leakage, bad margins, and what to fix first.',
   features: [
@@ -55,7 +55,7 @@ const products = [
   },
   {
     name: 'Private dining',
-    price: '$49',
+    price: '$149',
     period: '/month',
     badge: 'Add-on',
     description: 'Private dining page + inquiries and CRM (you handle communications)',
@@ -73,7 +73,7 @@ const products = [
   },
   {
     name: 'Digital signage',
-    price: '$99',
+    price: '$199',
     period: '/month',
     badge: 'Add-on',
     description: 'TV signage display system',
@@ -90,8 +90,8 @@ const products = [
   },
   {
     name: 'Social media connection',
-    price: 'Ask',
-    period: '',
+    price: '$149',
+    period: '/month',
     badge: 'Add-on',
     description: 'Manage all your social pages within one app',
     valueClaim: 'One login for the channels guests actually scroll.',
@@ -107,17 +107,17 @@ const products = [
 
 const bundle = {
   name: 'Complete Bundle',
-  price: '$199',
+  price: '$349',
   period: '/month',
-  compareAt: '$247',
-  savings: 'Save $48/month',
+  compareAt: '$447',
+  savings: 'Save $98/month',
   description:
-    'Customizable website, private dining, and digital signage on one bill. Add the analytics engine for $99/month instead of $149.',
+    'Customizable website, private dining, and digital signage on one bill. Add the analytics engine for $199/month instead of $249.',
   features: [
     'Everything in Customizable website',
     'Everything in Private dining',
     'Everything in Digital signage',
-    'Analytics engine for $99/mo when added (vs $149 alone)',
+    'Analytics engine for $199/mo when added (vs $249 alone)',
     'One platform, one bill',
     'Dedicated support',
   ],
@@ -127,26 +127,28 @@ const bundle = {
 const faqItems = [
   {
     question: 'Do I need to sign a long-term contract?',
-    answer: 'No, there are no long-term contracts. You can cancel anytime if the service doesn\'t meet your needs.',
+    answer:
+      'Yes. A partnership is 12 months. The first month and the first anniversary month are free, so you pay 10 months of that year. We ask for the year because we build before we bill.',
   },
   {
     question: 'How much is the analytics engine?',
     answer:
-      'The analytics engine (Menu Insights) is $149/month on its own, or $99/month when included in the Complete Bundle.',
+      'The analytics engine is $249/month on its own, or $199/month when added to the Complete Bundle.',
   },
   {
     question: 'Can I start with just the website and add features later?',
     answer:
-      'Absolutely! Start with the customizable website at $99/month and add private dining, digital signage, social, or the analytics engine when you need them—or grab the Complete Bundle at $199/month and add the analytics engine for $99.',
+      'Start with the website at $99/month. Private dining is $149, social is $149, signage is $199, and the analytics engine is $249. The Complete Bundle (website, dining, and signage) is $349/month. Add the analytics engine to that for $199.',
   },
   {
     question: 'What\'s included in the Complete Bundle?',
     answer:
-      'The Complete Bundle includes the customizable website, private dining, and digital signage for $199/month ($48 less than buying all three separately at $247). The analytics engine is $99/month when added to the bundle (vs $149 alone). Social media connection is a separate add-on—ask us for pricing.',
+      'The Complete Bundle is the website, private dining, and digital signage for $349/month ($98 less than $447 apart). The analytics engine is $199/month on the bundle, or $249 alone. Social is $149/month.',
   },
   {
-    question: 'What happens if I need to cancel?',
-    answer: 'You can cancel anytime. There are no cancellation fees or penalties.',
+    question: 'What if our slow season makes the fee hurt?',
+    answer:
+      'Pay month to month and the first year is 10 payments: the first month and the first anniversary are free. Pay the year up front and you pay 9 times the monthly price, which is less. On the $99 website that is $891 once, versus $990 over the ten payments. A pause only skips invoices. It does not change the product. Any calendar besides these two needs our approval.',
   },
   {
     question: 'Is there a setup fee?',
@@ -155,7 +157,7 @@ const faqItems = [
   {
     question: 'How does this pay for itself?',
     answer:
-      'Around the cost of one 4-top. Private Dining catches high-intent party requests that more than cover $49. For the CMS ($99), SEO helps people who never would have noticed you walk in. For Menu Insights, one bad-margin fix can cover months. The bundle is less than one mid-week private party.',
+      'The website is $99. Private dining at $149 is covered by one booking. Signage at $199 is covered by one special that sells off the screen. One bad-margin fix can cover months of the $249 analytics engine.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -163,7 +165,8 @@ const faqItems = [
   },
   {
     question: 'Do you offer discounts for annual plans?',
-    answer: 'Contact us to discuss annual pricing options. We\'re happy to work with you on a plan that fits your budget.',
+    answer:
+      'Yes. Paying the year up front is 9 times the monthly price, which is one month less than the 10 payments in year one. On the $99 website that is $891 instead of $990.',
   },
 ]
 
@@ -179,40 +182,39 @@ export default function PricingPage() {
           <div className="mb-4 max-w-3xl">
             <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl">Pricing</h1>
             <p className="mt-2 text-base leading-snug text-gray-300 md:text-lg">
-              No setup fee. No long-term contract. Analytics is $149 alone, or $99 when you add it
-              to the $199 bundle.
+              No setup fee. The website starts at $99/month, or $891 if you pay the year up front.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-5">
             <a href="#analytics" className="rounded-xl border border-primary-500/50 bg-dark-800 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Core</p>
               <p className="mt-1 text-sm font-semibold text-white">Analytics</p>
-              <p className="text-xl font-bold text-white">$149</p>
-              <p className="text-xs text-gray-400">$99 in the bundle</p>
+              <p className="text-xl font-bold text-white">$249</p>
+              <p className="text-xs text-gray-400">$199 in the bundle</p>
             </a>
             <a href="#website" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Tier 1</p>
               <p className="mt-1 text-sm font-semibold text-white">Website</p>
               <p className="text-xl font-bold text-white">$99</p>
-              <p className="text-xs text-gray-400">per month</p>
+              <p className="text-xs text-gray-400">$891 for the year</p>
             </a>
             <a href="#dining" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Add-on</p>
               <p className="mt-1 text-sm font-semibold text-white">Private dining</p>
-              <p className="text-xl font-bold text-white">$49</p>
+              <p className="text-xl font-bold text-white">$149</p>
               <p className="text-xs text-gray-400">per month</p>
             </a>
             <a href="#signage" className="rounded-xl border border-dark-700 bg-dark-800 p-3">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Add-on</p>
               <p className="mt-1 text-sm font-semibold text-white">Signage</p>
-              <p className="text-xl font-bold text-white">$99</p>
+              <p className="text-xl font-bold text-white">$199</p>
               <p className="text-xs text-gray-400">per month</p>
             </a>
             <a href="#bundle" className="col-span-2 rounded-xl border border-dark-600 bg-dark-800 p-3 md:col-span-1">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-300">Bundle</p>
               <p className="mt-1 text-sm font-semibold text-white">Site + dining + TVs</p>
-              <p className="text-xl font-bold text-white">$199</p>
-              <p className="text-xs text-gray-400">was $247</p>
+              <p className="text-xl font-bold text-white">$349</p>
+              <p className="text-xs text-gray-400">was $447</p>
             </a>
           </div>
         </div>
@@ -377,7 +379,7 @@ export default function PricingPage() {
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               <p className="text-sm text-gray-400 leading-relaxed">
-                <span className="text-white font-medium block mb-1">$49 private dining</span>
+                <span className="text-white font-medium block mb-1">$149 private dining</span>
                 Catch high-intent requests before they die in email.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -385,7 +387,7 @@ export default function PricingPage() {
                 SEO that helps strangers find the door.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
-                <span className="text-white font-medium block mb-1">$149 analytics engine</span>
+                <span className="text-white font-medium block mb-1">$249 analytics engine</span>
                 One bad-margin fix can cover months.
               </p>
             </div>
@@ -504,7 +506,7 @@ export default function PricingPage() {
               Ready for a menu read?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Analytics engine $149 ($99 in the bundle), or the Complete Bundle at $199. Tell us
+              Website $99 ($891 for the year). Analytics is $249, or $199 on the $349 bundle. Tell us
               your POS—we reply within one business day.
             </p>
             <Button href="/contact" variant="primary" size="lg">

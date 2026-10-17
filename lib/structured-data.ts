@@ -44,7 +44,7 @@ export function getSoftwareApplicationSchema(): SoftwareApplication {
     brand: { '@type': 'Brand', name: SITE_NAME },
     offers: {
       '@type': 'Offer',
-      price: '149',
+      price: '99',
       priceCurrency: 'USD',
       priceValidUntil: PRICE_VALID_UNTIL,
       availability: 'https://schema.org/InStock',
@@ -71,7 +71,7 @@ export function getProductSchema(options?: {
     },
     offers: {
       '@type': 'Offer',
-      price: options?.price ?? '149',
+      price: options?.price ?? '249',
       priceCurrency: 'USD',
       priceValidUntil: PRICE_VALID_UNTIL,
       availability: 'https://schema.org/InStock',

@@ -46,7 +46,7 @@ export const comparisons: ComparisonPage[] = [
       { feature: 'Monthly cost predictability', us: 'Flat product pricing', them: 'Retainer + change fees' },
       { feature: 'TV signage + website sync', us: 'Available', them: 'Usually separate vendors' },
       { feature: 'Private dining pipeline', us: 'Productized CRM', them: 'Custom build or email' },
-      { feature: 'Cancel anytime', us: 'Yes', them: 'Often contract-bound' },
+      { feature: 'Term', us: '12 months, two of them free', them: 'Retainer, often harder to leave' },
     ],
     verdict: [
       'Hire an agency when you need a full rebrand or complex custom integrations.',
